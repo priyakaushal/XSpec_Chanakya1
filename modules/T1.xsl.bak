@@ -7,7 +7,6 @@
         <p>
             <T1>
                 <xsl:value-of select="."/>
-		<Test>
             </T1>
         </p>
     </xsl:template>
