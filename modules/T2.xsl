@@ -6,6 +6,7 @@
     
     <xsl:template match="p/T2">
         <p>
+<!--            Priya-->
             <T2>
                 <xsl:value-of select="."/>
             </T2>
