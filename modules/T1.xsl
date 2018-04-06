@@ -7,12 +7,12 @@
         <p>
             <T1>
                 <xsl:value-of select="."/>
-		<Test>
+		<Test> </Test>
             </T1>
         </p>
     </xsl:template>
     
 <!--   testting for monolirthic -->
-    
+    <!-- Chal ja bhai -->
     
 </xsl:stylesheet>
