@@ -6,11 +6,11 @@
     <xsl:template match="T3">
         <p>
             <T3>
-<!--                Chaitanya and Priya-->
+<!--                Chaitanya sharma chanakya project scrum-->
                 <xsl:value-of select="."/>
             </T3>
         </p>
     </xsl:template>
-<!--  I have put the comments only for testing of monolithic generation  -->
+
     
 </xsl:stylesheet>

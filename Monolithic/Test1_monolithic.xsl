@@ -9,19 +9,19 @@
         <p>
             <T1>
                 <xsl:value-of select="."/>
-		<Test> </Test>
+		<Test>
             </T1>
         </p>
     </xsl:template>
     
-<!--   testting -->
-    
+<!--   testting for monolirthic -->
+    <!--heya -->
     
 
     <xsl:template match="T3">
         <p>
             <T3>
-<!--                Chaitanya and Priya-->
+<!--                Chaitanya-->
                 <xsl:value-of select="."/>
             </T3>
         </p>
