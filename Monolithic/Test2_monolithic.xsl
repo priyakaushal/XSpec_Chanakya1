@@ -8,7 +8,7 @@
     
     <xsl:template match="p/T2">
         <p>
-<!--            PriyaK-->
+<!--            PriyaK Chanakya-->
             <T2>
                 <xsl:value-of select="."/>
             </T2>
@@ -21,7 +21,7 @@
     <xsl:template match="T3">
         <p>
             <T3>
-<!--                Chaitanya-->
+<!--                Chaitanya and Priya-->
                 <xsl:value-of select="."/>
             </T3>
         </p>
