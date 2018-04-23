@@ -12,7 +12,7 @@
 						xmlns:source_lnci="http://www.lexis-nexis.com/lnci"
 
 						exclude-result-prefixes="xs xd lnf lncr dita error lnv source_lnci">
-<!--Chaitanya-->
+<!--Chaitanya Sharmac2-->
 	<!-- Set as 'true' if you want inline (embedded) citations.  -->
 	<xsl:param name="outputEmbeddedCitations" as="xs:string" select="'false'"/>
 
