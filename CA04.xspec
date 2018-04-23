@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:admindecision="urn:x-lexisnexis:content:administrative-decision:sharedservices:1"
+    xmlns:admindoc="urn:x-lexisnexis:content:administrative-document:sharedservices:1"
+    xmlns:base="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/"
+    xmlns:case="http://www.lexis-nexis.com/glp/case"
+    xmlns:case2="http://www.lexisnexis.com/xmlschemas/content/legal/case/1/"
+    xmlns:casehist="http://www.lexisnexis.com/xmlschemas/content/legal/case-history/1/"
+    xmlns:caseinfo="http://www.lexisnexis.com/xmlschemas/content/legal/case-information/1/"
+    xmlns:casesum="http://www.lexisnexis.com/xmlschemas/content/legal/case-summary/1/"
+    xmlns:ci="http://www.lexis-nexis.com/ci"
+    xmlns:classify="http://www.lexisnexis.com/xmlschemas/content/shared/classification/1/"
+    xmlns:comm="http://www.lexis-nexis.com/glp/comm"
+    xmlns:contact="http://www.lexisnexis.com/xmlschemas/content/shared/contact/1/"
+    xmlns:courtcase="http://www.lexisnexis.com/xmlschemas/content/legal/courtcase/1/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:decision="http://www.lexisnexis.com/xmlschemas/content/legal/decision/1/"
+    xmlns:dig="http://www.lexis-nexis.com/glp/dig"
+    xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+    xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+    xmlns:doc="http://www.lexisnexis.com/xmlschemas/content/shared/document-level-metadata/1/"
+    xmlns:docinfo="http://www.lexis-nexis.com/glp/docinfo"
+    xmlns:error="urn:x-lexisnexis:conversion:global:error:1"
+    xmlns:ext="http://exslt.org/common"
+    xmlns:form="http://www.lexisnexis.com/xmlschemas/content/shared/form/1/"
+    xmlns:frm="http://www.lexis-nexis.com/glp/frm"
+    xmlns:globalentity="urn:x-lexisnexis:content:identified-entities:global:1"
+    xmlns:glp="http://www.lexis-nexis.com/glp"
+    xmlns:guid="urn:x-lexisnexis:content:guid:global:1"
+    xmlns:in="http://www.lexis-nexis.com/glp/in"
+    xmlns:index="urn:x-lexisnexis:content:publicationindex:sharedservices:1"
+    xmlns:jrnl="http://www.lexis-nexis.com/glp/jrnl"
+    xmlns:jurisinfo="http://www.lexisnexis.com/xmlschemas/content/legal/jurisdiction-info/1/"
+    xmlns:leg="http://www.lexis-nexis.com/glp/leg"
+    xmlns:legisinfo="http://www.lexisnexis.com/xmlschemas/content/legal/legislation-info/1/"
+    xmlns:lnci="http://www.lexisnexis.com/xmlschemas/content/shared/citations/1/"
+    xmlns:lncr="http://www.lexis-nexis.com/lncr"
+    xmlns:lnf="urn:x-lexisnexis:conversion:global:functions:1"
+    xmlns:lnmeta="http://www.lexisnexis.com/xmlschemas/content/shared/lexisnexis-metadata/1/"
+    xmlns:lnv="http://www.lexis-nexis.com/lnv"
+    xmlns:lnvxe="http://www.lexis-nexis.com/lnvxe"
+    xmlns:location="http://www.lexisnexis.com/xmlschemas/content/shared/location/1/"
+    xmlns:person="http://www.lexisnexis.com/xmlschemas/content/shared/person/1/"
+    xmlns:primlaw="http://www.lexisnexis.com/xmlschemas/content/legal/primarylaw/1/"
+    xmlns:primlawhist="http://www.lexisnexis.com/xmlschemas/content/legal/primarylaw-history/1/"
+    xmlns:proc="http://www.lexisnexis.com/xmlschemas/content/shared/process-elements/1/"
+    xmlns:pubinfo="http://www.lexisnexis.com/xmlschemas/content/shared/publication-info/1/"
+    xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/"
+    xmlns:seclaw="http://www.lexisnexis.com/xmlschemas/content/legal/secondary-law/1/"
+    xmlns:source_cttr="http://www.lexis-nexis.com/glp/cttr"
+    xmlns:source_dict="http://www.lexis-nexis.com/glp/dict"
+    xmlns:source_docinfo="http://www.lexis-nexis.com/glp/docinfo"
+    xmlns:source_lnci="http://www.lexis-nexis.com/lnci"
+    xmlns:topic="urn:x-lexisnexis:content:topic:global:1"
+    stylesheet="CA04-CAN_Rosetta_casedoc-to-LexAdv_admindoc.xsl">
+    <x:scenario label="CA04: Scenario for testing W*7096215 : LA - CA - CA04 Admin Decisions - Rocket conversion - case:priorhist dropped">
+        <x:context>
+            <case:priorhist>
+                <p>
+                    <text>
+                        <glp:note>
+                            <p nl="0">
+                                <text>
+                                    [Quicklaw note: Supplementary reasons for judgment were released October 3, 1997. See
+                                    <ci:cite>
+                                        <ci:case>
+                                            <ci:caseref ID="cref00001085" spanref="cspan00001085">
+                                                <ci:reporter value="AJ"/>
+                                                <ci:edition>
+                                                    <ci:date year="1997"/>
+                                                </ci:edition>
+                                                <ci:refnum num="961"/>
+                                            </ci:caseref>
+                                        </ci:case>
+                                        <ci:content>
+                                            <ci:span spanid="cspan00001085">[1997] A.J. No. 961</ci:span>
+                                        </ci:content>
+                                    </ci:cite>.]
+                                </text>
+                            </p>
+                        </glp:note>
+                    </text>
+                </p>
+            </case:priorhist>
+        </x:context>
+        <x:expect label="casehist should be created in output">
+            <casehist:casehist>
+                <casehist:priorhist>
+                    <casehist:summary>
+                        <p xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                            <text>
+                                <inlinenote notetype="editor-note">
+                                    [Quicklaw note: Supplementary reasons for judgment were released October 3, 1997. See
+                                    <lnci:cite>
+                                        <lnci:case>
+                                            <lnci:caseref ID="cref00001085">
+                                                <lnci:reporter value="AJ"/>
+                                                <lnci:edition>
+                                                    <lnci:date year="1997"/>
+                                                </lnci:edition>
+                                                <lnci:refnum num="961"/>
+                                            </lnci:caseref>
+                                        </lnci:case>
+                                        <lnci:content>[1997] A.J. No. 961</lnci:content>
+                                    </lnci:cite>.]
+                                </inlinenote>
+                            </text>
+                        </p>
+                    </casehist:summary>
+                </casehist:priorhist>
+            </casehist:casehist>
+        </x:expect>
+    </x:scenario>
+    <x:scenario label="CA04: Scenario for Testing W*7100343 : LA - CA - Dropped Text in Date Segment">
+        <x:context href="CA00000007869296_00003033.xml" select="/CASEDOC/case:body[1]/case:headnote[1]/case:info[1]/case:courtinfo[2]/case:dates[1]/*"/>
+        <x:expect label="All the hearingdates should be captured in output">
+            <decision:argueddate>Entendu :<date-text xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/"> le 28 août 2015; les 24 mars,</date-text>
+            </decision:argueddate>
+            <decision:argueddate>
+                <date-text xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">19 avril, 7 juillet, 14 octobre</date-text>
+            </decision:argueddate>
+            <decision:argueddate>
+                <date-text xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">2016; les 20 mars, 18 avril, 5 décembre 2017.</date-text>
+            </decision:argueddate>
+            <decision:argueddate>Sentence arbitrale :<date-text xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/"> le 18 décembre 2017.</date-text>
+            </decision:argueddate>
+        </x:expect>
+    </x:scenario>
+</x:description>

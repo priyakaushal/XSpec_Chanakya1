@@ -1,0 +1,1996 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--<!DOCTYPE CASEDOC PUBLIC "-//LEXISNEXIS//DTD GLP Casedoc v006//EN" "casedoc-norm.dtd">-->
+<CASEDOC xmlns:docinfo="http://www.lexis-nexis.com/glp/docinfo"
+ xmlns:case="http://www.lexis-nexis.com/glp/case" xmlns:ci="http://www.lexis-nexis.com/ci"
+ xmlns:glp="http://www.lexis-nexis.com/glp" type="fulltext">
+ <docinfo partitionnum="1">
+  <docinfo:doc-heading>Commission scolaire Marguerite-Bourgeoys c. Syndicat de l'enseignement de
+   l'Ouest de Montréal (grief de Badenas), 2017 LNSARTQ 295</docinfo:doc-heading>
+  <docinfo:doc-id>CA00000007869296</docinfo:doc-id>
+  <docinfo:assoc-links>
+   <remotelink remotekey1="REFNUM(02067968)"
+    remotekey2="All Canadian Summaries (Netletters, Digests, Summaries)" service="QUERY"
+    xml:lang="en-CA">Find case digests</remotelink>
+   <remotelink remotekey1="REFNUM(02067968)"
+    remotekey2="All Canadian Summaries (Netletters, Digests, Summaries)" service="QUERY"
+    xml:lang="fr-CA">Rsums jurisprudentiels</remotelink>
+  </docinfo:assoc-links>
+  <docinfo:doc-lang lang="fr"/>
+  <docinfo:doc-country iso-cc="CA"/>
+  <docinfo:lbu-meta>
+   <docinfo:metaitem name="SRCNAME" value="SARQ"/>
+   <docinfo:metaitem name="SRCDOCNO" value="00003033"/>
+   <docinfo:metaitem name="DPSI" value="0FWZ"/>
+  </docinfo:lbu-meta>
+  <docinfo:custom-metafields>
+   <docinfo:custom-metafield name="date">20171218</docinfo:custom-metafield>
+   <docinfo:custom-metafield name="country">1</docinfo:custom-metafield>
+   <docinfo:custom-metafield name="juris">120</docinfo:custom-metafield>
+   <docinfo:custom-metafield name="court">158</docinfo:custom-metafield>
+   <docinfo:custom-metafield searchtype="COURT-CLASSIFY">QCArbRelTrav</docinfo:custom-metafield>
+   <docinfo:custom-metafield searchtype="JURIS-CLASSIFY">PQ</docinfo:custom-metafield>
+   <docinfo:custom-metafield searchtype="CITED-COUNT">0</docinfo:custom-metafield>
+  </docinfo:custom-metafields>
+  <docinfo:load-date>
+   <date year="2018" month="01" day="18">20180118</date>
+  </docinfo:load-date>
+  <docinfo:topiccodes>
+   <docinfo:topiccode>#C25#</docinfo:topiccode>
+  </docinfo:topiccodes>
+ </docinfo>
+ <case:body>
+  <case:headnote>
+   <case:info>
+    <case:courtinfo>
+     <case:dates>
+      <case:decisiondate ln.user-displayed="false">
+       <date year="2017" month="12" day="18">2017/12/18</date>
+      </case:decisiondate>
+     </case:dates>
+    </case:courtinfo>
+    <abbrvname display-name="Intitulé de la cause :" searchtype="SHORT-CASE-NAME">Commission
+     scolaire Marguerite-Bourgeoys<nl/> c. Syndicat de l'enseignement de<nl/> l'Ouest de Montréal
+     (grief de Badenas)</abbrvname>
+    <case:casename>Tribunal d'arbitrage<nl/> Entre<nl/> COMMISSION SCOLAIRE MARGUERITE-BOURGEOYS,
+     et<nl/> SYNDICAT DE L'ENSEIGNEMENT DE L'OUEST DE MONTRÉAL<nl/> Griefs nos : 2015-0000285-5152
+     (Suspension)<nl/> and 2015-0000286-5152 (Liste de<nl/> rappel) - Judith Badenas</case:casename>
+    <case:reportercite>
+     <ci:cite type="cite4thisdoc">
+      <ci:case>
+       <ci:caseref ID="cref00000060" spanref="cspan00000060">
+        <ci:reporter value="LSART"/>
+        <ci:edition>
+         <ci:date year="2017"/>
+        </ci:edition>
+        <ci:refnum num="295"/>
+       </ci:caseref>
+      </ci:case>
+      <ci:content>
+       <ci:span spanid="cspan00000060">2017 LNSARTQ 295</ci:span>
+      </ci:content>
+     </ci:cite>
+    </case:reportercite>
+    <refnum refnumtype="UCN" ln.user-displayed="false">02067968</refnum>
+    <case:courtinfo>
+     <case:juris ln.user-displayed="false">PQ</case:juris>
+     <case:courtcode ln.user-displayed="false">PQLET</case:courtcode>
+     <abbrvname ln.user-displayed="false">QCArbRelTrav</abbrvname>
+     <case:courtname>Québec<nl/> Sentence arbitrale en relations de travail</case:courtname>
+     <case:judges>Membre : Claude Martin, avocat (Arbitre)</case:judges>
+     <case:dates>
+      <case:hearingdates>Entendu : le 28 août 2015; les 24 mars,<nl/> 19 avril, 7 juillet, 14
+       octobre<nl/> 2016; les 20 mars, 18 avril, 5 décembre 2017.<nl/> Sentence arbitrale : le 18
+       décembre 2017.</case:hearingdates>
+     </case:dates>
+    </case:courtinfo>
+   </case:info>
+   <case:length>(68 paragr.)</case:length>
+   <case:info>
+    <case:constituents>
+     <pgrp>
+      <heading>
+       <title>Comparutions :</title>
+      </heading>
+      <p>
+       <text><emph typestyle="bf">COMMISSION SCOLAIRE MARGUERITE-BOURGEOYS</emph>, Représentée par
+        Me Jacques Provencher.</text>
+      </p>
+      <p>
+       <text><emph typestyle="bf">SYNDICAT DE L'ENSEIGNEMENT DE L'ouest de montréal</emph>,
+        Représenté par Me Gaétan Lévesque.</text>
+      </p>
+     </pgrp>
+    </case:constituents>
+   </case:info>
+  </case:headnote>
+  <case:content>
+   <case:judgments>
+    <case:judgment>
+     <case:judgmentbody>
+      <p>
+       <text align="center">
+        <emph typestyle="bf">SENTENCE ARBITRALE</emph>
+       </text>
+      </p>
+      <p>
+       <pnum count="1">1</pnum>
+       <text>Le 12 novembre 2012, le Greffe des tribunaux d'arbitrage du secteur de l'éducation
+        m'informait que j'étais saisi des affaires mentionnées en rubrique et que leur instruction
+        devait commencer le 21 février 2013. Cette première journée d'audience a, cependant, dû être
+        reportée en raison de l'état de santé de la Plaignante, Madame Judith Badenas. Un recours
+        entrepris en vertu de l'article 47.2 du <emph typestyle="it">Code du travail</emph> a, par
+        la suite, retardé le commencement de l'enquête. Je n'ai pu l'entreprendre que le 28 août
+        2015.</text>
+      </p>
+      <p>
+       <pnum count="2">2</pnum>
+       <text>Madame Badenas et le Syndicat contestent deux décisions de la Commission scolaire. Le 8
+        juillet 2011, la Commission suspendait Madame Badenas parce qu'elle ne s'était pas présentée
+        au travail les 4 et 6 juillet<fnr fnrtoken="fnr-1" fntoken="fn-1">1</fnr>. Cette mesure
+        disciplinaire a fait l'objet du grief 2015-0000285-5152. Suivant ce qu'il appert de ce
+        premier recours, ils allèguent que la Commission a contrevenu à l'article 5-6.00 de la
+        "convention locale"<fnr fnrtoken="fnr-2" fntoken="fn-2">2</fnr>. Ils contestent le
+        bien-fondé de la mesure et en demandent, entre autres, l'annulation.</text>
+      </p>
+      <p>
+       <pnum count="3">3</pnum>
+       <text>À la suite d'incidents survenus le 8 juillet la Commission la sanctionnait une nouvelle
+        fois le 15 juillet. Elle la retirait de la liste de rappel et fermait son dossier. Si la
+        lettre que la directrice adjointe Thériault lui faisait parvenir pour l'en informer avait
+        pour objet sa "radiation de la liste de rappel et [la] fermeture de son dossier [...] suite
+        aux événements survenus dans la semaine du 4 juillet 2011", son dernier paragraphe faisait
+        référence à une fin d'emploi. Après avoir rappelé les faits et les motifs à l'origine de
+        cette décision, Madame Thériault écrivait que la Commission scolaire n'avait pas d'autre
+        choix que de la congédier et, conséquemment, de retirer immédiatement son nom de la liste de
+        rappel du personnel enseignant en français langue d'enseignement<fnr fnrtoken="fnr-3"
+         fntoken="fn-3">3</fnr>. Cette mesure fait l'objet du grief 2015-0000286-5152. Selon le
+        Syndicat, la Commission a alors transgressé les dispositions de la convention locale et,
+        plus particulièrement, sa clause 11-2.05.01 b). Comme pour la sanction du 8 juillet, il
+        estime que la mesure n'est pas fondée. Il me demande d'annuler cette décision et d'ordonner
+        à la Commission de verser à Madame Badenas une somme équitable pour réparer les dommages
+        qu'elle a subis en raison de celle-ci.</text>
+      </p>
+      <p>
+       <text>
+        <emph typestyle="ib">Les dispositions pertinentes des conventions collectives et de la
+         loi</emph>
+       </text>
+      </p>
+      <p>
+       <pnum count="4">4</pnum>
+       <text>L'analyse des faits mis en preuve et les motifs au soutien de ma sentence doivent tenir
+        compte des dispositions de la "convention nationale" entre le Comité patronal de
+        négociations pour les commissions scolaires francophones et la Fédération autonome de
+         l'enseignement<fnr fnrtoken="fnr-4" fntoken="fn-4">4</fnr> et de l'entente locale entre la
+        Commission scolaire et la Syndicat de l'enseignement de l'Ouest de Montréal<fnr
+         fnrtoken="fnr-5" fntoken="fn-5">5</fnr>. Je dois également tenir compte de l'article 124 de
+        la <emph typestyle="it">Loi sur les normes du travail</emph> et de la portée que la Cour
+        suprême lui a donné lorsque des salariés dont les conditions de travail sont régies par une
+        convention collective se voient privés du droit de contester leur congédiement devant un
+        arbitre de grief.</text>
+      </p>
+      <p>
+       <pnum count="5">5</pnum>
+       <text>Le Syndicat et la Commission scolaire ne disputent pas le fait que la Plaignante était
+        une enseignante à taux horaire qui enseignait aux adultes. Les parties à la convention
+        nationale ont convenu, paragraphe 2-1.05 de la convention nationale, que :</text>
+      </p>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Malgré la clause 2-1.01, seul le chapitre 11-0.00 s'applique aux enseignantes et
+          enseignants couverts par l'accréditation et employés directement par la commission pour
+          enseigner aux adultes dans le cadre des cours de l'éducation aux adultes sous la
+          responsabilité de la commission.</text>
+        </p>
+       </li>
+      </l>
+      <p>
+       <pnum count="6">6</pnum>
+       <text>La clause 11-2.01 énonce les dispositions de la convention qui s'appliquent
+        spécifiquement à ces enseignants. Elle ne mentionne ni le Chapitre 5-0.00 de la convention
+        traitant des conditions d'emploi et des avantages sociaux, lesquelles comprennent les
+        dispositions régissant les dossiers personnels des salariés ni le Chapitre 9-0.00 se
+        rapportant, notamment, au règlement des griefs. Selon cette clause :</text>
+      </p>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Seuls s'appliquent aux enseignantes ou enseignants à taux horaire employés
+          directement par la commission pour enseigner aux adultes dans le cadre des cours à
+          l'éducation des adultes les articles, clauses et annexes où elles ou ils sont expressément
+          désignés, de même que :</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel>-</lilabel>
+        <p>
+         <text>les articles 11-1.00 et 11-2.00;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel>-</lilabel>
+        <p>
+         <text>le paragraphe A) de la clause 11-8.09;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel>-</lilabel>
+        <p>
+         <text>les articles 14-1.00 à 14-4.00;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel>-</lilabel>
+        <p>
+         <text>l'article 14-9.00;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel>-</lilabel>
+        <p>
+         <text>l'article 14-12.00;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel>-</lilabel>
+        <p>
+         <text>l'article 14-14.00;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel>-</lilabel>
+        <p>
+         <text>les annexes XXX, XXXVI, XL, XLVII, XLIX, L et LI.</text>
+        </p>
+       </li>
+      </l>
+      <p>
+       <text>Aucune des dispositions auxquelles ce paragraphe renvoie ne traite de l'imposition de
+        sanctions ou de mesures disciplinaires ou d'un recours à l'encontre de celles-ci.</text>
+      </p>
+      <p>
+       <pnum count="7">7</pnum>
+       <text>C'est au paragraphe 11.2.10 que les parties ont cerné l'étendue du droit à la procédure
+        de grief d'une enseignante à taux horaire. Les parties se sont mises d'accord pour que
+        :</text>
+      </p>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>L'enseignante ou l'enseignant à taux horaire a droit à la procédure de règlement des
+          griefs quant aux articles et clauses mentionnés au présent article ainsi que les articles
+          et clauses où elle ou il est expressément désigné.</text>
+        </p>
+       </li>
+      </l>
+      <p>
+       <pnum count="8">8</pnum>
+       <text>La lettre du 15 juillet 2011 annonçant à Madame Badenas la sanction que la Commission
+        avait prise contre elle avait pour objet sa radiation de la liste de rappel<fnr
+         fnrtoken="fnr-6" fntoken="fn-6">6</fnr>. Selon la clause 11-2.05.01 b) de la convention
+        locale :</text>
+      </p>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>La commission enlève de la liste :</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>[...]</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel>4)</lilabel>
+        <p>
+         <text>le nom des enseignantes et enseignants qui ont été congédiés et la radiation
+          s'effectue à la date du congédiement, si aucune procédure de contestation n'est en cours
+          ou qu'un grief contestant le congédiement a été perdu.</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>[...].</text>
+        </p>
+       </li>
+      </l>
+      <p>
+       <pnum count="9">9</pnum>
+       <text>Comme je le soulignerai plus loin, la Commission scolaire prétend que Madame Badenas ne
+        pouvait pas contester sa décision de mettre fin à son emploi. Le Syndicat, pour sa part, a
+        rappelé qu'elle pouvait avoir malgré tout droit à la procédure de grief en raison de
+        l'article 124 de la <emph typestyle="it">Loi sur les normes du travail<fnr fnrtoken="fnr-7"
+          fntoken="fn-7">7</fnr></emph> et la portée que la Cour suprême a donnée à cet article dans
+         <emph typestyle="it">Syndicat de la fonction publique du Québec</emph> c. <emph
+         typestyle="it">Québec (Procureur général)</emph><fnr fnrtoken="fnr-8" fntoken="fn-8"
+         >8</fnr>.</text>
+      </p>
+      <p>
+       <text>
+        <emph typestyle="ib">La preuve</emph>
+       </text>
+      </p>
+      <p>
+       <pnum count="10">10</pnum>
+       <text>Le Centre d'éducation aux adultes Champlain est un des établissements de la Commission
+        scolaire. D'après Madame Michelle Pâquet, qui en était la directrice à l'époque pertinente
+        aux griefs, une cinquantaine d'enseignants y travaillent.</text>
+      </p>
+      <p>
+       <pnum count="11">11</pnum>
+       <text>Selon l'article 23 de la <emph typestyle="it">Loi sur l'instruction publique</emph><fnr
+         fnrtoken="fnr-9" fntoken="fn-9">9</fnr>, une enseignante à taux horaire est dispensée de
+        l'obligation d'être titulaire d'une autorisation d'enseigner. Les parties appellent les
+        personnes dans cette situation des enseignantes non légalement qualifiées. Je comprends, de
+        la preuve, que c'était là le statut de Madame Badenas. Elle était à la fois une enseignante
+        à taux horaire et une enseignante non légalement qualifiée. À l'époque, cependant, elle
+        avait entrepris des démarches afin d'obtenir sa qualification. Elle s'était inscrite à un
+        programme de formation auprès de l'Université d'Ottawa. La Commission avait d'ailleurs
+        transmis à cet établissement une attestation de ses heures d'enseignement depuis 2007, à sa
+        demande, pour appuyer sa candidature à un programme de baccalauréat menant à un brevet
+        d'enseignement.</text>
+      </p>
+      <p>
+       <pnum count="12">12</pnum>
+       <text>Suivant la preuve, elle travaillait pour la Commission scolaire depuis 2004. Elle était
+        affectée à l'éducation aux adultes. D'une année scolaire à l'autre, elle a pu enseigner de
+        soixante-dix heures (pour l'année scolaire 2004-2005) à sept cent soixante et une heures
+        (pour l'année scolaire 2005-2006). Au cours des trois années qui ont précédé l'année
+        2011-2012, elle a enseigné cinq cent quarante heures en 2008-2009, sept cent trente et une
+        heures en 2009-2010 et deux cent soixante et une heures en 2010-2011<fnr fnrtoken="fnr-10"
+         fntoken="fn-10">10</fnr>.</text>
+      </p>
+      <p>
+       <pnum count="13">13</pnum>
+       <text>L'attribution des heures d'enseignement des enseignantes affectées à l'éducation aux
+        adultes se fait à l'occasion d'une séance d'affectation que les parties appellent un bassin.
+        Ces bassins ont lieu au mois de juin et au mois d'août, chaque année. Madame Pâquet a
+        expliqué que les enseignants et enseignantes inscrits sur une liste de rappel - c'était le
+        cas de Madame Badenas - reçoivent, soixante-douze heures avant le bassin, la liste des
+        postes disponibles pour la période scolaire qui vient. Le soir du bassin, un représentant de
+        la commission scolaire fait la lecture d'informations sur le déroulement du bassin et sur
+        certaines obligations des enseignants. Ils sont notamment avisés qu'ils doivent occuper le
+        poste qu'ils choisissent et que la Commission n'accordera aucun congé sans traitement, sauf
+        s'il s'agit d'une absence dans le cadre des droits parentaux<fnr fnrtoken="fnr-11"
+         fntoken="fn-11">11</fnr>. Les enseignants sont ensuite appelés par ordre de date d'entrée
+        en service dans chacune des spécialités d'enseignement. Une enseignante peut alors accepter
+        une charge d'enseignement. Le cas échéant, le poste qu'elle a choisi n'est plus disponible
+        pour les autres enseignants et une indication à cet effet apparaît sur un écran que peuvent
+        voir tous les participants au bassin<fnr fnrtoken="fnr-12" fntoken="fn-12">12</fnr>. À
+        l'occasion du bassin du 22 juin 2011, Madame Badenas a choisi de donner un cours de français
+        lui assurant cent heures d'enseignement entre le 4 juillet et le 19 août<fnr
+         fnrtoken="fnr-13" fntoken="fn-13">13</fnr>. Lorsque Me Provencher l'a interrogée,
+        cependant, elle a affirmé qu'elle ignorait alors quel allait être son horaire de
+        cours.</text>
+      </p>
+      <p>
+       <pnum count="14">14</pnum>
+       <text>Au début de la séance d'affectation, Madame Badenas s'est approchée de Madame Pâquet
+        pour lui dire qu'elle devait s'absenter le 4 juillet. La preuve est contradictoire quant à
+        la raison qu'elle a invoquée pour justifier cette absence. Alors que Me Provencher
+        l'interrogeait, Madame Badenas a affirmé qu'elle lui a parlé de sa formation à l'Université
+        d'Ottawa et qu'elle allait peut-être devoir être remplacée. Selon Madame Pâquet, elle a
+        plutôt mentionné une absence pour des raisons personnelles. Quoi qu'il en soit, Madame
+        Badenas s'est adressée à elle une nouvelle fois alors que la séance était en cours pour lui
+        dire qu'elle pourrait être absente à quelques reprises. Madame Pâquet a répondu qu'elle
+        devait être présente à ses cours, du début à la fin de sa période d'enseignement. Madame
+        Badenas a néanmoins insisté et Madame Pâquet lui a alors dit qu'elle consulterait le service
+        des ressources humaines de la Commission scolaire.</text>
+      </p>
+      <p>
+       <pnum count="15">15</pnum>
+       <text>Madame Badenas a pris connaissance de son horaire d'enseignement le 27 juin. Elle a
+        alors constaté qu'elle devait enseigner le 4 juillet. Elle devait également être à
+        l'Université d'Ottawa pour un cours dans le cadre de sa formation pour obtenir un brevet
+        d'enseignement. Elle a dit à Madame Pâquet qu'elle devait donc être remplacée pour cette
+        première journée. Elle lui a également dit qu'il était possible qu'elle ait à s'absenter à
+        d'autres occasions. Madame Pâquet, par contre, lui a rappelé qu'elle devait enseigner quatre
+        heures par jour, cinq jours par semaine, pendant cinq semaines. Elle lui a rappelé les
+        consignes lues le soir du bassin et elle l'a avisée qu'elle ne l'autorisait pas à
+        s'absenter. Elle lui a également remis un exemplaire des informations qui avaient été lues
+        par une représentante de la Commission le soir du bassin.</text>
+      </p>
+      <p>
+       <pnum count="16">16</pnum>
+       <text>Le 29 juin, Madame Paquet lui transmettait une lettre lui rappelant qu'elle
+        n'autorisait pas le congé que Madame Badenas demandait. Pour être certaine qu'elle la
+        recevrait, elle la lui faisait parvenir par huissier. Après avoir évoqué leur entretien du
+        27, Madame Paquet ajoutait :</text>
+      </p>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Dans les circonstances, je vous réitère que votre absence du 4 juillet et les autres,
+          ne sont pas autorisées. Ainsi, vous êtes attendue au CEA Champlain dès 8 h 30. Soyez
+          avisée que le défaut de vous présenter au travail selon ces modalités sera considéré comme
+          une absence non autorisée et par le fait même vous serez passible d'une mesure
+          disciplinaire. Il en sera de même pour les autres absences susmentionnées<fnr
+           fnrtoken="fnr-14" fntoken="fn-14">14</fnr>.</text>
+        </p>
+       </li>
+      </l>
+      <p>
+       <pnum count="17">17</pnum>
+       <text>L'huissier a signifié un exemplaire de cette lettre le 30 juin en la déposant dans la
+        boîte aux lettres que la Commission scolaire croyait être celle de la résidence de Madame
+        Badenas. La preuve révélera, cependant, qu'il s'agissait plutôt de celle du domicile d'une
+        de ses amies. Madame Badenas avait décidé, à l'époque, qu'elle préférait faire inscrire
+        cette adresse plutôt que la sienne dans son dossier.</text>
+      </p>
+      <p>
+       <pnum count="18">18</pnum>
+       <text>En dépit de sa conversation avec Madame Pâquet, le 27, et de la lettre qu'elle avait
+        reçue le 30, Madame Badenas informait la Commission, le dimanche 3 juillet, qu'elle
+        s'absenterait le lendemain. Elle ne se souvient cependant pas si elle a laissé son message à
+        cet effet à Madame Pâquet ou à son adjointe. Le 4 juillet, Madame Badenas s'est rendue à
+        l'Université d'Ottawa plutôt que de se présenter au travail.</text>
+      </p>
+      <p>
+       <pnum count="19">19</pnum>
+       <text>Madame Badenas s'est de nouveau absentée le 6 juillet 2011. Selon Madame Pâquet, sa
+        secrétaire l'a informée vers 15 heures, le 5, que Madame Badenas avait demandé à être
+        remplacée le lendemain. Madame Pâquet s'est rendue à la salle de classe où se trouvait
+        Madame Badenas pour lui demander de la voir avant de quitter le Centre, à la fin de sa
+        journée, et s'enquérir de la raison de son absence. Pour toute réponse, Madame Badenas lui a
+        dit qu'elle n'avait pas le temps de se rendre à son bureau parce qu'elle avait un
+        rendez-vous et qu'elle ne lui parlerait qu'en présence d'un représentant de son
+        syndicat.</text>
+      </p>
+      <p>
+       <pnum count="20">20</pnum>
+       <text>Le 7 juillet, la Commission scolaire a cherché à lui faire parvenir, encore une fois
+        par huissier, un avis la convoquant à une rencontre à son siège social, le 8 juillet à 11 h
+        45, afin de lui imposer une suspension, "conformément à l'article 5-6.06-B de l'entente
+         locale"<fnr fnrtoken="fnr-15" fntoken="fn-15">15</fnr>. La directrice adjointe du service
+        des ressources humaines l'avisait également qu'elle pouvait se présenter à cette réunion
+        accompagnée d'un représentant de son Syndicat. Tout indique que l'huissier ne lui a pas
+        remis cet avis. Suivant son procès-verbal, l'adresse à laquelle la lettre devait être
+        signifiée était en fait celle d'une amie de Madame Badenas qui ne voulait maintenant plus
+        recevoir son courrier. Cette amie refusait également de lui donner des informations
+        nécessaires pour qu'il puisse livrer l'avis à son destinataire.</text>
+      </p>
+      <p>
+       <pnum count="21">21</pnum>
+       <text>Selon Madame Badenas, c'est alors qu'elle donnait sa première période de cours, le
+        matin du 8, qu'elle a reçu l'avis la convoquant aux bureaux de la Commission. À l'occasion
+        de son témoignage, elle a expliqué qu'elle était désemparée. Elle se sentait, a-t-elle dit,
+        prise dans un étau, harcelée depuis maintenant quatre jours. Elle était sur la défensive,
+        inquiète. Elle avait l'impression d'être privée de la possibilité de s'amender. Elle ne se
+        sentait pas prête, a-t-elle ajouté, pour une suspension.</text>
+      </p>
+      <p>
+       <pnum count="22">22</pnum>
+       <text>Entretemps, Madame Pâquet a pris les dispositions pour la remplacer. Elle a demandé à
+        une autre enseignante, Madame Benoît, de prendre en charge sa classe. Madame Benoît s'est
+        rendue à la classe de sa collègue qui lui a alors dit qu'il s'agissait d'un malentendu.
+        Madame Benoît est retournée au bureau de Madame Pâquet pour l'en informer.</text>
+      </p>
+      <p>
+       <pnum count="23">23</pnum>
+       <text>À 10 h 45, Madame Badenas a communiqué avec la directrice Thériault pour lui demander
+        un répit. À la fin de sa pause, elle est retournée à sa classe. Madame Pâquet y était déjà.
+        Elle demandait aux élèves qui s'y trouvaient de se rendre dans la salle 302, où Madame
+        Benoît enseignait. Madame Pâquet lui a rappelé qu'elle était attendue au siège social de la
+        Commission scolaire et qu'elle devrait être en route pour s'y rendre, puis elle est
+        retournée à son bureau.</text>
+      </p>
+      <p>
+       <pnum count="24">24</pnum>
+       <text>Plutôt que de prendre les dispositions pour se rendre aux bureaux de la direction de la
+        Commission scolaire, Madame Badenas a choisi de suivre ses élèves et elle s'est rendue dans
+        la salle de classe de Madame Benoît. Elle lui a dit qu'elles enseigneraient ensemble et elle
+        s'est dirigée vers le fond de la salle pour s'asseoir derrière un pupitre.</text>
+      </p>
+      <p>
+       <pnum count="25">25</pnum>
+       <text>Informée que Madame Badenas était maintenant dans la classe de Madame Benoît, Madame
+        Paquet s'y est rendue. Devant tous les élèves, elle lui a rappelé qu'elle était attendue aux
+        bureaux de la Commission scolaire. Selon Madame Pâquet, Madame Badenas lui a dit qu'elle
+        avait besoin d'un répit, qu'elle était harcelée depuis le lundi 4 juillet, qu'elle ne se
+        présenterait pas à la rencontre et que son Syndicat lui avait dit qu'il n'était pas
+        nécessaire qu'elle y soit. Madame Pâquet lui a alors intimé l'ordre de la suivre, ce qu'elle
+        a refusé de faire.</text>
+      </p>
+      <p>
+       <pnum count="26">26</pnum>
+       <text>Madame Pâquet est alors sortie de la salle de classe, pour y revenir accompagnée d'un
+        agent de sécurité. Elle s'est rendue au pupitre où était assise Madame Badenas. Elle lui a à
+        nouveau rappelé qu'elle devait se rendre au siège social de la Commission scolaire. Elle a
+        pris son sac à dos et elle l'a remis à l'agent. Elle est ensuite retournée à son bureau,
+        accompagnée de l'agent de sécurité. Madame Benoît, pour sa part, s'est adressée à Madame
+        Badenas et elle lui a conseillé de se conformer à l'ordre qu'elle avait reçu et se rendre à
+        la rencontre à laquelle était convoquée.</text>
+      </p>
+      <p>
+       <pnum count="27">27</pnum>
+       <text>Madame Badenas a d'abord décidé de se rendre à la salle des maîtres. En passant devant
+        le bureau de Madame Pâquet, elle a constaté que ses effets s'y trouvaient. Elle y est alors
+        entrée. Madame Pâquet, qui parlait au téléphone, lui a fait signe de s'asseoir. La preuve a
+        révélé qu'elle appelait alors les services d'urgence (le 9-1-1), à la suggestion de Madame
+        Roussel, parce qu'à son avis, Madame Badenas était dans un état de détresse
+        psychologique.</text>
+      </p>
+      <p>
+       <pnum count="28">28</pnum>
+       <text>Comme elle y avait été invitée, Madame Badenas s'est assise. L'agent de sécurité, qui
+        était également dans le bureau, en a fermé la porte et s'est adossé contre elle.</text>
+      </p>
+      <p>
+       <pnum count="29">29</pnum>
+       <text>Peu de temps après, trois policiers se sont présentés au bureau de Madame Pâquet. La
+        preuve a également révélé que les services ambulanciers se sont rendus au Centre de
+        formation. Selon Madame Badenas, Madame Pâquet leur a dit qu'elle ne la croyait pas en état
+        de quitter seule l'établissement. Selon Madame Pâquet, par contre, elle leur a plutôt dit
+        que Madame Badenas refusait de se rendre au rendez-vous auquel elle était convoquée.</text>
+      </p>
+      <p>
+       <pnum count="30">30</pnum>
+       <text>Les policiers lui ont demandé de quitter le Centre. Elle leur a demandé un peu de temps
+        pour se rendre à sa classe pour y prendre des effets. Ils l'ont accompagnée, elle a pris ses
+        choses puis ils sont sortis de l'édifice. Les policiers l'ont alors laissée partir. Selon
+        Madame Badenas, une quinzaine d'élèves ont été témoins de son départ.</text>
+      </p>
+      <p>
+       <pnum count="31">31</pnum>
+       <text>Madame Badenas ne s'est pas rendue au siège social de la Commission. La réunion à
+        laquelle elle avait été convoquée avait pour but de lui remettre un avis de suspension en
+        raison de ses absences du 4 et du 6 juillet. La Commission la relevait de ses fonctions,
+        sans traitement, le 11 juillet. Dans la lettre qu'elle entendait lui donner, en présence de
+        son représentant syndical, Madame Thériault lui rappelait les circonstances de ses absences
+        et ses obligations et elle lui signifiait que la Commission scolaire ne pouvait tolérer le
+        comportement qu'elle lui reprochait. La Commission ajoutait, par surcroît, qu'elle serait
+        dorénavant contrainte de présenter une "pièce justificative conforme" pour chacune de ses
+        absences du travail.<fnr fnrtoken="fnr-16" fntoken="fn-16">16</fnr> Mise à la poste le 12
+        juillet, Madame Badenas ne la recevra qu'après son congédiement.<fnr fnrtoken="fnr-17"
+         fntoken="fn-17">17</fnr></text>
+      </p>
+      <p>
+       <pnum count="32">32</pnum>
+       <text>L'incident du 8 juillet est à l'origine de deux mesures. La Commission a d'abord exigé
+        de Madame Badenas un certificat médical de capacité attestant qu'elle pouvait travailler.
+        Elle devait le remettre à une représentante du secteur santé et sécurité au travail de la
+        Commission scolaire le 13 juillet, au plus tard. La Commission scolaire ajoutait qu'elle ne
+        pourrait pas reprendre son travail tant qu'elle n'y aurait pas été autorisée par la
+        direction de son école ou par un représentant du secteur santé et sécurité.<fnr
+         fnrtoken="fnr-18" fntoken="fn-18">18</fnr> Madame Badenas a reconnu qu'elle en a pris
+        connaissance le 11 juillet. Puis, le 13 juillet, elle l'a convoquée à une rencontre devant
+        avoir lieu deux jours plus tard à l'occasion de laquelle elle allait être informée des
+        motifs justifiant la radiation de son nom de la liste de rappel.<fnr fnrtoken="fnr-19"
+         fntoken="fn-19">19</fnr></text>
+      </p>
+      <p>
+       <pnum count="33">33</pnum>
+       <text>Madame Badenas ne s'est pas présentée à la réunion du 15. Elle a reçu, dans les jours
+        qui ont suivi, un avis qui, s'il avait pour objet la radiation annoncée le 13, l'informait
+        également qu'elle était congédiée. J'en reproduis ici la teneur. La directrice adjointe
+        Thériault écrivait :</text>
+      </p>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Considérant l'avis de convocation qui vous a été remise en main propre, le 6 juillet
+          dernier, pour la remise d'une suspension disciplinaire prévue pour le 8 juillet
+          2011;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Considérant notre entretien téléphonique du 8 juillet 2011, vers 10h30;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Considérant votre défaut de vous présenter à la remise de votre suspension
+          disciplinaire tel que mentionné ci-haut;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Considérant la suspension disciplinaire du 8 juillet 2011;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Considérant les événements survenus au CEA Champlain, le 8 juillet au matin. Plus
+          particulièrement, mais non limitativement, le fait d'avoir pris votre classe en "otage",
+          et le fait que la direction a dû faire appel aux services d'urgence afin que vous quittiez
+          le Centre;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Considérant notre lettre, en date du 8 juillet dernier, vous demandant de nous
+          fournir un certificat de capacité de travail et ce, au plus tard le 13 juillet à
+          midi;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Considérant le message laissé sur votre boîte vocale le 8 juillet 2011, par une
+          coordonnatrice au secteur des relations du travail;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Considérant vos appels téléphoniques au secteur des relations du travail, en date du
+          11 juillet 2011;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Considérant le message laissé sur votre boîte vocale le 11 juillet 2011, par une
+          coordonnatrice au secteur des relations du travail;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Considérant votre refus, négligence ou omission de nous fournir ledit
+          certificat;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Considérant l'impact que peuvent avoir votre attitude et vos comportements sur la
+          réputation du Centre et sur la réussite des élèves;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Considérant que par votre attitude et vos comportements vous avez définitivement
+          rompu le lien de confiance entre vous et la Commission scolaire;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Nous n'avons d'autre choix que de vous congédier à titre d'enseignante à taux horaire
+          et par le fait même, de radier votre nom de la liste de rappel du personnel enseignant en
+          français langue d'enseignement (FLE) et ce, en date de ce jour.</text>
+        </p>
+       </li>
+      </l>
+      <p>
+       <pnum count="34">34</pnum>
+       <text>Le 19 août 2011, le Syndicat déposait son grief. J'en reproduis ici les parties
+        m'apparaissent essentielles à une meilleure compréhension des positions défendues par les
+        parties :</text>
+      </p>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>
+          <emph typestyle="un">Nature du grief</emph>
+         </text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>La Commission scolaire Marguerite-Bourgeoys contrevient aux conditions de travail en
+          vigueur, particulièrement, mais non limitativement à la clause 11-2.05.01 b). Le Syndicat
+          conteste en fait et en droit le bien-fondé du retrait de Mme Judith Badenas de la liste de
+          rappel. De plus, ce grief conteste la procédure ayant entouré cette question.</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>
+          <emph typestyle="un">CORRECTIF REQUIS</emph>
+         </text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Nous demandons à la Commission scolaire Marguerite-Bourgeoys :</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel>1)</lilabel>
+        <p>
+         <text>de reconnaître la violation de la clause précitée;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="3">
+       <li>
+        <lilabel>2)</lilabel>
+        <p>
+         <text>en conséquence, d'annuler le retrait de Mme Judith Badenas de la liste de
+          rappel;</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="3">
+       <li>
+        <lilabel>3)</lilabel>
+        <p>
+         <text>de verser à Mme Judith Badenas une somme équitable en regard des dommages subis, et
+          ce, avec les intérêts prévus au code.</text>
+        </p>
+       </li>
+      </l>
+      <p>
+       <text>
+        <emph typestyle="ib">Les arguments</emph>
+       </text>
+      </p>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>- <emph typestyle="it">La Commission scolaire</emph></text>
+        </p>
+       </li>
+      </l>
+      <p>
+       <pnum count="35">35</pnum>
+       <text>La Commission scolaire rappelle d'abord que les conditions de travail de la Plaignante
+        apparaissent à l'article 11 de la convention collective nationale. Elle souligne, par
+        ailleurs, que Madame Badenas n'a pas contesté son congédiement. Elle a plutôt récusé le
+        droit de son employeur de la radier de la liste de rappel.</text>
+      </p>
+      <p>
+       <pnum count="36">36</pnum>
+       <text>Selon la Commission scolaire, Madame Badenas n'a pas droit à la procédure de grief en
+        raison des clauses 2-1.05 et 11-2.01 sauf dans la mesure permise par la clause 11-2.10 de la
+        convention nationale. Elle ne bénéficie donc pas des avantages convenus à la clause 5-6.00
+        de la convention nationale et aux clauses 5-6.00 et 5-7.00 de la convention locale
+        concernant le traitement du dossier personnel de l'enseignante et la procédure de grief à
+        l'occasion d'un renvoi, en dépit du texte de l'avis de convocation qu'elle lui a transmis le
+        6 juillet 2011<fnr fnrtoken="fnr-20" fntoken="fn-20">20</fnr>. Elle ajoute que le rappel de
+        la clause 5-6.06 b) dans l'avis était une erreur qui ne saurait être génératrice d'un droit
+        à l'avantage de la Plaignante. Par contre, dans la mesure où le Syndicat pouvait faire un
+        grief, la Commission est d'avis que ma compétence pour en disposer est restreinte. Je dois
+        m'assurer simplement que sa décision n'est pas illégitime, disproportionnée ou déraisonnable
+        compte tenu des circonstances, mais plutôt qu'elle avait pour assise des faits en lien
+        logique avec la nature même de la décision<fnr fnrtoken="fnr-21" fntoken="fn-21">21</fnr>.
+        Le fardeau de la preuve de démontrer qu'elle devrait être annulée repose sur les épaules du
+         Syndicat<fnr fnrtoken="fnr-22" fntoken="fn-22">22</fnr>.</text>
+      </p>
+      <p>
+       <pnum count="37">37</pnum>
+       <text>Pour la Commission, sa décision de suspendre Madame Badenas, le 11 juillet, n'était pas
+        abusive. La détermination de la durée d'une suspension comporte une part de discrétion<fnr
+         fnrtoken="fnr-23" fntoken="fn-23">23</fnr>. En l'instance, une suspension d'une journée,
+        compte tenu des circonstances qui l'expliquent, n'est ni abusive ni déraisonnable.</text>
+      </p>
+      <p>
+       <pnum count="38">38</pnum>
+       <text>Relativement au grief du 19 août 2011, la Commission souligne d'abord que le Syndicat
+        ne conteste pas le congédiement de la Plaignante, mais plutôt la radiation de son nom de la
+        liste de rappel. Ma compétence se limite à vérifier si les raisons qu'elle a invoquées pour
+        justifier sa décision correspondent à celles apparaissant à la clause 11-2.05.01 b) 4). Le
+        Syndicat allègue qu'elle a contrevenu à cette clause en particulier. Il n'allègue cependant
+        pas qu'elle a fait preuve de mauvaise foi ou qu'elle a posé un geste abusif. En l'absence
+        d'allégations à cet effet, je ne peux décider de ces questions<fnr fnrtoken="fnr-24"
+         fntoken="fn-24">24</fnr>.</text>
+      </p>
+      <p>
+       <pnum count="39">39</pnum>
+       <text>La Commission scolaire est également d'avis que je ne peux pas m'appuyer sur l'article
+        124 de la <emph typestyle="it">Loi sur les normes du travail</emph> pour intervenir dans ce
+        dossier. D'une part, la clause 11-2.05.01 b) 4) de l'entente locale lui permet de retirer de
+        la liste de rappel le nom d'une enseignante qu'elle a congédiée. L'enseignante à taux
+        horaire n'a droit à la procédure de grief que pour les dispositions qui lui sont
+        applicables. Le grief de Madame Badenas conteste une décision prise en vertu de cette
+        disposition. D'autre part, Madame Badenas ne peut pas prétendre avoir complété deux ans de
+        service continu auprès de son employeur. Elle a plutôt convenu de contrats successifs avec
+        la Commission scolaire. Sa position, à cet égard, s'appuie sur la décision de l'arbitre
+        Charbonneau, dans <emph typestyle="it">Commission scolaire de la Capitale</emph> et <emph
+         typestyle="it">Syndicat de l'enseignement de la région de Québec</emph><fnr
+         fnrtoken="fnr-25" fntoken="fn-25">25</fnr>, une affaire concernant le retrait du nom de
+        l'enseignante Laurie Pageau de la liste de suppléance de son employeur. L'arbitre
+        Charbonneau avait rejeté son grief parce qu'elle ne justifiait pas de deux ans de service
+        continu. Selon l'arbitre Charbonneau :</text>
+      </p>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>[123] Pour que Madame Pageau justifie deux ans de service continu, il faudrait que le
+          tribunal cumule les jours au cours desquels elle a accompli de la suppléance pour le
+          compte de la commission scolaire de la Capitale en considérant que, pendant cette période,
+          se sont succédés des contrats à durée déterminée sans qu'il y ait eu d'interruption qui
+          puisse être interprétée comme un non-renouvellement, rencontrant ainsi la définition de
+          service continu prévue à la Loi sur les normes du travail.</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>[124] Mais rien dans la preuve ne permet de conclure qu'il y a un contrat continu,
+          couvrant la période 2009-2014, qui lie la commission scolaire à la plaignante, même si ses
+          services ont été retenus à répétition et pour des durées variables, pendant une période de
+          cinq (5) ans. Il y a une succession de contrats, à durée variable, de même que deux
+          contrats à temps partiel représentant environ 120 jours en 2008-2009 et 30 jours en
+          2011-2012. Les obligations réciproques liant les parties au sein d'un contrat de travail
+          ne sont pas présentes en dehors des périodes de travail. Le fait que madame Pageau se soit
+          placée en situation de disponibilité, même de façon continue, ne permet pas de créer un
+          contrat de travail continu liant la commission scolaire à celle-ci.</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>[...]</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>[128] La preuve ne nous permet pas davantage de constater, [...], la succession de
+          contrats à durée déterminée, sans interruption, ni la présence d'indices [...] permettant
+          de conclure que, dans les faits, il y avait une relation de travail continue de plus de
+          deux (2) ans.</text>
+        </p>
+       </li>
+      </l>
+      <p>
+       <pnum count="40">40</pnum>
+       <text>Suivant le même raisonnement, la Commission scolaire m'invite à conclure que Madame
+        Badenas n'a pas cumulé deux ans de service continu et, par conséquent, ne peut fonder son
+        grief sur l'article 124 de la <emph typestyle="it">Loi</emph>.</text>
+      </p>
+      <p>
+       <pnum count="41">41</pnum>
+       <text>Enfin, si j'en venais à la conclusion qu'elle le peut, la Commission scolaire avance
+        qu'elle avait une cause juste et suffisante pour se défaire de Madame Badenas, sans avoir à
+        respecter une progression dans les sanctions disciplinaires. Elle soutient que le principe
+        de la progression des sanctions ne s'applique pas lorsqu'une employée est sanctionnée en
+        raison d'une faute grave ou lorsque la discipline progressive ne pourrait pas l'amener à
+        amender sa conduite.<fnr fnrtoken="fnr-26" fntoken="fn-26">26</fnr></text>
+      </p>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>- <emph typestyle="it">Le Syndicat</emph></text>
+        </p>
+       </li>
+      </l>
+      <p>
+       <pnum count="42">42</pnum>
+       <text>Suivant l'article 11-2.10, rappelle le Syndicat, une enseignante à taux horaire a droit
+        à la procédure de grief pour les mésententes relatives à l'interprétation et l'application
+        des droits et avantages convenus à l'article 11-2.00 de la convention nationale ou à ses
+        autres dispositions où elle est expressément désignée.</text>
+      </p>
+      <p>
+       <pnum count="43">43</pnum>
+       <text>De l'avis du Syndicat, je suis saisi d'un grief par lequel Madame Badenas conteste son
+        renvoi. Il souligne que l'article 5-7.00 de la convention locale donne à l'arbitre le
+        pouvoir de déterminer si les motifs allégués au soutien d'un renvoi constituent une cause
+        juste et suffisante pour le faire et, s'il en vient à la conclusion qu'ils ne le constituent
+        pas, d'ordonner la réintégration de la salariée dans ses fonctions et, le cas échéant, de
+        déterminer la compensation à laquelle elle a droit. À son avis, il s'agit là d'un recours
+        équivalent à celui prévu à l'article 124 de la <emph typestyle="it">Loi sur les normes du
+         travail</emph>. En raison du jugement rendu par la Cour suprême dans <emph typestyle="it"
+         >Syndicat de la fonction publique du Québec</emph> c. <emph typestyle="it">Québec
+         (Procureur général)<fnr fnrtoken="fnr-27" fntoken="fn-27">27</fnr></emph>, je dois d'abord
+        me demander si, suivant les dispositions de la convention, une employée qui a deux ans et
+        plus de service continu se voit privée du droit de contester son congédiement. Le cas
+        échéant, cette clause est réputée non écrite. C'est le cas, en l'espèce. Puisqu'une
+        disposition équivalente à l'article 124 de la <emph typestyle="it">Loi</emph> existe dans la
+        convention collective, la disposition qui aurait pour effet d'empêcher une enseignante à
+        taux horaire ayant deux ans de service continu auprès de son employeur de s'en prévaloir,
+        comme Madame Badenas, est réputée non écrite. Elle peut alors avoir accès au recours convenu
+        à l'article 5-7.00 et j'ai les pouvoirs prévus à cet article et à l'article 100.12 du <emph
+         typestyle="it">Code du travail</emph> pour disposer de son grief.</text>
+      </p>
+      <p>
+       <pnum count="44">44</pnum>
+       <text>D'après le Syndicat, Madame Badenas justifiait de deux ans de service continu à la
+        Commission scolaire lorsque celle-ci l'a remerciée. Sa position s'appuie notamment sur les
+        motifs du juge Dalphond, dans <emph typestyle="it">Syndicat de l'enseignement de
+         Champlain</emph> c. <emph typestyle="it">Commission scolaire des patriotes</emph>, alors
+        qu'il était saisi de l'appel d'un jugement de la Cour supérieure ayant rejeté une requête en
+        révision judiciaire. La Commission scolaire, dans cette affaire, avait refusé d'accorder à
+        la plaignante, une enseignante à temps partiel inscrite sur sa liste de rappel, un contrat à
+        temps partiel pour l'année scolaire 2004-2005 et un contrat à temps plein en 2005-2006,
+        parce qu'elle était incapable de travailler pour des raisons de santé. Le syndicat avait
+        contesté ce refus et réclamait que la commission scolaire lui verse des prestations
+        d'assurance salaire. L'arbitre avait rejeté le grief. Quoique le juge Dalphond ne se
+        penchait alors pas sur l'existence ou non d'un recours à l'arbitrage dans le cas d'un
+        salarié remercié, il suggérait que, à l'heure actuelle, le lien d'emploi d'une enseignante
+        commence avec son engagement et se termine avec son départ volontaire ou forcé. Selon lui,
+        le contrat d'engagement tient plus de l'affectation annuelle que d'une nouvelle entente
+        créant un lien d'emploi pour une période déterminée. "En réalité," ajoutait-il, "tant
+        l'enseignante régulière que l'enseignante à temps partiel sur la liste de priorité d'emploi
+        bénéficient d'un lien d'emploi continu".<fnr fnrtoken="fnr-28" fntoken="fn-28">28</fnr> Le
+        Syndicat s'appuie également sur la décision de l'arbitre Pierre St-Arnaud, dans <emph
+         typestyle="it">Syndicat des cols bleus de la Ville de Laval inc., SCFP, section locale
+         4545</emph>, et <emph typestyle="it">Ville de Laval<fnr fnrtoken="fnr-29" fntoken="fn-29"
+          >29</fnr></emph> selon qui des salariés temporaires demeuraient des salariés de la Ville
+        même s'ils ne travaillaient que pour des périodes déterminées et pouvaient se prévaloir de
+        la procédure de grief en dépit d'une clause qui limitait leur droit à ce recours que pour
+        des conditions de travail mentionnées à quelques clauses particulières. M'invitant à
+        appliquer la proposition du juge Dalphond et la conclusion de l'arbitre St-Arnaud à la
+        situation de Madame Badenas, le Syndicat rappelle qu'elle a travaillé comme enseignante à
+        taux horaire aux adultes pour la Commission depuis au moins le mois de mars 2005 jusqu'à ce
+        qu'elle soit remerciée.</text>
+      </p>
+      <p>
+       <pnum count="45">45</pnum>
+       <text>Le Syndicat soutient également que son grief conteste le renvoi ou la résiliation de
+        l'emploi de la Plaignante, malgré son libellé. À son avis, je dois interpréter le grief
+        libéralement afin de trancher la véritable question qui m'est soumise. Je dois rechercher
+        l'intention du plaignant plutôt que de m'en remettre au seul texte du grief.</text>
+      </p>
+      <p>
+       <pnum count="46">46</pnum>
+       <text>Enfin, le Syndicat avance que la décision de mettre un terme à l'emploi de Madame
+        Badenas était injustifiée. La preuve, selon lui, ne me permet pas de conclure qu'elle a
+        défié l'autorité de la Commission scolaire, que son comportement le matin du 8 juillet a
+        perturbé les élèves dans la classe dans laquelle elle se trouvait, que les circonstances
+        particulières de l'affaire suggèrent qu'elle a fait preuve d'insubordination ou, encore, que
+        la Commission a perdu la confiance qu'elle doit avoir à l'endroit de son enseignante.</text>
+      </p>
+      <p>
+       <text>
+        <emph typestyle="ib">Les motifs</emph>
+       </text>
+      </p>
+      <p>
+       <pnum count="47">47</pnum>
+       <text>J'entends d'abord disposer du grief 2015-0000285-5152. À mon avis, il est irrecevable.
+        Une enseignante à taux horaire à l'éducation aux adultes ne peut recourir à la procédure de
+        grief pour contester le fondement d'une mesure disciplinaire.<fnr fnrtoken="fnr-30"
+         fntoken="fn-30">30</fnr></text>
+      </p>
+      <p>
+       <pnum count="48">48</pnum>
+       <text>Avec les clauses 11-2.01 et 11-2.10 de la convention nationale, les parties ont
+        clairement convenu des dispositions, des conditions et des avantages auxquels ont droit les
+        enseignantes à taux horaire. Sans limiter la portée de la clause 11-2.01, je note qu'ils ont
+        droit au régime de rémunération convenu à la clause 11-2.02; à l'addition de leurs noms à la
+        liste de rappel, conformément à la clause 11-2.05; à une priorité d'embauche suivant le
+        nombre d'heures d'enseignement lorsqu'une commission scolaire décide d'engager des
+        enseignants à taux horaire, en raison de la clause 11-2.06; à un milieu de travail exempt de
+        harcèlement sexuel selon les règles et conditions énoncées à l'article 14-9.00; aux
+        dispositions concernant le rappel de traitement apparaissant à l'article 14-14.00; et aux
+        conditions ou avantages décrits à certaines annexes spécifiques de la convention. Les
+        enseignantes à taux horaires bénéficient également des autres clauses de la convention
+        collective "où elles sont expressément désignées". Or, elles ne sont pas expressément
+        désignées à l'article 9-1.00 qui traite de la procédure de règlement des griefs et à
+        l'article 9-2.00 concernant l'arbitrage. Une mesure disciplinaire imposée de bonne foi à une
+        enseignante à taux horaire ne peut donc pas, en principe, faire l'objet d'un grief.</text>
+      </p>
+      <p>
+       <pnum count="49">49</pnum>
+       <text>J'aurais toutefois rejeté le grief de Madame Badenas même si j'en étais venu à la
+        conclusion qu'elle pouvait contester sa suspension d'une journée. Elle a accepté sa charge
+        d'enseignement à l'occasion du bassin du mois de juin, consciente qu'elle était tenue de se
+        décharger de son obligation d'être au travail pour toutes les heures d'enseignement liées à
+        cette affectation. C'était d'ailleurs là la nature même de son engagement. Madame Paquet l'a
+        clairement avisée qu'elle refusait de lui accorder le congé du 4 juillet 2011 qu'elle
+        sollicitait. En dépit des directives claires de Madame Pâquet, elle a plutôt choisi de
+        s'absenter et je ne peux me convaincre qu'elle était de bonne foi lorsqu'elle a prévenu son
+        employeur de son absence en laissant un message à sa directrice ou à son adjointe le
+        dimanche 3 juillet. Le 5 juillet, elle a refusé de discuter de son absence non autorisée,
+        mais annoncée, du lendemain. Elle s'est à nouveau absentée sans autorisation le 6 juillet.
+        Tout me porte à conclure qu'elle avait décidé de placer la Commission devant un fait
+        accompli, peu importe les conséquences auxquelles elle s'exposait.</text>
+      </p>
+      <p>
+       <pnum count="50">50</pnum>
+       <text>Je n'ai aucun élément de preuve que me permet de conclure que la Commission scolaire a
+        fait preuve de mauvaise foi dans le traitement de cette question, à quelque moment que cela
+        soit. Elle pouvait légitimement insister pour que Madame Badenas soit au travail le 4 et le
+        6 juillet et elle n'avait pas l'obligation de lui permettre d'être plutôt à l'Université
+        d'Ottawa pour qu'elle puisse poursuivre sa formation. Je ne peux me convaincre, par
+        ailleurs, que la Commission scolaire savait ou devait savoir qu'elle avait entrepris des
+        études à cet établissement universitaire au mois de juillet 2011 simplement parce qu'elle
+        avait dans ses dossiers le résultat d'un examen de compétence linguistique<fnr
+         fnrtoken="fnr-31" fntoken="fn-31">31</fnr>, qu'une commissaire à l'assermentation qui
+        travaillait pour elle avait certifié ses résultats académiques universitaires<fnr
+         fnrtoken="fnr-32" fntoken="fn-32">32</fnr>, ou qu'une agente de bureau avait transmis à
+        l'Université une attestation de ses heures d'enseignement. Si ces documents permettent de
+        croire que Madame Badenas entendait s'inscrire à un programme offert par l'Université
+        d'Ottawa, ils n'établissent certainement pas que l'Université avait accepté d'inscrire
+        Madame Badenas à un programme qui lui permettrait d'obtenir un brevet d'enseignement valide
+        au Québec, que la Commission scolaire en avait été informée en temps utiles et qu'elle
+        l'autorisait ou devait l'autoriser à s'absenter pour qu'elle puisse se rendre à ses
+        cours.</text>
+      </p>
+      <p>
+       <pnum count="51">51</pnum>
+       <text>La solution à apporter au grief 2015-0000286-5152 soulève plus de difficultés. La
+        première tient au libellé du grief. Comme l'avance la Commission scolaire, le grief paraît
+        contester le retrait du nom de Madame Badenas de la liste de rappel plutôt que sa décision
+        de mettre fin à son emploi. Compte tenu de la rédaction de la clause 11-2.05.01 b) 4) de la
+        convention locale à laquelle il renvoie, son grief, à supposer qu'elle puisse se prévaloir
+        de la procédure de grief, devrait être rejeté parce qu'elle n'a pas contesté son
+        congédiement et la Commission peut enlever de la liste de rappel le nom d'une enseignante
+        qu'elle a congédié.</text>
+      </p>
+      <p>
+       <pnum count="52">52</pnum>
+       <text>Le jugement récent de la Cour d'appel, dans <emph typestyle="it">Syndicat de
+         l'enseignement de l'Ouest de Montréal</emph> c. <emph typestyle="it">Commission scolaire
+         Marguerite-Bourgeoys</emph><fnr fnrtoken="fnr-33" fntoken="fn-33">33</fnr>, invite à
+        analyser cet argument avec une circonspection certaine. La Cour conseille à l'arbitre la
+        prudence lorsqu'il prend connaissance d'un grief. Son libellé doit être interprété d'une
+        manière libérale de sorte que la véritable question qu'il soulève puisse être tranchée.
+        L'arbitre doit éviter le formalisme dans sa lecture du grief et considérer davantage le but
+        qu'il vise, en allant au-delà du sens littéral des mots qu'il contient.</text>
+      </p>
+      <p>
+       <pnum count="53">53</pnum>
+       <text>En dépit de la rédaction du grief, il m'apparaît évident que l'intention du Syndicat
+        était de contester le congédiement de la Plaignante, compte tenu des circonstances
+        particulières qui l'ont entouré. D'une part, il aurait été absolument illogique que le
+        Syndicat conteste le retrait du nom de Madame Badenas de la liste de rappel sans s'adresser
+        au fondement de la décision de la Commission scolaire. En effet, en raison du texte de la
+        clause 11-2.05.01 b) 4), le retrait de la liste est la conséquence pratiquement automatique
+        d'un congédiement qui n'est pas disputé. Si le congédiement de Madame Badenas n'avait pas
+        été contesté, son grief serait sans fondement. D'autre part, le grief fait suite à la
+        décision de la Commission annoncée dans la lettre du 15 juillet 2011 que la directrice
+        adjointe Thériault adressait à la Plaignante. Si cette lettre avait pour objet la radiation
+        de son nom de la liste de rappel, elle visait également la fermeture de son dossier. Dans le
+        dernier paragraphe, par ailleurs, la décision de la Commission est limpide. Après avoir revu
+        les faits survenus au cours de la semaine du 4 juillet, Madame Thériault explique que la
+        Commission n'avait d'autre choix que de la congédier et, conséquemment, de retirer son nom
+        de la liste de rappel du personnel enseignant. C'est cette décision, dans toutes ses
+        composantes, que le Syndicat conteste. Enfin, le Syndicat me demande de "reconnaître la
+        violation de la clause" 11-2.05.01 b). Pour en arriver à une pareille conclusion, il me faut
+        également conclure que le congédiement a été contesté ou qu'il a été infirmé. La proposition
+        étroite qu'avance la Commission s'appuie à mon avis sur un formalisme trop important, compte
+        tenu de l'objet évident du recours que le Syndicat a entrepris à l'avantage de Madame
+        Badenas. Je suis donc d'avis que l'objection qu'elle soulève doit être écartée dans les
+        circonstances particulières de cette affaire.</text>
+      </p>
+      <p>
+       <pnum count="54">54</pnum>
+       <text>La deuxième difficulté découle de l'absence apparente d'un recours utile dans la
+        convention collective à l'encontre d'un congédiement d'une enseignante à taux horaire. Pour
+        la résoudre, je dois tenir compte du jugement de la Cour suprême dans <emph typestyle="it"
+         >Syndicat de la fonction publique du Québec</emph>. Cet arrêt était l'aboutissement d'un
+        différend sur la compétence d'un arbitre pour disposer de recours contestant le congédiement
+        d'employés à statut précaire ayant plus de deux ans de service continu auprès de leur
+        employeur et qui, suivant leur convention collective, ne pouvaient se prévaloir de la
+        procédure de grief. En de pareils cas, selon le juge Lebel :</text>
+      </p>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>[l]a solution qui s'impose est la reconnaissance de la compétence de l'arbitre de
+          griefs à se saisir de la plainte afin d'examiner l'équivalence de la procédure de grief et
+          d'arbitrage prévue à la convention collective avec le recours offert par l'art. 124 L.n.t,
+          et ce en raison de la portée d'ordre public de la L.n.t. sur le contenu des conventions
+          collectives conclues en vertu du <emph typestyle="it">Code du travail</emph>, [...]. Si la
+          procédure de grief et d'arbitrage est équivalente, l'arbitre doit entendre le grief.
+          Autrement, celui-ci doit être renvoyé devant la C.R.T. [...]<fnr fnrtoken="fnr-34"
+           fntoken="fn-34">34</fnr>.</text>
+        </p>
+       </li>
+      </l>
+      <p>
+       <pnum count="55">55</pnum>
+       <text>Tous les juges de la Cour suprême, dans cet arrêt, ont réaffirmé que l'article 124 de
+        la <emph typestyle="it">Loi sur les normes du travail</emph> a créé une norme substantielle
+        suivant laquelle un employeur ne peut congédier sans cause juste et suffisante un salarié
+        justifiant de deux années de service continu. Cette norme, confirme le juge Lebel, "s'impose
+        à tout contrat individuel à durée déterminée ou indéterminée et aux conventions collectives
+        de travail".<fnr fnrtoken="fnr-35" fntoken="fn-35">35</fnr> Pour la juge Deschamps, qui a
+        rédigé les motifs de la minorité, il est incontestable :</text>
+      </p>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>[q]ue les employés québécois, qu'ils soient couverts par une convention collective ou
+          par un contrat individuel de travail, bénéficient d'une protection contre un congédiement
+          effectué sans une cause juste et suffisante s'ils comptent au moins deux ans de service
+          continu dans l'entreprise. Cette protection est prévue dans un très grand nombre de
+          conventions collectives, mais aussi à l'art. 124 de la <emph typestyle="it">Loi sur les
+           normes du travail</emph> [...], qui est d'ordre public [...]<fnr fnrtoken="fnr-36"
+           fntoken="fn-36">36</fnr>.</text>
+        </p>
+       </li>
+      </l>
+      <p>
+       <text>La Commission scolaire, par conséquent, ne peut mettre fin à l'emploi d'une de ses
+        salariées, quel que soit son statut en vertu de la convention collective, si elle justifie
+        deux ans de service continu. Une disposition qui a pour effet d'écarter ce droit est réputée
+        non-écrite et la convention doit être modifiée en conséquence.</text>
+      </p>
+      <p>
+       <pnum count="56">56</pnum>
+       <text>L'arrêt de la Cour suprême détermine devant quel tribunal, de l'arbitre de grief ou du
+        Tribunal administratif du travail (ou de la Commission des relations du travail à l'époque
+        pertinente), doit se présenter cette salariée dont les conditions de travail sont
+        déterminées par une convention collective, si elle entend faire valoir ce droit. D'après la
+        majorité, la contestation de son congédiement devra être débattue devant l'arbitre de grief
+        si la convention collective contient un recours équivalent à celui que l'article 124 assure.
+        Selon le juge Lebel :</text>
+      </p>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>[43] Pour décider s'il existe un recours équivalent au sens de l'article 124 L.n.t.,
+          on doit alors examiner si le contenu modifié de la convention collective accorde des
+          droits et des recours équivalents à ceux que la L.n.t. accorde pour contrôler et
+          sanctionner le congédiement sans cause juste et suffisante des salariés justifiant de deux
+          ans de service continu. Ce n'est que si la convention n'accorde pas de tels recours que le
+          salarié devra se pouvoir devant la C.R.T.</text>
+        </p>
+       </li>
+      </l>
+      <p>
+       <pnum count="57">57</pnum>
+       <text>Au terme de son analyse, la Cour, dans cette affaire, a décidé qu'une clause empêchant
+        un employé occasionnel du ministère des Ressources naturelles justifiant de deux ans de
+        service continu de contester un congédiement devant un arbitre était réputée non écrite en
+        raison de son incompatibilité avec la norme substantielle de l'article 124. D'après le juge
+        Lebel, cette clause privait le salarié du droit de contester un renvoi sans cause juste et
+        suffisante après deux ans de service continu. Dans ce cas particulier, Monsieur le juge
+        Lebel ajoutait :</text>
+      </p>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>Il faut donc revenir à la clause 4-14.21 donnant ouverture au dépôt du grief.
+          L'arbitre saisi doit examiner la convention collective en tenant compte aussi des pouvoirs
+          qui lui sont accordés par l'art. 100 C.t., afin de déterminer si elle accorde, compte tenu
+          de l'effet d'ordre public de la L.n.t., un recours équivalent à celui qu'institue l'art.
+          124 L.n.t. En d'autres termes, il s'agit de déterminer s'il peut réviser le renvoi
+          lorsqu'il est intervenu sans cause juste et suffisante et accorder des réparations
+          équivalentes à celles que la C.R.T. pourrait ordonner.</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="3">
+       <li>
+        <lilabel/>
+        <p>
+         <text>[51] Pour conclure à l'équivalence des recours, on doit retrouver chez l'un et
+          l'autre des décideurs la capacité de réviser la décision de l'employeur et celle
+          d'ordonner des réparations appropriées, et ce, dans un cadre d'une efficacité procédurale
+           comparable<fnr fnrtoken="fnr-37" fntoken="fn-37">37</fnr>.</text>
+        </p>
+       </li>
+      </l>
+      <p>
+       <pnum count="58">58</pnum>
+       <text>Après avoir comparé les pouvoirs de la Commission des relations du travail et ceux de
+        l'arbitre, il en venait à la conclusion que l'arbitrage de grief constituait un recours
+        équivalent et que ce dernier était, par conséquent, compétent pour entendre le grief. Je
+        suis d'avis que la même conclusion s'impose pour le grief de Madame Badenas. La convention
+        collective prive la salariée ayant moins de deux ans de service du recours à l'arbitrage,
+        mais il est incontestable qu'elle contient une disposition équivalente à l'article 124.
+        L'argument suivant lequel la possibilité qu'elle avait de contester la décision de retirer
+        son nom de la liste de rappel suffirait pour écarter la règle arrêtée par la Cour suprême ne
+        me convainc pas. Je peux, voire je dois me saisir de son grief, dans la mesure où elle
+        justifiait toutefois, au moment de soin congédiement, de deux ans de service continu.</text>
+      </p>
+      <p>
+       <pnum count="59">59</pnum>
+       <text>C'est là la troisième difficulté qu'elle doit surmonter. Selon la Commission scolaire,
+        Madame Badenas ne satisfait pas cette condition, même si les documents qu'elle a elle-même
+        déposés en preuve témoignaient qu'elle avait enseigné 761 heures en 2005-2006, 697 heures en
+        2006-2007, 205 heures en 2007-2008, 540 heures en 2008-2009, 731 heures en 2009-2010 et 269
+        heures en 2010-2011<fnr fnrtoken="fnr-38" fntoken="fn-38">38</fnr>.</text>
+      </p>
+      <p>
+       <pnum count="60">60</pnum>
+       <text>Le terme "service continu" est une expression définie dans la <emph typestyle="it">Loi
+         sur les normes du travail</emph>. Suivant cette définition, le service continu correspond à
+        la durée ininterrompue pendant laquelle un salarié est lié à son employeur par un contrat de
+        travail, même si l'exécution du travail a été interrompue sans qu'il y ait résiliation du
+        contrat de travail. Dans l'analyse de la preuve se rapportant au service continu d'un
+        salarié en général et d'une enseignante en particulier, la continuité d'un lien d'emploi est
+        ce qu'il importe de retenir<fnr fnrtoken="fnr-39" fntoken="fn-39">39</fnr>. Par conséquent,
+        un enseignant qui convient de contrats de remplacement successifs peut, suivant les
+        circonstances, accumuler du service continu<fnr fnrtoken="fnr-40" fntoken="fn-40">40</fnr>.
+        S'il se peut que suivant les règles du droit civil strict, il y ait plus qu'un seul contrat,
+        le facteur important est la durée ininterrompue de la relation de travail, même si
+        l'exécution du travail lui-même a été interrompue<fnr fnrtoken="fnr-41" fntoken="fn-41"
+         >41</fnr>. Dans un contexte différent de celui de l'enseignement, la Cour d'appel a même
+        reconnu que des salariés saisonniers qui avaient exécuté plusieurs contrats à durée
+        déterminée qui se succédaient, d'une année à l'autre, avaient maintenu un lien contractuel
+        avec leur employeur dans <emph typestyle="it">Fruits de mer Gascons ltée</emph> c. <emph
+         typestyle="it">Commission des normes du travail</emph><fnr fnrtoken="fnr-42"
+         fntoken="fn-42">42</fnr>. Enfin, je fais mien le propos du commissaire du travail Raymond
+        Gagnon, dans <emph typestyle="it">Bélanger</emph> et <emph typestyle="it">Commission
+         scolaire des Rives-du-Saguenay</emph><fnr fnrtoken="fnr-43" fntoken="fn-43">43</fnr>, pour
+        qui :</text>
+      </p>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>[48] La continuité du lien d'emploi est l'assise fondamentale du "<emph
+           typestyle="it">service continu</emph>", tel que défini à la L.N.T.</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>[49] La succession de contrats ou de prestations même nombreuses de travail
+          (l'exécution de contrats), ne constitue pas en soi une continuité d'emploi. À l'exécution
+          de ces contrats doit s'ajouter un lien juridique d'emploi non interrompu (la relation
+          d'emploi).</text>
+        </p>
+       </li>
+      </l>
+      <l virtual-nesting="2">
+       <li>
+        <lilabel/>
+        <p>
+         <text>[50] Ce lien se fonde, entre autres, sur le fait que le salarié, d'une part, s'attend
+          ou détient un certain droit à être rappelé au travail et, d'autre part, que l'employeur
+          puisse compter sur sa disponibilité pour combler ses besoins.</text>
+        </p>
+       </li>
+      </l>
+      <p>
+       <pnum count="61">61</pnum>
+       <text>Puisque la Commission scolaire dispute la durée du service continu de la Plaignante en
+        dépit du fait qu'elle ait travaillé chaque année depuis l'année scolaire 2005-2006, il lui
+        appartenait de faire la preuve des faits au soutien de sa prétention. Je note, d'abord,
+        Madame Badenas a travaillé tous les ans depuis l'année scolaire 2005-2006. Au cours des
+        années scolaires 2005-2006 et 2009-2010, ses heures de travail représentaient l'équivalent
+        de plus de 90 pour cent d'une charge complète, suivant l'entente locale<fnr
+         fnrtoken="fnr-44" fntoken="fn-44">44</fnr>. Ses engagements ou contrats de travail annuels
+        n'ont pas été produits en preuve et je ne peux donc tirer d'eux une conclusion quelconque
+        quant au caractère du lien d'emploi qu'elle entretenait avec la Commission scolaire. Je n'ai
+        aucun élément de preuve qui me permet de conclure qu'ils ont été résiliés, à quelque moment
+        que cela soit au cours des années, quoique je tienne pour acquis que la Commission scolaire
+        retenait ses services pour une durée déterminée ou un besoin d'enseignement particulier. Son
+        nom était cependant maintenu ou ajouté à la liste de rappel tous les ans, suivant les
+        dispositions et conditions convenues à la clause 11-2.05.01 de l'entente locale, ce qui tend
+        à confirmer l'existence d'un lien d'emploi continu comme le suggère l'arrêt de la Cour
+        d'appel. La preuve de la Commission ne m'a pas convaincu que Madame Badenas ne détenait pas
+        un droit d'être rappelé au travail et que la Commission scolaire, à tout le moins jusqu'au 4
+        juillet 2011, ne comptait pas sur sa disponibilité pour satisfaire ses besoins pour
+        l'enseignement au Centre d'éducation des adultes Champlain. La preuve ne me convainc pas non
+        plus que ses engagements, d'une année à l'autre, étaient purement aléatoires. J'en viens
+        donc à la conclusion qu'elle avait deux ans de service continu lorsque la Commission
+        scolaire a décidé de la remercier. Je dois donc déterminer si elle a été congédiée sans
+        cause juste et suffisante.</text>
+      </p>
+      <p>
+       <pnum count="62">62</pnum>
+       <text>À la lecture de la lettre du 15 juillet 2011 par laquelle la directrice adjointe
+        Thériault avise Madame Badenas que la Commission scolaire n'a d'autres choix que de la
+        congédier, je suis d'avis que les causes directes de cette décision sont le fait qu'elle ne
+        se soit pas présentée à la rencontre du 8 juillet, les événements survenus ce matin-là et
+        son omission de remettre à la Commission scolaire l'attestation médicale qu'elle exigeait. À
+        mon avis, la Commission scolaire a fait la preuve, <emph typestyle="it">prima facie</emph>,
+        des faits qu'elle lui reproche.</text>
+      </p>
+      <p>
+       <pnum count="63">63</pnum>
+       <text>Madame Badenas n'a pas remis l'attestation médicale que la Commission lui demandait.
+        Elle a reconnu, pourtant, qu'elle avait reçu la demande de la Commission scolaire le 11
+        juillet, qu'elle en avait pris connaissance et qu'elle en était indignée. Elle n'a pas
+        expliqué les raisons pour lesquelles elle ne l'a pas fournie ou, encore, n'a pas cherché à
+        prendre des dispositions avec Madame Thériault, la direction de son établissement
+        d'enseignement ou un représentant du secteur santé et sécurité de la Commission, pour
+        reporter l'échéance, si ce n'est que d'affirmer qu'elle avait transmis à Madame Bouchard. le
+        15 juillet, un fac-similé - qui n'a pas ailleurs pas été produit en preuve - lui disant que
+        le délai pour l'obtenir était trop court. Elle ne l'a fait que le 15 août, bien après son
+        congédiement.</text>
+      </p>
+      <p>
+       <pnum count="64">64</pnum>
+       <text>Je ne peux cependant pas retenir ce manquement contre elle. L'exigence de la Commission
+        a fait suite au comportement de Madame Badenas le matin du 8 juillet. La preuve ne me permet
+        pas de conclure que la Commission scolaire entendait exiger d'elle qu'elle produise un
+        certificat médical de capacité avant ce matin-là. Par ailleurs, la Commission n'a pas
+        expliqué les raisons qui l'ont amenée à prendre cette décision. Madame Thériault, qui a
+        signé la lettre, n'a pas témoigné. Madame Pâquet, témoin de l'incident, n'a certes pas
+        établie qu'elle avait les connaissances nécessaires pour évaluer l'état de santé de Madame
+        Badenas. Madame Badenas n'a pas justifiée ses absences en raison de sa condition médicale.
+        La Commission scolaire n'a pas fait la démonstration qu'elle avait des raisons de croire
+        qu'un problème médical quelconque pouvait expliquer le comportement de Madame Badenas ou
+        pouvait l'empêcher d'exécuter ses obligations d'enseignante sans mettre sa santé ou sa
+        sécurité ou celles de ses élèves en péril. L'ordre qui lui a été donné ne précise pas la
+        nature de la confirmation que la Commission scolaire recherche. La lettre du 8 juillet ne
+        requiert pas que Madame Badenas confirme qu'elle est mentalement ou physiquement apte à
+        enseigner. Enfin, la demande de la Commission scolaire, datée du vendredi, 8 juillet 2011,
+        ne lui a été signifiée que le lundi, 11 juillet, à 11 h 30<fnr fnrtoken="fnr-45"
+         fntoken="fn-45">45</fnr>. La Commission exigeait d'elle qu'elle fournisse un certificat
+        attestant de sa capacité de travailler au plus tard le 13 juillet, à midi. Elle contraignait
+        donc Madame Badenas à obtenir et à transmettre une preuve de son aptitude à travailler dans
+        un court délai sans qu'elle ne sache la nature de la confirmation que la Commission
+        recherchait. L'exigence de la Commission, dans ces circonstances, était abusive.</text>
+      </p>
+      <p>
+       <pnum count="65">65</pnum>
+       <text>Madame Badeans ne s'est pas présentée à la rencontre du 8 juillet, sans explication
+        valable. Compte tenu de ses absences du 4 et du 6 juillet, en dépit des directives pourtant
+        claires de Madame Pâquet, la Commission pouvait raisonnablement lui demander de se présenter
+        à cette réunion. Puisque Madame Thériault lui signalait dans l'avis de convocation du 6
+        juillet qu'elle pouvait être accompagnée d'un représentant du Syndicat, il lui appartenait
+        de faire les démarches pour s'assurer de cette aide. Si, au matin du 8, elle était
+        incertaine qu'il y serait, il lui revenait de prendre les dispositions en conséquence. Elle
+        pouvait communiquer avec le bureau du représentant ou, encore, communiquer avec Madame
+        Thériault pour s'enquérir de la situation. Elle a plutôt décidé d'ignorer l'avis.
+        Lorsqu'elle s'est présentée au travail, elle a dit à Madame Paquet qu'elle ne se rendrait
+        pas au siège social de la Commission scolaire. Lorsque Madame Benoît lui a rappelé la
+        réunion, à la demande de Madame Pâquet, elle a lui a dit qu'il s'agissait d'un malentendu.
+        Si, à sa pause, elle a communiqué avec Madame Thériault, c'était pour lui dire qu'elle
+        n'irait pas à la réunion, qu'elle voulait un répit. Lorsque Madame Pâquet a pris les
+        dispositions pour que ses élèves se rendent dans une autre classe, elle a choisi de les
+        suivre plutôt que de se rendre à cette rencontre. Il s'agissait, manifestement, d'une
+        insubordination qui justifie pleinement l'imposition d'une mesure disciplinaire.</text>
+      </p>
+      <p>
+       <pnum count="66">66</pnum>
+       <text>Le comportement de Madame Badenas, par la suite, est surprenant. Elle s'est en quelque
+        sorte placée elle-même dans une situation de confrontation. Non seulement a-t-elle suivi ses
+        élèves qui se rendaient vers l'autre classe, mais elle y est entrée, a déclaré à
+        l'enseignante responsable de cette classe, Madame Benoît, qu'elles allaient enseigner
+        ensemble puis elle s'est installée au fond de la salle. Je n'ai aucun doute que l'échange
+        qui a fait suite à l'intervention de Madame Pâquet a été disgracieux, voire perturbant.
+        Devant une classe manifestement bondée, Madame Pâquet a demandé à Madame Badenas de la
+        suivre. Elle a refusé. À tort ou à raison, Madame Pâquet a demandé l'intervention d'un agent
+        de sécurité. Ce n'est qu'à la suite de l'invitation de sa collègue qu'elle s'est enfin
+        décidée de se rendre au bureau de Madame Pâquet. Son comportement, à mon avis, était au
+        mieux, inapproprié, et, au pire, inacceptable. Je conviendrai que la réaction de Madame
+        Pâquet, lorsqu'elle a sollicité l'intervention des services d'urgence, témoignait de son
+        désarroi, mais cette réaction n'excuse pas le comportement de la Plaignante entre son
+        arrivée au centre d'éducation, le matin, et son départ. Son refus d'obtempérer à l'ordre de
+        se présenter au siège social de la Commission scolaire et son comportement, par la suite,
+        justifiait l'imposition d'une sanction substantielle.</text>
+      </p>
+      <p>
+       <pnum count="67">67</pnum>
+       <text>La sanction que la Commission a imposée est, indiscutablement, sévère. Le nom de Madame
+        Badenas a non seulement été radié de la liste de rappel, la privant alors de la possibilité
+        d'enseigner comme enseignante à taux horaire dans un de ses établissements, mais son lien
+        d'emploi a été rompu. Malgré la sévérité de la mesure, je ne crois pas qu'il y ait lieu de
+        la modifier. Madame Badenas s'est absentée le 4 juillet, en dépit des directives de sa
+        supérieure. Elle l'a fait de nouveau le 6. Avisée qu'elle ferait l'objet d'une sanction en
+        raison de ses absences non autorisées, elle a refusé de se présenter à la réunion du 8
+        juillet. Son comportement au cours de l'avant-midi du 8 était inacceptable. Son attitude, à
+        mon avis, trahissait une intention ferme de sa part de ne pas se plier aux directives de son
+        employeur et remettait en cause le droit de la Commission scolaire d'exiger d'elle qu'elle
+        respecte son obligation d'exécuter sa prestation de travail. Par ailleurs, la preuve ne me
+        permet pas de retenir à son avantage des faits qui justifierait une atténuation de la
+        sanction. Elle n'a manifesté aucun regret pour sa conduite. Son comportement, dans la salle
+        de classe de sa collègue, est inexplicable. L'attitude de la Plaignante me porte à croire
+        qu'elle n'accepte des directives que si elles lui conviennent. Dans les circonstances
+        particulières de cette affaire, par conséquent, j'en viens à la conclusion que Commission
+        avait une cause juste et raisonnable de mettre fin à l'emploi de Madame Badenas.</text>
+      </p>
+      <p>
+       <pnum count="68">68</pnum>
+       <text>En raison des dispositions de la convention collective nationale, les honoraires et les
+        frais de l'arbitre sont à la charge de l'employeur dans un cas d'un grief de renvoi.
+        Autrement, ils sont à la charge de la partie qui perd. Compte tenu que j'étais saisi de deux
+        griefs assujettis à des règles différentes qui ont été entendus au cours d'une même
+        instruction, j'entends les partager. Le Syndicat devra assumer 25 % de mes honoraires et
+        déboursés parce qu'il a perdu le grief 2015-0000285-5152. Au début de l'instruction de ces
+        affaires, cependant, le Syndicat m'a demandé de réserver ses droits relativement à
+        l'application de la clause 9-2.22 de la convention collective. En l'absence d'objection de
+        l'Employeur, je donne suite à cette demande dans le présent dossier. Le Syndicat devra
+        m'aviser de sa position relativement à ce partage dans les trente jours de la
+        présente.</text>
+      </p>
+      <p>
+       <text>
+        <emph typestyle="ib">POUR CES MOTIFS, LE TRIBUNAL</emph>
+       </text>
+      </p>
+      <p>
+       <text><emph typestyle="ib">REJETTE</emph> les griefs 2015-0000285-5152 et
+        2015-0000286-5152.</text>
+      </p>
+      <p>
+       <text><emph typestyle="ib">RÉSERVE</emph> les droits du Syndicat relativement à l'application
+        de la clause 9-2.22 de la convention collective dans la présente affaire.</text>
+      </p>
+      <l virtual-nesting="1">
+       <li>
+        <lilabel>(s)</lilabel>
+        <p>
+         <text>Claude Martin Claude Martin, avocat</text>
+        </p>
+       </li>
+      </l>
+     </case:judgmentbody>
+    </case:judgment>
+    <footnotegrp>
+     <footnote fntoken="fn-1" fnrtokens="fnr-1">
+      <fnlabel>1</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce S-4 : Lettre du 8 juillet 2011 de Madame Rachel Thériault informant Madame
+         Badenas de sa suspension sans traitement.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-2" fnrtokens="fnr-2">
+      <fnlabel>2</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce S-2 : Entente locale et arrangements locaux intervenus entre la Commission
+         scolaire Marguerite-Bourgeoys et le Syndicat de l'enseignement de l'ouest de Montréal, mai
+         2015.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-3" fnrtokens="fnr-3">
+      <fnlabel>3</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce S-7 : Lettre du 15 juillet 2011 de Madame Thériault informant Madame Badenas de
+         son retrait de la liste de rappel et de la fermeture de son dossier.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-4" fnrtokens="fnr-4">
+      <fnlabel>4</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce S-1 : Entente intervenue entre le Comité patronal de négociation pour les
+         commissions scolaires francophones et la Fédération autonome de l'enseignement, 2015 -
+         2020.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-5" fnrtokens="fnr-5">
+      <fnlabel>5</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce S-2 : Entente locale et arrangements locaux intervenus entre la Commission
+         scolaire Marguerite-Bourgeoys et le Syndicat de l'enseignement de l'ouest de Montréal, mai
+         2005.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-6" fnrtokens="fnr-6">
+      <fnlabel>6</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce S-7, supra note 3.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-7" fnrtokens="fnr-7">
+      <fnlabel>7</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Loi sur les normes du travail</emph>, R.L.R.Q. c. N-1.1.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-8" fnrtokens="fnr-8">
+      <fnlabel>8</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Syndicat de la fonction publique du Québec c. Québec (Procureur
+          général)</emph>, <ci:cite><ci:case><ci:caseinfo spanref="cspan00000061"><ci:opinionnum
+             num="28"/><ci:jurisinfo><ci:can courtcode="SCC"/></ci:jurisinfo><ci:decisiondate
+             year="2010"/></ci:caseinfo></ci:case><ci:content><ci:span spanid="cspan00000061">2010
+            CSC 28</ci:span></ci:content></ci:cite>
+         <ci:cite><ci:case><ci:caseref ID="cref00000062" spanref="cspan00000062"><ci:reporter
+             value="SCR"/><ci:volume num="2"/><ci:edition><ci:date year="2010"
+             /></ci:edition><ci:page num="61"/></ci:caseref></ci:case><ci:content><ci:span
+            spanid="cspan00000062">[2010] 2 R.C.S. 61</ci:span></ci:content></ci:cite>.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-9" fnrtokens="fnr-9">
+      <fnlabel>9</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Loi sur l'instruction publique</emph>, R.L.R.Q., c.
+         I-13.3.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-10" fnrtokens="fnr-10">
+      <fnlabel>10</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce E-8 : Tableau des tâches octroyées à Madame Badenas et des heures qu'elle
+         effectuées à taux horaire.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-11" fnrtokens="fnr-11">
+      <fnlabel>11</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce E-3 : Informations lues à l'occasion de la séance d'affectation du mois de juin
+         2011 du personnel enseignant sur la liste de rappel EDAP.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-12" fnrtokens="fnr-12">
+      <fnlabel>12</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Je paraphrase ici ce qui apparaît à la pièce E-3 : "Lorsque vous serez nommé, vous
+         avez la possibilité de faire un choix ou passer votre tour. Si vous faites un choix, on
+         vous demandera de nous identifier clairement le rang du poste. Lorsque vous avez fait votre
+         choix, le poste apparaîtra en gris sur l'écran et ne sera plus disponible".</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-13" fnrtokens="fnr-13">
+      <fnlabel>13</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Voir, à cet égard, la pièce E-2, le premier paragraphe d'une lettre que la directrice
+         Pâquet adressait à Madame Badenas le 29 juin 2011.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-14" fnrtokens="fnr-14">
+      <fnlabel>14</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce E-2, en liasse : Lettre du 29 juin adressée à Madame Badenas et procès-verbal de
+         signification de l'huissier Patrick Martin.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-15" fnrtokens="fnr-15">
+      <fnlabel>15</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce E-5, en liasse : Avis de convocation du 6 juillet 2011 pour mesure disciplinaire
+         et procès-verbal de signification.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-16" fnrtokens="fnr-16">
+      <fnlabel>16</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce S-4 : Lettre du 8 juillet 2014 de la directrice adjointe Thériault adressée à
+         Madame Badenas.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-17" fnrtokens="fnr-17">
+      <fnlabel>17</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièces S-36 et S-36-A : Lettre du 8 juillet de la directrice adjointe Thériault sur
+         lequel apparaît le numéro de recommandation postale et copie de l'enveloppe dans laquelle
+         elle a été transmise.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-18" fnrtokens="fnr-18">
+      <fnlabel>18</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce E-6, en liasse : Lettre du 8 juillet 2011 de la directrice adjointe Rachel
+         Thériault exigeant de Madame Badenas un certificat de capacité. Selon le procès-verbal de
+         signification, l'huissier a déposé cette lettre dans la boîte aux lettres de Madame Badenas
+         le 11 juillet.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-19" fnrtokens="fnr-19">
+      <fnlabel>19</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce S-6 : Avis de convocation du 13 juillet 2011.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-20" fnrtokens="fnr-20">
+      <fnlabel>20</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Commission scolaire des samares et Syndicat de l'enseignement de
+          Lanaudière</emph>, SAE 8602 (Me M. Flynn, arb.). <emph typestyle="it">Syndicat de
+          l'enseignement de la région de Québec et Commission scolaire de la Capitale</emph>, SAE
+         8994 (M. Daniel Charbonneau, arb., 18 décembre 2015.).</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-21" fnrtokens="fnr-21">
+      <fnlabel>21</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Syndicat de l'enseignement de la région de Québec et Commission
+          scolaire de la Capitale</emph>, SAE 8994, <emph typestyle="it">ibid</emph>.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-22" fnrtokens="fnr-22">
+      <fnlabel>22</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Commission scolaire des samares, supra</emph> note 21; <emph
+          typestyle="it">Syndicat des professionnelles et professionnels municipaux de
+          Montréal</emph> et <emph typestyle="it">Montréal (Ville de) (Bureau du taxi de
+          Montréal</emph>), SOQUIJ AZ-51286274, <ci:cite><ci:case><ci:caseref ID="cref00000063"
+            spanref="cspan00000063"><ci:reporter value="DTE"/><ci:edition><ci:date year="2016"
+             /></ci:edition><ci:page num="560"/></ci:caseref></ci:case><ci:content><ci:span
+            spanid="cspan00000063">D.T.E. 2016T-560</ci:span></ci:content></ci:cite>.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-23" fnrtokens="fnr-23">
+      <fnlabel>23</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Commission scolaire des samares, supra</emph> note 21.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-24" fnrtokens="fnr-24">
+      <fnlabel>24</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Syndicat des travailleuses et travailleurs du Centre jeunesse de
+          Montréal - CSN</emph> c. <emph typestyle="it">Bolduc</emph> et <emph typestyle="it">Centre
+          jeunesse de Montréal - Institut universitaire</emph>, <ci:cite><ci:case><ci:caseinfo
+            spanref="cspan00000064"><ci:opinionnum num="4269"/><ci:jurisinfo><ci:can
+              courtcode="QCCS"/></ci:jurisinfo><ci:decisiondate year="2016"
+           /></ci:caseinfo></ci:case><ci:content><ci:span spanid="cspan00000064">2016 QCCS
+            4269</ci:span></ci:content></ci:cite>, SOQUIJ AZ-51320630, <ci:cite><ci:case><ci:caseref
+            ID="cref00000065" spanref="cspan00000065"><ci:reporter value="DTE"/><ci:edition><ci:date
+              year="2016"/></ci:edition><ci:page num="737"
+            /></ci:caseref></ci:case><ci:content><ci:span spanid="cspan00000065">D.T.E.
+            2016T-737</ci:span></ci:content></ci:cite> (CS); <emph typestyle="it">Centre de santé et
+          de services sociaux de l'Ouest-de-l'Île</emph> et <emph typestyle="it">Syndicat des
+          travailleuses et travailleurs de la région du Lac St-Louis</emph>,
+            <ci:cite><ci:case><ci:caseinfo spanref="cspan00000066"><ci:opinionnum num="501"
+              /><ci:jurisinfo><ci:can courtcode="QCTA"/></ci:jurisinfo><ci:decisiondate year="2014"
+            /></ci:caseinfo></ci:case><ci:content><ci:span spanid="cspan00000066">2014 QCTA
+            501</ci:span></ci:content></ci:cite>, SOQUIJ AZ- 51085447, <ci:cite><ci:case><ci:caseref
+            ID="cref00000067" spanref="cspan00000067"><ci:reporter value="DTE"/><ci:edition><ci:date
+              year="2014"/></ci:edition><ci:page num="539"
+            /></ci:caseref></ci:case><ci:content><ci:span spanid="cspan00000067">D.T.E.
+            2014T-539</ci:span></ci:content></ci:cite> (Me C. Martin, arb., 18 avril 2014).</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-25" fnrtokens="fnr-25">
+      <fnlabel>25</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Commission scolaire de la Capitale et Syndicat de l'enseignement
+          de la région de Québec</emph>, SAE 8852 (M. Daniel Charbonneau, arb., 9 janvier
+         2015).</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-26" fnrtokens="fnr-26">
+      <fnlabel>26</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Pilgrim c. Commission des relations du travail</emph>,
+            <ci:cite><ci:case><ci:caseinfo spanref="cspan00000068"><ci:opinionnum num="3786"
+              /><ci:jurisinfo><ci:can courtcode="QCCS"/></ci:jurisinfo><ci:decisiondate year="2015"
+            /></ci:caseinfo></ci:case><ci:content><ci:span spanid="cspan00000068">2015 QCCS
+            3786</ci:span></ci:content></ci:cite>, SOQUIJ AZ-51208068, <ci:cite><ci:case><ci:caseref
+            ID="cref00000069" spanref="cspan00000069"><ci:reporter value="DTE"/><ci:edition><ci:date
+              year="2015"/></ci:edition><ci:page num="674"
+            /></ci:caseref></ci:case><ci:content><ci:span spanid="cspan00000069">D.T.E.
+            2015T-674</ci:span></ci:content></ci:cite>.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-27" fnrtokens="fnr-27">
+      <fnlabel>27</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Syndicat de la fonction publique du Québec</emph> c. <emph
+          typestyle="it">Québec (Procureur général)</emph>
+         <ci:cite><ci:case><ci:caseinfo spanref="cspan00000070"><ci:opinionnum num="28"
+              /><ci:jurisinfo><ci:can courtcode="SCC"/></ci:jurisinfo><ci:decisiondate year="2010"
+            /></ci:caseinfo></ci:case><ci:content><ci:span spanid="cspan00000070">2010 CSC
+            28</ci:span></ci:content></ci:cite>, <ci:cite><ci:case><ci:caseref ID="cref00000071"
+            spanref="cspan00000071"><ci:reporter value="SCR"/><ci:volume num="2"
+              /><ci:edition><ci:date year="2010"/></ci:edition><ci:page num="61"
+           /></ci:caseref></ci:case><ci:content><ci:span spanid="cspan00000071">[2010] 2 R.C.S
+            61</ci:span></ci:content></ci:cite>.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-28" fnrtokens="fnr-28">
+      <fnlabel>28</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Syndicat de l'enseignement de Champlain</emph> c. <emph
+          typestyle="it">Commission scolaire des patriotes</emph>, <ci:cite><ci:case><ci:caseinfo
+            spanref="cspan00000072"><ci:opinionnum num="1874"/><ci:jurisinfo><ci:can
+              courtcode="QCCA"/></ci:jurisinfo><ci:decisiondate year="2010"
+           /></ci:caseinfo></ci:case><ci:content><ci:span spanid="cspan00000072">2010 QCCA
+            1874</ci:span></ci:content></ci:cite>, SOQUIJ AZ-50680946, <ci:cite><ci:case><ci:caseref
+            ID="cref00000073" spanref="cspan00000073"><ci:reporter value="DTE"/><ci:edition><ci:date
+              year="2010"/></ci:edition><ci:page num="718"
+            /></ci:caseref></ci:case><ci:content><ci:span spanid="cspan00000073">D.T.E.
+            2010T-718</ci:span></ci:content></ci:cite>, au paragraphe 27.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-29" fnrtokens="fnr-29">
+      <fnlabel>29</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Syndicat des cols bleus de la Ville de Laval inc., SCFP, section
+          locale 4545</emph>, et <emph typestyle="it">Ville de Laval</emph>,
+            <ci:cite><ci:case><ci:caseref ID="cref00000074" spanref="cspan00000074"><ci:reporter
+             value="CANLI"/><ci:edition><ci:date year="2014"/></ci:edition><ci:refnum num="16467"
+            /></ci:caseref></ci:case><ci:content><ci:span spanid="cspan00000074">2014 CanLII
+            16467</ci:span></ci:content></ci:cite> (QC SAT) (Me P. St-Arnaud, arb., 8 juillet
+         2014).</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-30" fnrtokens="fnr-30">
+      <fnlabel>30</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Commission scolaire des samares</emph> et <emph typestyle="it"
+          >Syndicat de l'enseignement de Lanaudière, supra</emph> note 20.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-31" fnrtokens="fnr-31">
+      <fnlabel>31</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce S-12 : Résultats à l'examen de compétence linguistique 2011.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-32" fnrtokens="fnr-32">
+      <fnlabel>32</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce S-13 : Relevé de notes portant le sceau de Madame Carole Leboeuf, commissaire à
+         l'assermentation.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-33" fnrtokens="fnr-33">
+      <fnlabel>33</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Syndicat de l'enseignement de l'Ouest de Montréal c. Commission
+          scolaire Marguerite-Bourgeoys</emph>, <ci:cite><ci:case><ci:caseinfo
+            spanref="cspan00000075"><ci:opinionnum num="1600"/><ci:jurisinfo><ci:can
+              courtcode="QCCA"/></ci:jurisinfo><ci:decisiondate year="2016"
+           /></ci:caseinfo></ci:case><ci:content><ci:span spanid="cspan00000075">2016 QCCA
+            1600</ci:span></ci:content></ci:cite>, SOQUIJ AZ-51328685.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-34" fnrtokens="fnr-34">
+      <fnlabel>34</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Syndicat de la fonction publique du Québec, supra</emph> note
+         27.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-35" fnrtokens="fnr-35">
+      <fnlabel>35</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Ibid</emph>., au paragraphe 19.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-36" fnrtokens="fnr-36">
+      <fnlabel>36</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Ibid</emph>., au paragraphe 55.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-37" fnrtokens="fnr-37">
+      <fnlabel>37</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Ibid</emph>., aux paragraphes 50 et 51.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-38" fnrtokens="fnr-38">
+      <fnlabel>38</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce E-8 : supra note 10.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-39" fnrtokens="fnr-39">
+      <fnlabel>39</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Collège d'enseignement Ellis</emph> c. <emph typestyle="it"
+          >Lafleur</emph>, SOQUIJ AZ-8314907, <ci:cite><ci:case><ci:caseref ID="cref00000076"
+            spanref="cspan00000076"><ci:reporter value="DTE"/><ci:edition><ci:date year="1983"
+             /></ci:edition><ci:page num="535"/></ci:caseref></ci:case><ci:content><ci:span
+            spanid="cspan00000076">D.T.E. 83T-535</ci:span></ci:content></ci:cite> (CS); <emph
+          typestyle="it">Commission scolaire Berthier Nord-Joli</emph> et <emph typestyle="it"
+          >Beauséjour</emph>, SOQUIJ AZ-88011331, <ci:cite><ci:case><ci:caseref ID="cref00000077"
+            spanref="cspan00000077"><ci:reporter value="DTE"/><ci:edition><ci:date year="1988"
+             /></ci:edition><ci:page num="261"/></ci:caseref></ci:case><ci:content><ci:span
+            spanid="cspan00000077">D.T.E. 88T-261</ci:span></ci:content></ci:cite>m(CA).</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-40" fnrtokens="fnr-40">
+      <fnlabel>40</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Commission scolaire d'Iberville</emph> et <emph typestyle="it"
+          >Lapointe</emph>, SOQUIJ AZ-89143022, <ci:cite><ci:case><ci:caseref ID="cref00000078"
+            spanref="cspan00000078"><ci:reporter value="DTE"/><ci:edition><ci:date year="1989"
+             /></ci:edition><ci:page num="494"/></ci:caseref></ci:case><ci:content><ci:span
+            spanid="cspan00000078">D.T.E. 89T-494</ci:span></ci:content></ci:cite> (M.P. Gosselin,
+         arb., 24 février 1989).</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-41" fnrtokens="fnr-41">
+      <fnlabel>41</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Commission scolaire Berthier Nord-Joli</emph> et <emph
+          typestyle="it">Beauséjour</emph>, SOQUIJ AZ-88011331, <ci:cite><ci:case><ci:caseref
+            ID="cref00000079" spanref="cspan00000079"><ci:reporter value="DTE"/><ci:edition><ci:date
+              year="1988"/></ci:edition><ci:page num="261"
+            /></ci:caseref></ci:case><ci:content><ci:span spanid="cspan00000079">D.T.E.
+            88T-261</ci:span></ci:content></ci:cite> (CA).</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-42" fnrtokens="fnr-42">
+      <fnlabel>42</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Fruits de mer Gascons ltée</emph> c. <emph typestyle="it"
+          >Commission des normes du travail</emph>, SOQUIJ AZ-50225578,
+            <ci:cite><ci:case><ci:caseref ID="cref00000080" spanref="cspan00000080"><ci:reporter
+             value="DTE"/><ci:edition><ci:date year="2004"/></ci:edition><ci:page num="706"
+            /></ci:caseref></ci:case><ci:content><ci:span spanid="cspan00000080">D.T.E.
+            2004T-706</ci:span></ci:content></ci:cite> (CA). Dans cette affaire, la Commission des
+         normes du travail réclamait de l'employeur la différence entre l'indemnité de congé annuel
+         que ses salariés avaient reçue et celle à laquelle ils avaient droit en vertu de la <emph
+          typestyle="it">Loi sur les normes de travail</emph>. Cette indemnité est déterminée
+         suivant la durée de service continu de l'employé. L'employeur exploitait une entreprise de
+         transformation du crabe d'avril à juillet de chaque année. À la fin de la saison, il
+         remettait à chaque employé un relevé d'emploi qui contenait la mention "retour non prévu",
+         mais il inscrivait leurs noms sur une liste de rappel. À la fin de l'hiver, toutefois, il
+         invitait les salariés inscrits sur cette liste à reprendre le travail au mois d'avril
+         suivant. Pour se défendre de la réclamation de la Commission des normes, il avait soutenu,
+         entre autres, que ses salariés avaient cessé d'être à son emploi à la fin de chaque
+         contrat. La Cour a rejeté cet argument.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-43" fnrtokens="fnr-43">
+      <fnlabel>43</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text><emph typestyle="it">Bélanger</emph> et <emph typestyle="it">Commission scolaire des
+          Rives-du-Saguenay</emph>, <ci:cite><ci:case><ci:caseinfo spanref="cspan00000081"
+             ><ci:opinionnum num="274"/><ci:jurisinfo><ci:can courtcode="QCCRT"
+             /></ci:jurisinfo><ci:decisiondate year="2008"
+            /></ci:caseinfo></ci:case><ci:content><ci:span spanid="cspan00000081">2008 QCCRT
+            0274</ci:span></ci:content></ci:cite>, SOQUIJ AZ-50498541, <ci:cite><ci:case><ci:caseref
+            ID="cref00000082" spanref="cspan00000082"><ci:reporter value="DTE"/><ci:edition><ci:date
+              year="2008"/></ci:edition><ci:page num="574"
+            /></ci:caseref></ci:case><ci:content><ci:span spanid="cspan00000082">D.T.E.
+            2008T-574</ci:span></ci:content></ci:cite>.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-44" fnrtokens="fnr-44">
+      <fnlabel>44</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Voir, en particulier, la référence à "l'équivalent d'une charge pleine (800 heures)"
+         mentionnée à l'alinéa 11-2.05.01 a) 2) de l'entente locale.</text>
+       </p>
+      </fnbody>
+     </footnote>
+     <footnote fntoken="fn-45" fnrtokens="fnr-45">
+      <fnlabel>45</fnlabel>
+      <fnbody>
+       <p i="2" indent="1st-line">
+        <text>Pièce E-6. Voir le procès-verbal de signification joint à la lettre du 8
+         juillet.</text>
+       </p>
+      </fnbody>
+     </footnote>
+    </footnotegrp>
+   </case:judgments>
+  </case:content>
+ </case:body>
+</CASEDOC>

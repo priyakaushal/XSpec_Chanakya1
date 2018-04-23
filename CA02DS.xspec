@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:annot="http://www.lexisnexis.com/xmlschemas/content/shared/annotations/1/"
+    xmlns:base="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/"
+    xmlns:case="http://www.lexis-nexis.com/glp/case"
+    xmlns:case2="http://www.lexisnexis.com/xmlschemas/content/legal/case/1/"
+    xmlns:caseinfo="http://www.lexisnexis.com/xmlschemas/content/legal/case-information/1/"
+    xmlns:casesum="http://www.lexisnexis.com/xmlschemas/content/legal/case-summary/1/"
+    xmlns:ci="http://www.lexis-nexis.com/ci"
+    xmlns:classify="http://www.lexisnexis.com/xmlschemas/content/shared/classification/1/"
+    xmlns:comm="http://www.lexis-nexis.com/glp/comm"
+    xmlns:contact="http://www.lexisnexis.com/xmlschemas/content/shared/contact/1/"
+    xmlns:courtcase="http://www.lexisnexis.com/xmlschemas/content/legal/courtcase/1/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:decision="http://www.lexisnexis.com/xmlschemas/content/legal/decision/1/"
+    xmlns:dig="http://www.lexis-nexis.com/glp/dig"
+    xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+    xmlns:ditaarch="http://dita.oasis-open.org/architecture/2005/"
+    xmlns:doc="http://www.lexisnexis.com/xmlschemas/content/shared/document-level-metadata/1/"
+    xmlns:docinfo="http://www.lexis-nexis.com/glp/docinfo"
+    xmlns:error="urn:x-lexisnexis:conversion:global:error:1"
+    xmlns:ext="http://exslt.org/common"
+    xmlns:form="http://www.lexisnexis.com/xmlschemas/content/shared/form/1/"
+    xmlns:frm="http://www.lexis-nexis.com/glp/frm"
+    xmlns:functx="http://www.functx.com"
+    xmlns:globalentity="urn:x-lexisnexis:content:identified-entities:global:1"
+    xmlns:glp="http://www.lexis-nexis.com/glp"
+    xmlns:guid="urn:x-lexisnexis:content:guid:global:1"
+    xmlns:in="http://www.lexis-nexis.com/glp/in"
+    xmlns:index="urn:x-lexisnexis:content:publicationindex:sharedservices:1"
+    xmlns:jrnl="http://www.lexis-nexis.com/glp/jrnl"
+    xmlns:jurisinfo="http://www.lexisnexis.com/xmlschemas/content/legal/jurisdiction-info/1/"
+    xmlns:leg="http://www.lexis-nexis.com/glp/leg"
+    xmlns:lnci="http://www.lexisnexis.com/xmlschemas/content/shared/citations/1/"
+    xmlns:lncr="http://www.lexis-nexis.com/lncr"
+    xmlns:lnf="urn:x-lexisnexis:conversion:global:functions:1"
+    xmlns:lnmeta="http://www.lexisnexis.com/xmlschemas/content/shared/lexisnexis-metadata/1/"
+    xmlns:lnv="http://www.lexis-nexis.com/lnv"
+    xmlns:lnvxe="http://www.lexis-nexis.com/lnvxe"
+    xmlns:location="http://www.lexisnexis.com/xmlschemas/content/shared/location/1/"
+    xmlns:person="http://www.lexisnexis.com/xmlschemas/content/shared/person/1/"
+    xmlns:primlaw="http://www.lexisnexis.com/xmlschemas/content/legal/primarylaw/1/"
+    xmlns:primlawhist="http://www.lexisnexis.com/xmlschemas/content/legal/primarylaw-history/1/"
+    xmlns:proc="http://www.lexisnexis.com/xmlschemas/content/shared/process-elements/1/"
+    xmlns:pubfm="http://www.lexisnexis.com/xmlschemas/content/shared/publication-front-matter/1/"
+    xmlns:pubinfo="http://www.lexisnexis.com/xmlschemas/content/shared/publication-info/1/"
+    xmlns:pubup="http://www.lexisnexis.com/xmlschemas/content/shared/publication-update/1/"
+    xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/"
+    xmlns:seclaw="http://www.lexisnexis.com/xmlschemas/content/legal/secondary-law/1/"
+    xmlns:source_cttr="http://www.lexis-nexis.com/glp/cttr"
+    xmlns:source_dict="http://www.lexis-nexis.com/glp/dict"
+    stylesheet="CA02-CAN_Rosetta_digestdoc-to-LexAdv_seclaw.xsl">
+    <x:scenario label="Scenario to Test fix for W*7043180 | LA-CA - casesum:decisionsummary double dashes not converted to mdash">
+        <!-- In the context section, test input data is given-->
+    <x:context>
+        <case:decisionsummary>
+            <p>
+                <text>Appeal by wife from matrimonial property division
+                            dismissed -- Parties divorced after four and a half
+                            years of marriage -- Husband owned company, home and
+                            RRSPs at marriage and sold company and home during
+                            marriage -- Wife had no assets at marriage -- Trial
+                            judge divided increase in value of exempt assets 70 per
+                            cent to husband and 30 per cent to wife -- Non-exempt
+                            matrimonial property was divided equally -- Trial judge
+                            gave lengthy and considered decision in which he
+                            thoroughly reviewed evidence and applied relevant law --
+                            Trial judge fully explained reasons for decision and
+                            made no reviewable error. Appeal From: Appeal from the
+                            Judgment by the Honourable Mr. Justice P.B. Michalyshyn
+                            Dated the 20th day of February, 2013, Filed on the 12th
+                            day of August, 2013 (Docket: 4803-144882).</text>
+            </p>
+        </case:decisionsummary>
+    </x:context>
+        <!-- In the expect section, expected outcome is mentioned. The test will pass if expected outcome is same as actual output, else the test will fail -->
+        <x:expect label="Expected outcome is that the double dashes in the source should be converted to em dashes in the target">
+        <casesum:summaries xmlns:casesum="http://www.lexisnexis.com/xmlschemas/content/legal/case-summary/1/">
+            <casesum:decisionsummary>
+                <bodytext xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                    <p>
+                        <text>Appeal by wife from matrimonial property division
+                            dismissed — Parties divorced after four and a half
+                            years of marriage — Husband owned company, home and
+                            RRSPs at marriage and sold company and home during
+                            marriage — Wife had no assets at marriage — Trial
+                            judge divided increase in value of exempt assets 70 per
+                            cent to husband and 30 per cent to wife — Non-exempt
+                            matrimonial property was divided equally — Trial judge
+                            gave lengthy and considered decision in which he
+                            thoroughly reviewed evidence and applied relevant law —
+                            Trial judge fully explained reasons for decision and
+                            made no reviewable error. Appeal From: Appeal from the
+                            Judgment by the Honourable Mr. Justice P.B. Michalyshyn
+                            Dated the 20th day of February, 2013, Filed on the 12th
+                            day of August, 2013 (Docket: 4803-144882).</text>
+                    </p>
+                </bodytext>
+            </casesum:decisionsummary>
+        </casesum:summaries>
+    </x:expect>
+</x:scenario>
+</x:description>

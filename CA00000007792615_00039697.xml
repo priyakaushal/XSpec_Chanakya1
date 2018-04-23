@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--<!DOCTYPE CASEDOC PUBLIC "-//LEXISNEXIS//DTD GLP Casedoc v006//EN" "casedoc-norm.dtd">-->
+<CASEDOC xmlns:docinfo="http://www.lexis-nexis.com/glp/docinfo" xmlns:case="http://www.lexis-nexis.com/glp/case" xmlns:ci="http://www.lexis-nexis.com/ci" xmlns:glp="http://www.lexis-nexis.com/glp" type="fulltext"><docinfo partitionnum="1">
+<docinfo:doc-heading>675553 Ontario Ltd. v. Mississauga (City), [2017] O.M.B.D. No. 534</docinfo:doc-heading>
+<docinfo:doc-id>CA00000007792615</docinfo:doc-id>
+<docinfo:assoc-links>
+<remotelink remotekey1="REFNUM(02023743)" remotekey2="All Canadian Summaries (Netletters, Digests, Summaries)" service="QUERY" xml:lang="en-CA">Find case digests</remotelink>
+<remotelink remotekey1="REFNUM(02023743)" remotekey2="All Canadian Summaries (Netletters, Digests, Summaries)" service="QUERY" xml:lang="fr-CA">Rsums jurisprudentiels</remotelink></docinfo:assoc-links>
+<docinfo:doc-lang lang="en"/>
+<docinfo:doc-country iso-cc="CA"/>
+<docinfo:lbu-meta>
+<docinfo:metaitem name="SRCNAME" value="OMBC"></docinfo:metaitem>
+<docinfo:metaitem name="SRCDOCNO" value="00039697"></docinfo:metaitem>
+<docinfo:metaitem name="DPSI" value="03QO"></docinfo:metaitem></docinfo:lbu-meta>
+<docinfo:custom-metafields>
+<docinfo:custom-metafield name="date">20170427</docinfo:custom-metafield>
+<docinfo:custom-metafield name="country">1</docinfo:custom-metafield>
+<docinfo:custom-metafield name="juris">100</docinfo:custom-metafield>
+<docinfo:custom-metafield name="court">224</docinfo:custom-metafield>
+<docinfo:custom-metafield searchtype="COURT-CLASSIFY">ONMunBd</docinfo:custom-metafield>
+<docinfo:custom-metafield searchtype="JURIS-CLASSIFY">ON</docinfo:custom-metafield>
+<docinfo:custom-metafield searchtype="CITED-COUNT">1</docinfo:custom-metafield>
+</docinfo:custom-metafields>
+<docinfo:load-date><date year="2017" month="06" day="21">20170621</date></docinfo:load-date>
+<docinfo:topiccodes>
+<docinfo:topiccode>#C30#</docinfo:topiccode></docinfo:topiccodes></docinfo>
+<case:body>
+<case:headnote>
+<case:info>
+<case:courtinfo>
+<case:dates>
+<case:decisiondate ln.user-displayed="false"><date year="2017" month="04" day="27">2017/04/27</date></case:decisiondate></case:dates></case:courtinfo>
+<abbrvname display-name="Case Name:" searchtype="SHORT-CASE-NAME">675553 Ontario Ltd. v. Mississauga (City)</abbrvname>
+<case:casename>PROCEEDING COMMENCED UNDER subsection<nl/>
+36(3) of the Planning Act, R.S.O.<nl/>
+1990, c. P. 13, as amended<nl/>
+Applicant and Appellant: 675553 Ontario Limited<nl/>
+Subject: Removal of Holding Symbol: Zoning<nl/>
+By-law No. 0225-2007 - Failure of<nl/>
+the City of Mississauga to announce<nl/>
+a decision on the application<nl/>
+Property Address/Description: 90, 100, 110 Dundas Street West<nl/>
+Municipality: City of Mississauga<nl/>
+PROCEEDING COMMENCED UNDER subsection<nl/>
+51(34) of the Planning Act, R.S.O.<nl/>
+1990, c. P.13, as amended<nl/>
+Applicant and Appellant: 675553 Ontario Limited<nl/>
+Subject: Proposed Plan of Subdivision<nl/>
+- Failure of the City of Mississauga<nl/>
+to make a decision<nl/>
+Purpose: To permit the development<nl/>
+of 140 units, comprising of 120<nl/>
+residential townhouse units and 20 live/work units<nl/>
+Property Address/Description: 90, 100, 110 Dundas Street West<nl/>
+Municipality: City of Mississauga</case:casename>
+<case:reportercite><ci:cite type="cite4thisdoc"><ci:case><ci:caseref ID="cref00000001" spanref="cspan00000001"><ci:reporter value="OMBD"/><ci:edition><ci:date year="2017"/></ci:edition><ci:refnum num="534"/></ci:caseref></ci:case><ci:content><ci:span spanid="cspan00000001">[2017] O.M.B.D. No. 534</ci:span></ci:content></ci:cite></case:reportercite>
+<case:courtinfo>
+<case:filenum>OMB Case No.: PL151224</case:filenum>
+<case:filenum>OMB File No.: PL151224, PL160092</case:filenum></case:courtinfo>
+<refnum refnumtype="UCN" ln.user-displayed="false">02023743</refnum>
+<case:courtinfo>
+<case:juris ln.user-displayed="false">ON</case:juris>
+<case:courtcode ln.user-displayed="false">ONMB</case:courtcode>
+<abbrvname ln.user-displayed="false">ONMunBd</abbrvname>
+<case:courtname>Ontario Municipal Board<nl/>
+ Mississauga, Ontario</case:courtname>
+<case:judges>Panel: Anne Milchberg, Member</case:judges>
+<case:dates>
+<case:hearingdates>Heard: April 27, 2017.<nl/> Oral decision: April 27, 2017.<nl/> Filed: June 2, 2017.</case:hearingdates></case:dates></case:courtinfo></case:info>
+<case:length>(7 paras.)</case:length>
+<case:priorhist>
+<p><text><glp:note><p nl="0"><text>[Editor's note: An amending decision was released by the Board August 16, 2017. See <ci:cite><ci:case><ci:caseref ID="cref00000002" spanref="cspan00000002"><ci:reporter value="OMBD"/><ci:edition><ci:date year="2017"/></ci:edition><ci:refnum num="818"/></ci:caseref></ci:case><ci:content><ci:span spanid="cspan00000002">[2017] O.M.B.D. No. 818</ci:span></ci:content></ci:cite>.]</text></p></glp:note></text></p></case:priorhist>
+<case:info>
+<case:constituents>
+<pgrp><heading><title>Appearances:</title></heading><p><text>675553 Ontario Limited: John Alati, Andy Margaritis, counsel.</text></p><p><text>City of Mississauga: Michal Minkowski, counsel.</text></p></pgrp></case:constituents></case:info></case:headnote>
+<case:content>
+<case:judgments>
+<case:judgment>
+<case:judgmentbody>
+<p><text align="center"><emph typestyle="bu">MEMORANDUM OF ORAL DECISION DELIVERED<nl/> BY ANNE MILCHBERG ON APRIL 27,<nl/> 2017 AND ORDER OF THE BOARD</emph></text></p>
+<p><pnum count="1">1</pnum><text>675553 Ontario Limited (the "Applicant" and "Appellant") has appealed the failure of the City of Mississauga ("City", "Approval Authority") to make decisions on three applications concerning a proposed mixed use development, comprised of 21 live/work units and 121 residential units at 90, 100 and 110 Dundas Street West. The City failed to make decisions on applications for:</text></p><l virtual-nesting="2"> <li><lilabel>*</lilabel><p><text>the removal of a Holding Symbol on the lands;</text></p></li> </l><l virtual-nesting="2"> <li><lilabel>*</lilabel><p><text>a draft Plan of Subdivision; and</text></p></li> </l><l virtual-nesting="2"> <li><lilabel>*</lilabel><p><text>a site plan.</text></p></li> </l>
+<p><pnum count="2">2</pnum><text>The proposed development received Official Plan and Zoning By-law approvals from the Board in 2013. The removal of the Holding Symbol, draft Plan of Subdivision and site plan matters were the next steps in the planning approval process. Now under appeal, they are all being heard together.</text></p>
+<p><pnum count="3">3</pnum><text>The Parties informed the Board that they are moving towards a proposed settlement of all three appeals and have agreed on a framework to achieve this. As of this hearing, the Parties' efforts are still ongoing. Mr. Minkowski told the Board that City Council has already dealt with the lifting of the Holding Symbol in a manner satisfactory to the Appellant, and that it will deal with the Draft Plan of Subdivision on or before July 5, 2017.</text></p>
+<p><pnum count="4">4</pnum><text>The Parties also advised that part of the settlement effort consists of an application for Minor Variance ("MV") respecting the proposed development. This application is anticipated to be heard by the City's Committee of Adjustment ("CoA") on June 8, 2017.</text></p>
+<p><pnum count="5">5</pnum><text>Accordingly, the Parties have asked that the settlement hearing be adjourned, and that it resume in the summer, after Council has dealt with the Draft Plan, the CoA has considered the MV application, and the MV appeal period has passed.</text></p>
+<p><pnum count="6">6</pnum><text>The Board orders that the hearing will resume for one day, on <emph typestyle="bf">Thursday, August 24, 2017</emph>, at <emph typestyle="bf">10 a.m.</emph> at:</text></p>
+<p><text><emph typestyle="bf">Mississauga City Hall</emph><nl/> <emph typestyle="bf">Committee Room B</emph><nl/> <emph typestyle="bf">300 City Centre Drive</emph><nl/> <emph typestyle="bf">Mississauga, Ontario</emph><nl/> <emph typestyle="bf">L5B 3C1</emph></text></p>
+<p><pnum count="7">7</pnum><text>The Member is not seized.</text></p>
+<p><text>ANNE MILCHBERG<nl/> MEMBER</text></p></case:judgmentbody></case:judgment></case:judgments></case:content></case:body></CASEDOC>
