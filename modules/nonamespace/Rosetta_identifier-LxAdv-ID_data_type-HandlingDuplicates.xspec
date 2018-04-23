@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/nonamespace/Rosetta_identifier-LxAdv-ID_data_type-HandlingDuplicates.xsl"> 
+    <x:scenario label="Scenario for testing template with @xml:id happy path using dummy element">
+        <x:context>
+            <p>
+                <text>
+                    <refpt xml:id="a6500d"/>
+                </text>
+            </p>
+        </x:context>
+        <x:expect label="output untouched value">
+            <dummy-element xml:id="a6500d"/>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Scenario for testing template with @xml:id duplicates">
+        <x:context>
+            <p><refpt xml:id="a6500d"/>
+                <text>
+                    <refpt xml:id="a6500d"/>
+                    <refpt xml:id="a6500e"/>
+                    <refpt xml:id="a6500d"/>
+                </text>
+            </p>
+        </x:context>
+        <x:expect label="remove all but first dupes">
+            <dummy-element xml:id="a6500d"/>
+            <dummy-element/>
+            <dummy-element xml:id="a6500e"/>
+            <dummy-element/>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Scenario for testing template with @xml:id incorrect datatypes">
+        <x:context>
+            <p><refpt xml:id="a65!!!00,@d"/>
+                <text>
+                    <refpt xml:id="6500d"/>
+                    <refpt xml:id="a6500e"/>
+                    <refpt xml:id=".6500d"/>
+                </text>
+            </p>
+        </x:context>
+        <x:expect label="cleaned up datatypes">
+            <dummy-element xml:id="a65___00__d"/>
+            <dummy-element xml:id="_6500d"/>
+            <dummy-element xml:id="a6500e"/>
+            <dummy-element xml:id="_.6500d"/>
+        </x:expect>
+    </x:scenario>
+    
+    
+    <x:scenario label="Scenario for testing template with @id happy path using dummy element">
+        <x:context>
+            <p>
+                <text>
+                    <refpt id="a6500d"/>
+                </text>
+            </p>
+        </x:context>
+        <x:expect label="output untouched value">
+            <dummy-element id="a6500d"/>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Scenario for testing template with @id duplicates">
+        <x:context>
+            <p><refpt id="a6500d"/>
+                <text>
+                    <refpt id="a6500d"/>
+                    <refpt id="a6500e"/>
+                    <refpt id="a6500d"/>
+                </text>
+            </p>
+        </x:context>
+        <x:expect label="remove all but first dupes">
+            <dummy-element id="a6500d"/>
+            <dummy-element/>
+            <dummy-element id="a6500e"/>
+            <dummy-element/>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Scenario for testing template with @id incorrect datatypes">
+        <x:context>
+            <p><refpt id="a65!!!00,@d"/>
+                <text>
+                    <refpt id="6500d"/>
+                    <refpt id="a6500e"/>
+                    <refpt id="[.6500d]"/>
+                    <refpt id="&#xA;          0KMN_2_F_FC__S_CLAUSE:HTDICT-TERM&#xA;        "/>
+                </text>
+            </p>
+        </x:context>
+        <x:expect label="cleaned up datatypes">
+            <dummy-element id="a65___00__d"/>
+            <dummy-element id="_6500d"/>
+            <dummy-element id="a6500e"/>
+            <dummy-element id="_.6500d_"/>
+            <dummy-element id="_0KMN_2_F_FC__S_CLAUSE_HTDICT-TERM"/>
+        </x:expect>
+    </x:scenario>
+
+</x:description>

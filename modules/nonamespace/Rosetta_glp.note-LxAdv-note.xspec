@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"  xmlns:glp="http://www.lexis-nexis.com/glp"
+    xmlns:leg="http://www.lexis-nexis.com/glp/leg" xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/"
+    stylesheet="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/glp/Rosetta_glp.note-LxAdv-note.xsl">
+    <x:param name="streamID" select="'HK04'"/>
+    <x:scenario
+        label="Scenario for testing template with match 'glp:note">
+        <x:context>
+            <glp:note>
+                <refpt id="257_ALR_1_1" type="ext"/>
+            </glp:note>            
+        </x:context>
+        <x:expect label="output note">
+            <note xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                <ref:anchor id="_257_ALR_1_1" anchortype="global"/>
+            </note>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario
+        label="Scenario for testing template with match 'glp:note/@notetype">
+        <x:context>            
+            <glp:note notetype="warning">
+                <p><text>Editor's Note: This document contains the full text of sections 1 to 70 and the Schedule. The Appendices to the Act are found in a separate document. Please conduct a cite search for "S.B.C. 1999, c. 2" to obtain all relevant documents.Acts Affected: Adoption Act, R.S.B.C. 1996, c. 5; Child, Family and Community Service Act, R.S.B.C. 1996, c. 46; Environmental Assessment Act, R.S.B.C. 1996, c. 119; Estate Administration Act, R.S.B.C. 1996, c. 122;...</text></p>
+            </glp:note>
+        </x:context>
+        <x:expect label="copy notetype">
+            <note xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/" notetype="warning">
+                <bodytext xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                    <p xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/"><text xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">Editor's Note: This document contains the full text of sections 1 to 70 and the Schedule. The Appendices to the Act are found in a separate document. Please conduct a cite search for "S.B.C. 1999, c. 2" to obtain all relevant documents.Acts Affected: Adoption Act, R.S.B.C. 1996, c. 5; Child, Family and Community Service Act, R.S.B.C. 1996, c. 46; Environmental Assessment Act, R.S.B.C. 1996, c. 119; Estate Administration Act, R.S.B.C. 1996, c. 122;...</text></p>
+                </bodytext>
+            </note>            
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario
+        label="Scenario for testing template with match 'glp:note within leg:comntry level">
+        <x:context>
+            <leg:comntry>
+                <level>
+                    <glp:note>
+                        <p><text>Editor's Note: This document contains the full text of sections 1 to 70 and the Schedule. The Appendices to the Act are found in a separate document. Please conduct a cite search for "S.B.C. 1999, c. 2" to obtain all relevant documents.Acts Affected: Adoption Act, R.S.B.C. 1996, c. 5; Child, Family and Community Service Act, R.S.B.C. 1996, c. 46; Environmental Assessment Act, R.S.B.C. 1996, c. 119; Estate Administration Act, R.S.B.C. 1996, c. 122;...</text></p>
+                    </glp:note>
+                </level>
+            </leg:comntry>           
+        </x:context>
+        <x:expect label="copy notetype">
+            ...<note xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/" notetype="xref">
+                <bodytext xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                    <p xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/"><text xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">Editor's Note: This document contains the full text of sections 1 to 70 and the Schedule. The Appendices to the Act are found in a separate document. Please conduct a cite search for "S.B.C. 1999, c. 2" to obtain all relevant documents.Acts Affected: Adoption Act, R.S.B.C. 1996, c. 5; Child, Family and Community Service Act, R.S.B.C. 1996, c. 46; Environmental Assessment Act, R.S.B.C. 1996, c. 119; Estate Administration Act, R.S.B.C. 1996, c. 122;...</text></p>
+                </bodytext>
+            </note>...            
+        </x:expect>
+    </x:scenario>
+</x:description>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description	xmlns:x="http://www.jenitennison.com/xslt/xspec"
+
+						xmlns:in="http://www.lexis-nexis.com/glp/in"
+						xmlns:docinfo="http://www.lexis-nexis.com/glp/docinfo"
+						
+						xmlns:admt="http://www.lexis-nexis.com/glp/admt"
+						xmlns:case="http://www.lexis-nexis.com/glp/case" xmlns:ci="http://www.lexis-nexis.com/ci"
+						xmlns:comm="http://www.lexis-nexis.com/glp/comm"
+						xmlns:cttr="http://www.lexis-nexis.com/glp/cttr"
+						xmlns:dict="http://www.lexis-nexis.com/glp/dict" xmlns:dig="http://www.lexis-nexis.com/glp/dig"
+						xmlns:frm="http://www.lexis-nexis.com/glp/frm" xmlns:glp="http://www.lexis-nexis.com/glp"
+						xmlns:jrnl="http://www.lexis-nexis.com/glp/jrnl"
+						xmlns:leg="http://www.lexis-nexis.com/glp/leg" xmlns:lnci="http://www.lexis-nexis.com/lnci"
+						xmlns:lncle="http://www.lexis-nexis.com/lncle" xmlns:lnclx="http://www.lexis-nexis.com/lnclx"
+						xmlns:lndel="http://www.lexis-nexis.com/lndel"
+						xmlns:lndocmeta="http://www.lexis-nexis.com/lndocmeta"
+						xmlns:lngntxt="http://www.lexis-nexis.com/lngntxt"
+						xmlns:lnlit="http://www.lexis-nexis.com/lnlit" xmlns:lnv="http://www.lexis-nexis.com/lnv"
+						xmlns:lnvni="http://www.lexis-nexis.com/lnvni" xmlns:lnvx="http://www.lexis-nexis.com/lnvx"
+						xmlns:lnvxe="http://www.lexis-nexis.com/lnvxe" xmlns:nitf="urn:nitf:iptc.org.20010418.NITF"
+						xmlns:op="http://www.lexis-nexis.com/glp/op" xmlns:xhtml="http://www.w3c.org/1999/xhtml"
+
+						stylesheet="Rosetta_blockquote-LxAdv-blockquote.xsl">
+<!-- Must add Identity transform to blockquote XSLT for unit testing to work. -->
+<!--<xsl:template match="@*|node()">
+        <xsl:copy>
+            <xsl:apply-templates/>
+        </xsl:copy>
+    </xsl:template> -->
+	<x:scenario label="Unit Test of Module:  blockquote - ">
+		<x:scenario label="blockquote becomes blockquote">
+			<x:context>
+				<p>
+					<blockquote><p>Ipsum Lorem</p></blockquote>
+				</p>
+			</x:context>
+			
+			<x:expect label="blockquote created from local example">
+				<p>
+					<blockquote><p>Ipsum Lorem</p></blockquote>
+				</p>
+			</x:expect>
+
+		</x:scenario>
+		
+		<x:scenario label="blockquote element not output when child figure">
+			<x:context>
+				<blockquote>
+					<figure/>
+				</blockquote>
+			</x:context>
+			
+			<x:expect label="Only figure output from local example">
+				<figure/>
+			</x:expect>
+			
+		</x:scenario>
+		
+		<x:scenario label="blockquote element not output when child legfragment">
+			<x:context>
+				<blockquote>
+					<legfragment/>
+				</blockquote>
+			</x:context>
+			
+			<x:expect label="Only legfragment output from local example">
+				<legfragment/>
+			</x:expect>
+			
+		</x:scenario>
+		
+		<x:scenario label="Multiple immediate sibling blockquote elements output as a single blockquote">
+			<x:context>
+				<blockquote>
+					<p>
+						<text>Lorem ipsum dolor sit amet, eum et viris forensibus, cum option habemus ei.</text>
+					</p>
+				</blockquote>
+				<blockquote>
+					<p>
+						<text>Nam id oratio tincidunt scripserit, erant deleniti ponderum ad vix.</text>
+					</p>
+				</blockquote>
+				<blockquote>
+					<p>
+						<text>Accommodare consectetuer an vel, populo option luptatum pri in.</text>
+					</p>
+				</blockquote>
+				<list>
+					<li>1</li>
+					<li>2</li>
+				</list>
+				<blockquote>
+					<p>
+						<text>Populo euripidis ex quo, sed suas argumentum an, quo duis quaeque conceptam ex.</text>
+					</p>
+				</blockquote>
+			</x:context>
+			
+			<x:expect label="Multiple immediate sibling blockquote elements output as a single blockquote">
+				<blockquote>
+					<p>
+						<text>Lorem ipsum dolor sit amet, eum et viris forensibus, cum option habemus ei.</text>
+					</p>
+					<p>
+						<text>Nam id oratio tincidunt scripserit, erant deleniti ponderum ad vix.</text>
+					</p>
+					<p>
+						<text>Accommodare consectetuer an vel, populo option luptatum pri in.</text>
+					</p>
+				</blockquote>
+				<list>
+					<li>1</li>
+					<li>2</li>
+				</list>
+				<blockquote>
+					<p>
+						<text>Populo euripidis ex quo, sed suas argumentum an, quo duis quaeque conceptam ex.</text>
+					</p>
+				</blockquote>
+			</x:expect>
+			
+		</x:scenario>
+		
+		
+		
+
+	</x:scenario>
+</x:description>

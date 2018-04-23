@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns:source_cttr="http://www.lexis-nexis.com/glp/cttr" xmlns:leg="http://www.lexis-nexis.com/glp/leg" xmlns:cttr="urn:x-lexisnexis:content:citator:sharedservices:1" xmlns:legisinfo="http://www.lexisnexis.com/xmlschemas/content/legal/legislation-info/1/" version="2.0" exclude-result-prefixes="dita cttr leg">
+
+	<dita:topic xmlns="http://dita.oasis-open.org/architecture/2005/" id="UK11_DA_leg.info-ChOf-cttr.annot">
+    <title>leg:info <lnpid>id-UK11DA-29427</lnpid></title>
+    <body>
+        <section>
+            <p><sourcexml>leg:info</sourcexml> becomes <targetxml>cttr:legisinfo</targetxml>.<ul>
+                    <li><sourcexml>leg:officialname</sourcexml> becomes
+                            <targetxml>legisinfo:names/legisinfo:officialtitle</targetxml> under
+                            <targetxml>cttr:consideredlegis</targetxml>.</li>
+                </ul></p>
+            <note><targetxml>cttr:legisinfo</targetxml> requires child
+                    <targetxml>cttr:citations</targetxml>. Refer to the <xref href="UK11_DA_citations.dita">*:citations</xref> section for further
+                instruction.</note>
+        </section>
+
+        <pre>
+              <b><i>Example: Source XML 1</i></b>
+                  
+
+&lt;dig:body&gt;
+...
+  &lt;cttr:annotations annotationtype="consideredleg"&gt;
+    &lt;heading&gt;
+        &lt;title&gt;Legislation considered in this article&lt;/title&gt;
+    &lt;/heading&gt;
+    &lt;cttr:annot leg-signal="partly-in-force-prospective-amend"&gt;
+      &lt;cttr:use-group&gt;
+          &lt;cttr:use&gt;Partly in force prospective amendments&lt;/cttr:use&gt;
+      &lt;/cttr:use-group&gt;
+      &lt;leg:info&gt;
+          &lt;leg:officialname&gt;
+            &lt;ci:cite searchtype="LEG-REF" status="valid"&gt;
+                &lt;ci:sesslaw&gt;
+                    &lt;ci:sesslawinfo&gt;
+                        &lt;ci:sesslawnum num="1998_29a_Title"/&gt;
+                    &lt;/ci:sesslawinfo&gt;
+                    &lt;ci:sesslawref&gt;
+                        &lt;ci:standardname normpubcode="UK_ACTS"/&gt;
+                    &lt;/ci:sesslawref&gt;
+                &lt;/ci:sesslaw&gt;
+                &lt;ci:content&gt;Data Protection Act 1998&lt;/ci:content&gt;
+            &lt;/ci:cite&gt;
+          &lt;/leg:officialname&gt;
+      &lt;/leg:info&gt;
+    &lt;/cttr:annot&gt;
+    &lt;/cttr:annotations&gt;
+&lt;/dig:body&gt;
+ 
+	</pre>
+        <pre>
+                    
+              <b><i>Example: Target XML 1</i></b>
+    
+&lt;abstract:body&gt;
+  &lt;cttr:refs&gt;
+    &lt;cttr:refsection reftype="considered-legislation"&gt;
+      &lt;heading&gt;
+          &lt;title&gt;Legislation considered in this article&lt;/title&gt;
+      &lt;/heading&gt;
+      &lt;cttr:refitem&gt;
+          &lt;cttr:consideredlegis&gt;
+            &lt;legisinfo:names&gt;
+                  &lt;legisinfo:officialtitle&gt;
+                      &lt;lnci:cite status="valid"&gt;
+                          &lt;lnci:sesslaw&gt;
+                              &lt;lnci:sesslawinfo&gt;
+                                  &lt;lnci:sesslawnum num="1998_29a_Title"/&gt;
+                              &lt;/lnci:sesslawinfo&gt;
+                              &lt;lnci:sesslawref&gt;
+                                  &lt;lnci:standardname normpubcode="UK_ACTS"/&gt;
+                              &lt;/lnci:sesslawref&gt;
+                          &lt;/lnci:sesslaw&gt;
+                          &lt;lnci:content&gt;Data Protection Act 1998&lt;/lnci:content&gt;
+                      &lt;/lnci:cite&gt;
+                  &lt;/legisinfo:officialtitle&gt;
+              &lt;/legisinfo:names&gt;
+            &lt;cttr:legisinfo&gt;
+              ...
+              &lt;legisinfo:status statuscode="partly-in-force-prospective-amend"&gt;
+                 &lt;legisinfo:statustext&gt;Partly in force prospective amendments&lt;/legisinfo:statustext&gt;
+              &lt;/legisinfo:status&gt;
+            &lt;/cttr:legisinfo&gt;
+          &lt;/cttr:consideredlegis&gt;
+      &lt;cttr:refitem&gt;
+    &lt;/cttr:refsection&gt;
+  &lt;cttr:refs&gt;
+&lt;/abstract:body&gt;
+
+                </pre>
+        <section>
+            <title>Changes</title>
+            <p>2013-07-31: <ph id="change_20130731_jm">Updated target example, replacing
+                        <targetxml>cttr:usage</targetxml> with
+                        <targetxml>legisinfo:status</targetxml>.</ph></p>
+            <p>2013-04-08: <ph id="change_20130408_jm"><sourcexml>cttr:annot/leg:info</sourcexml> -
+                        <targetxml>cttr:legisinfo</targetxml> added to Abstract schema. Removed
+                    reference to pending CR.</ph></p>
+        </section>
+    </body>
+	</dita:topic>
+
+	<!--  @@@ This file has been autogenerated.  Remove this comment after manual development complete! @@@  -->
+	<!--    Original DITA file location:  DITA\ConversionInstructions\Rosetta\DITA-UK\UK11DA-Digest-Abstract\UK11_DA_leg.info-ChOf-cttr.annot.dita  -->
+<!--	<xsl:message>UK11_DA_leg.info-ChOf-cttr.annot.xsl requires manual development!</xsl:message> -->
+
+
+    <!--Vikas Rohilla : Template to match the cttr:annot/leg:info-->
+	<xsl:template match="source_cttr:annot/leg:info">
+		
+			<xsl:apply-templates select="@* | node()"/>
+		
+	</xsl:template>
+    
+
+
+</xsl:stylesheet>

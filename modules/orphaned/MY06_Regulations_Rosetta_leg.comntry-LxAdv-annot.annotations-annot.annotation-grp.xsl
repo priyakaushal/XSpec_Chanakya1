@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns:leg="http://www.lexis-nexis.com/glp/leg" xmlns:annot="http://www.lexisnexis.com/xmlschemas/content/shared/annotations/1/" xmlns:primlaw="http://www.lexisnexis.com/xmlschemas/content/legal/primarylaw/1/" xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/" version="2.0" exclude-result-prefixes="dita leg">
+
+	<dita:topic xmlns="http://dita.oasis-open.org/architecture/2005/" id="Rosetta_leg.comntry-to-LexisAdvance_annot.annotations-annot.annotation-grp">
+  <title><sourcexml>leg:comntry</sourcexml> to
+      <targetxml>annot:annotations/annot:annotation-grp</targetxml> <lnpid>id-MY06-17231</lnpid></title>
+  <body>
+    <section>
+      <p>
+        <ul>
+          <li><sourcexml>leg:comntry</sourcexml>
+            <b>Becomes</b>
+            <targetxml>annot:annotations/annot:annotation-grp</targetxml> with optional attributes
+            and child elements converted as: <ul>
+              <li><sourcexml>@subdoc</sourcexml>
+                <b>becomes</b>
+                <targetxml>@includeintoc</targetxml></li>
+              <li><sourcexml>@toc-caption</sourcexml>
+                <b>becomes</b>
+                <targetxml>@alternatetoccaption</targetxml></li>
+              <li><sourcexml>heading/@searchtype</sourcexml>
+                <b>becomes</b>
+                <targetxml>annot:annotation-grp/@grptype="COMMENTARY"</targetxml></li>
+              <li><sourcexml>refpt</sourcexml>
+                <b>becomes</b>
+                <targetxml>ref:anchor</targetxml> and must be the first child in the sequence. Refer
+                to the <xref href="Rosetta_refpt-LxAdv-ref.anchor.dita">refpt</xref> section for
+                more information.</li>
+              <li><sourcexml>heading/edpnum</sourcexml>
+                <b>becomes</b>
+                <targetxml>heading/desig</targetxml></li>
+              <li><sourcexml>heading/title</sourcexml>
+                <b>becomes</b>
+                <targetxml>heading/title</targetxml></li>
+            </ul>
+            <note>In the input Xpath, <sourcexml>leg:comntry</sourcexml> is allowed within
+                <sourcexml>leg:bodytext</sourcexml>, but the target New Lexis Xpath allows
+                <targetxml>annot:annotations</targetxml> to be a sibling to
+                <targetxml>primlaw:bodytext</targetxml> and child element of
+                <targetxml>primlaw:level</targetxml> i.e.
+                <sourcexml>leg:bodytext/leg:comntry</sourcexml> becomes
+                <targetxml>annot:annotations/annot:annotation-grp</targetxml>.</note>
+          </li>
+          <li> The conversion of <sourcexml>level</sourcexml> is determined by the value of
+              <sourcexml>@leveltype</sourcexml> which also reflects the nesting structure.
+              <note>Maintain source nesting.</note>
+          </li>
+          <li>If source document is having empty elements (i.e.
+              <sourcexml>bodytext/p/text</sourcexml> and <sourcexml>hrule</sourcexml>) within
+              <sourcexml>leg:comntry</sourcexml> then removed the empty markups from
+              <sourcexml>leg:comntry</sourcexml> and <sourcexml>leg:comntry</sourcexml> should be
+            mapped with <targetxml>annot:annotations</targetxml>. Please refer the below markups for
+            understanding this scenario: </li>
+        </ul>
+      </p>
+    </section>
+    <example>
+      <title>Source XML</title>
+      <codeblock>
+
+&lt;leg:comntry subdoc="true" toc-caption="Notes"&gt;
+  &lt;bodytext&gt;
+    &lt;p&gt;&lt;text&gt; &lt;/text&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;text&gt; &lt;/text&gt;&lt;/p&gt;
+    &lt;hrule/&gt;
+  &lt;/bodytext&gt;
+  &lt;level id="NZREGS_REGS-H.SGM_PARA-2009R165S1-COMPENDIUM" leveltype="para0"&gt;
+    &lt;bodytext searchtype="COMMENTARY"&gt;
+      ...
+    &lt;/bodytext&gt;
+  &lt;/level&gt;
+ &lt;/leg:comntry&gt;
+
+	</codeblock>
+      <title>Target XML</title>
+      <codeblock>
+
+&lt;annot:annotations&gt;
+  &lt;annot:annotation-grp includeintoc="true" alternatetoccaption="Notes"&gt;
+    &lt;annot:annotation xml:id="NZREGS_REGS-H.SGM_PARA-2009R165S1-COMPENDIUM"&gt;
+      &lt;bodytext&gt;
+        ...
+      &lt;/bodytext&gt;
+    &lt;/annot:annotation&gt;
+  &lt;/annot:annotation-grp&gt;
+&lt;/annot:annotations&gt;
+
+	</codeblock>
+    </example>
+    <section>
+      <title>Changes</title>
+      <p>2012-11-20: Added the instruction and example for handling the empty markups (i.e.
+          <sourcexml>bodytext/p/text</sourcexml> and <sourcexml>hrule</sourcexml>) within
+          <sourcexml>leg:comntry</sourcexml>.</p>
+       <p>2013-05-15 <ph id="change_20130515_wl">Fixed typo: (extra semicolon in xpath
+       expression)</ph>
+       </p>
+    </section>
+  </body>
+	</dita:topic>
+
+	<!--  @@@ This file has been autogenerated.  Remove this comment after manual development complete! @@@  -->
+	<!--    Original DITA file location:  DITA\ConversionInstructions\Rosetta\DITA-MY\MY06_Regulations\Rosetta_leg.comntry-LxAdv-annot.annotations-annot.annotation-grp.dita  -->
+	<xsl:message>MY06_Regulations_Rosetta_leg.comntry-LxAdv-annot.annotations-annot.annotation-grp.xsl requires manual development!</xsl:message> 
+
+	<xsl:template match="leg:comntry">
+
+		<!--  Original Target XPath:  annot:annotations/annot:annotation-grp   -->
+		<annot:annotations>
+			<annot:annotation-grp>
+				<xsl:apply-templates select="@* | node()"/>
+			</annot:annotation-grp>
+		</annot:annotations>
+
+	</xsl:template>
+
+	<xsl:template match="@subdoc">
+
+		<!--  Original Target XPath:  @includeintoc   -->
+		<xsl:attribute name="includeintoc">
+			<xsl:apply-templates select="node()"/>
+		</xsl:attribute>
+
+	</xsl:template>
+
+	<xsl:template match="@toc-caption">
+
+		<!--  Original Target XPath:  @alternatetoccaption   -->
+		<xsl:attribute name="alternatetoccaption">
+			<xsl:apply-templates select="node()"/>
+		</xsl:attribute>
+
+	</xsl:template>
+
+	<xsl:template match="heading/@searchtype">
+
+		<!--  Original Target XPath:  annot:annotation-grp/@grptype="COMMENTARY"   -->
+		<annot:annotation-grp>
+			<xsl:attribute name="grptype">
+				<xsl:text>COMMENTARY</xsl:text>
+			</xsl:attribute>
+		</annot:annotation-grp>
+
+	</xsl:template>
+
+	<xsl:template match="refpt">
+
+		<!--  Original Target XPath:  ref:anchor   -->
+		<ref:anchor>
+			<xsl:apply-templates select="@* | node()"/>
+		</ref:anchor>
+
+	</xsl:template>
+
+	<xsl:template match="heading/edpnum">
+
+		<!--  Original Target XPath:  heading/desig   -->
+		<heading>
+			<desig>
+				<xsl:apply-templates select="@* | node()"/>
+			</desig>
+		</heading>
+
+	</xsl:template>
+
+	<xsl:template match="heading/title">
+
+		<!--  Original Target XPath:  heading/title   -->
+		<heading>
+			<title>
+				<xsl:apply-templates select="@* | node()"/>
+			</title>
+		</heading>
+
+	</xsl:template>
+
+	<xsl:template match="leg:bodytext">
+
+		<!--  Original Target XPath:  annot:annotations   -->
+		<annot:annotations>
+			<xsl:apply-templates select="@* | node()"/>
+		</annot:annotations>
+
+	</xsl:template>
+
+	<xsl:template match="leg:bodytext/leg:comntry">
+
+		<!--  Original Target XPath:  annot:annotations/annot:annotation-grp   -->
+		<annot:annotations>
+			<annot:annotation-grp>
+				<xsl:apply-templates select="@* | node()"/>
+			</annot:annotation-grp>
+		</annot:annotations>
+
+	</xsl:template>
+
+	<xsl:template match="level">
+
+		<!--  Original Target XPath:  annot:annotations   -->
+		<annot:annotations>
+			<xsl:apply-templates select="@* | node()"/>
+		</annot:annotations>
+
+	</xsl:template>
+
+	<xsl:template match="@leveltype">
+
+		<!--  Original Target XPath:  annot:annotations   -->
+		<annot:annotations>
+			<xsl:apply-templates select="@* | node()"/>
+		</annot:annotations>
+
+	</xsl:template>
+
+	<xsl:template match="bodytext/p/text">
+
+		<!--  Original Target XPath:  annot:annotations   -->
+		<annot:annotations>
+			<xsl:apply-templates select="@* | node()"/>
+		</annot:annotations>
+
+	</xsl:template>
+
+	<xsl:template match="hrule">
+
+		<!--  Original Target XPath:  annot:annotations   -->
+		<annot:annotations>
+			<xsl:apply-templates select="@* | node()"/>
+		</annot:annotations>
+
+	</xsl:template>
+
+</xsl:stylesheet>

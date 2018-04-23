@@ -1,0 +1,1 @@
+"%JAVA_HOME%\bin\java" -Xmx1100m -jar "%DATAARCH_HOME%\Script\apache\ant\apache-ant-1.8.2\lib\saxon9.jar" -s:..\..\LA-to-MNCR\drivers\cv\cv.cv_to_cv.curriculumVitae.xsl -xsl:..\XSLT-to-dita.xsl mode=CI mapTitle="cv_to_cv.curriculumVitae" docTitle="Curriculum Vitae (cv) LexisAdvance to Mastering cv:curriculumVitae (1.0 Alpha)"  > ErrorLogCI.dat 2>&1

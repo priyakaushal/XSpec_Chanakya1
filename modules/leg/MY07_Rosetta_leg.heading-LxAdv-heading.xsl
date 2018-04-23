@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:dita="http://dita.oasis-open.org/architecture/2005/"
+  xmlns:leg="http://www.lexis-nexis.com/glp/leg"
+  xmlns:glp="http://www.lexis-nexis.com/glp" xmlns:primlaw="http://www.lexisnexis.com/xmlschemas/content/legal/primarylaw/1/" version="2.0"
+  exclude-result-prefixes="dita leg">
+
+  <dita:topic xmlns="http://dita.oasis-open.org/architecture/2005/"
+    id="MY07_Rosetta_leg.heading-LxAdv-heading">
+    <title>leg:heading <lnpid>id-MY07-17418</lnpid></title>
+    <body>
+      <section>
+        <p>
+          <ul>
+            <li><sourcexml>leg:heading</sourcexml> becomes <targetxml>heading</targetxml> with
+              attributes <sourcexml>@align</sourcexml> becames <targetxml>@align</targetxml>
+              <sourcexml>@inline</sourcexml> becomes <targetxml>@inline</targetxml> which has
+              tokenized values and populated as: <ul>
+                <li><targetxml>heading[@inline="true"]</targetxml></li>
+                <li><targetxml>heading[@inline="false"]</targetxml></li>
+              </ul>
+              <note>For handling <b>@ln.user-displayed</b> attribute, refer the general markup <xref
+                  href="../../common_newest/Rosetta_leg.heading_ln.user-displayed.dita"
+                  >ln.user_displayed="false"</xref> section in the CI.</note>
+              <b>heading element with inline attribute:</b>
+              <pre>
+ 
+       &lt;leg:level id="USM.0333e.PUA0309y2012e.S1"&gt;
+            &lt;leg:level-vrnt toc-caption="1. Citation and commencement" subdoc="true" searchtype="LEGISLATION SECT" leveltype="sect"&gt;
+                &lt;leg:heading inline="true"&gt;
+                    &lt;desig inline="true" searchtype="SECT-NUM"&gt;
+                      &lt;designum&gt;1.&lt;/designum&gt;
+                    &lt;/desig&gt;
+                    &lt;title inline="true" searchtype="SECT-TITLE"&gt;&lt;refpt type="ext" id="USM.0333e.PUA0309y2012e.S1"/&gt;Citation and commencement&lt;/title&gt;
+                &lt;/leg:heading&gt;
+             ....
+             &lt;/leg:level-vrnt&gt;
+      &lt;/leg:level&gt;
+
+</pre>
+              <b>Becomes</b>
+              <pre>
+
+       &lt;primlaw:level leveltype="section" includeintoc="true" alternatetoccaption="1. Citation and commencement"&gt;
+              &lt;ref:anchor id="USM.0333e.PUA0309y2012e.S1" anchortype="global"/&gt;
+                  &lt;heading inline="true"&gt;
+                    &lt;desig inline="true"&gt;1.&lt;/desig&gt;
+                    &lt;title&gt;Citation and commencement&lt;/title&gt;
+                  &lt;/heading&gt;
+              ...
+        &lt;/primlaw:level&gt;
+
+            </pre>
+              <note>If the input documents are having scenarios
+                  <sourcexml>leg:bodytext/leg:heading/desig</sourcexml> and
+                  <sourcexml>leg:bodytext/leg:heading/title</sourcexml> then
+                  <sourcexml>leg:bodytext</sourcexml> becomes
+                  <targetxml>primlaw:bodytext</targetxml> and create a wrapper
+                  <targetxml>primlaw:level[@leveltype="unclassified"]</targetxml> with child
+                  <sourcexml>desig</sourcexml> becomes <targetxml>desig</targetxml> and
+                  <sourcexml>title</sourcexml> becomes <targetxml>title</targetxml>.</note>
+              <pre>
+
+     &lt;leg:levelbody&gt;
+        &lt;leg:bodytext&gt;
+            &lt;leg:heading inline="true"&gt;
+                  &lt;desig&gt;
+                     &lt;designum&gt;
+                        &lt;refpt type="ext" id="USM.ALN0012y1963e.S1.1"/&gt;&amp;#x0028;1&amp;#x0029; &lt;/designum&gt;
+                  &lt;/desig&gt;
+             &lt;/leg:heading&gt;
+             &lt;p nl="0"&gt;
+                &lt;text&gt;These Rules may be cited as the &lt;emph typestyle="bf"&gt;Motor Vehicles &amp;#x0028;Transfer Fees&amp;#x0029; Rules, 1963.&lt;/emph&gt;
+                &lt;/text&gt;
+             &lt;/p&gt;
+       &lt;/leg:bodytext&gt;
+    &lt;/leg:levelbody&gt;
+              
+            </pre>
+              <b>Becomes</b>
+              <pre>
+
+&lt;primlaw:bodytext&gt;
+        &lt;primlaw:level leveltype="unclassified"&gt;
+          &lt;ref:anchor id="USM.ALN0012y1963e.S1.1" anchortype="global"/&gt;
+            &lt;heading&gt;
+              &lt;desig&gt;&amp;#x0028;1&amp;#x0029; &lt;/desig&gt;
+            &lt;/heading&gt;
+        &lt;/primlaw:level&gt;
+       &lt;p&gt;
+           &lt;text&gt;These Rules may be cited as the &lt;emph typestyle="bf"&gt;Motor Vehicles &amp;#x0028;Transfer Fees&amp;#x0029; Rules, 1963.&lt;/emph&gt;
+           &lt;/text&gt;
+       &lt;/p&gt;   
+&lt;/primlaw:bodytext&gt;
+            
+</pre>
+            </li>
+          </ul>
+        </p>
+      </section>
+      <section>
+        <title>Changes</title>
+        <p>2013-11-14: <ph id="change_20131114_SSX">Created</ph>.</p>
+      </section>
+    </body>
+  </dita:topic>
+
+  <!--  @@@ This file has been autogenerated.  Remove this comment after manual development complete! @@@  -->
+  <!--    Original DITA file location:  DITA\ConversionInstructions\Rosetta\DITA-MY\MY07_CourtRule\MY07_Rosetta_leg.heading-LxAdv-heading.dita  -->
+  <!--<xsl:message>MY07_Rosetta_leg.heading-LxAdv-heading.xsl requires manual development!</xsl:message>-->
+
+  <xsl:template match="leg:heading">
+    <!--  Original Target XPath:  heading   -->
+    <xsl:if
+      test="child::node()[name() != 'leg:empleg' or name() != 'glp:note' or name() != 'refpt']">
+      <heading>
+        <xsl:apply-templates select="@* | node() except (leg:empleg | glp:note | refpt)"/>
+      </heading>
+    </xsl:if>
+    <!--<xsl:apply-templates select="leg:empleg"/>-->
+  </xsl:template>
+
+  <xsl:template match="leg:heading/@align">
+    <!--  Original Target XPath:  @align   -->
+    <xsl:attribute name="align">
+      <xsl:value-of select="."/>
+    </xsl:attribute>
+  </xsl:template>
+
+  <xsl:template match="leg:heading/@inline">
+    <!--  Original Target XPath:  @inline   -->
+    <xsl:attribute name="inline">
+      <xsl:value-of select="."/>
+    </xsl:attribute>
+  </xsl:template>
+
+</xsl:stylesheet>

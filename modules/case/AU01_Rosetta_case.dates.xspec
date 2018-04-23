@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:case="http://www.lexis-nexis.com/glp/case"
+	xmlns:caseinfo="http://www.lexisnexis.com/xmlschemas/content/legal/case-information/1/"
+	xmlns:decision="http://www.lexisnexis.com/xmlschemas/content/legal/decision/1/"
+	stylesheet="AU01_Rosetta_case.dates.xsl">
+
+	<x:scenario label="case.dates">
+		<x:scenario label="Scenario for testing template with match 'case:dates">
+			<x:context>
+				<case:dates>
+					<case:hearingdates>8, </case:hearingdates>
+					<case:decisiondate>
+						<date day="20" month="05" year="2009">20 May 2009</date>
+					</case:decisiondate>
+				</case:dates>
+			</x:context>
+			<x:expect label="a decision:dates wrapper is expected">
+				<decision:dates>
+					<decision:argueddate>8, </decision:argueddate>
+					<decision:decisiondate day="20" month="05" year="2009" normdate="2009-05-20">
+						<date-text>20 May 2009</date-text>
+					</decision:decisiondate>
+				</decision:dates>				
+			</x:expect>
+		</x:scenario>
+
+		<x:scenario label="Scenario for testing template with match 'case:hearingdates[@ln.user-displayed='false']">
+			<x:context>
+				<case:hearingdates ln.user-displayed="false">
+					<date year="1995" month="04" day="28">28 April 1995</date>
+				</case:hearingdates>
+			</x:context>
+			<x:expect label="a decision:argueddate with only attributes is expected">
+				<decision:argueddate year="1995" month="04" day="28" normdate="1995-04-28"/>
+			</x:expect>
+		</x:scenario>
+
+		<x:scenario label="Scenario for testing template with match 'case:hearingdates">
+			<x:context>
+				<case:hearingdates>
+					<date day="12" month="05" year="2000">12 May 2000</date>
+				</case:hearingdates>
+			</x:context>
+			<x:expect label="a decision:argueddate with attributes and child node is expected">
+				<decision:argueddate day="12" month="05" year="2000" normdate="2000-05-12">
+					<date-text>12 May 2000</date-text>
+				</decision:argueddate>
+			</x:expect>
+		</x:scenario>
+
+		<x:scenario label="Scenario for testing template with match 'case:decisiondate[@ln.user-displayed='false']">
+			<x:context>
+				<case:decisiondate ln.user-displayed="false">
+					<date year="1995" month="04" day="28">28 April 1995</date>
+				</case:decisiondate>
+			</x:context>
+			<x:expect label="a decision:decisiondate with only attributes is expected">
+				<decision:decisiondate day="28" month="04" year="1995" normdate="1995-04-28"/>
+			</x:expect>
+		</x:scenario>
+
+		<x:scenario label="Scenario for testing template with match 'case:decisiondate">
+			<x:context>
+				<case:decisiondate>
+					<date day="12" month="05" year="2000">12 May 2000</date>
+				</case:decisiondate>
+			</x:context>
+			<x:expect label="a decision:decisiondate with  attributes and child nodes is expected">
+				<decision:decisiondate day="12" month="05" year="2000" normdate="2000-05-12">
+					<date-text>12 May 2000</date-text>
+				</decision:decisiondate>
+			</x:expect>
+		</x:scenario>
+
+<!--		<x:scenario label="Scenario for testing template with match 'date/@day">
+			<x:context>
+				<case:hearingdates>
+					<date day="12"/>
+				</case:hearingdates>
+			</x:context>
+			<x:expect label="decision argueddate with @day expected">
+				<decision:argueddate day="12">
+					<date-text/>
+				</decision:argueddate>
+			</x:expect>
+		</x:scenario>
+
+		<x:scenario label="Scenario for testing template with match 'date/@month">
+			<x:context>
+				<case:hearingdates>
+					<date month="06"/>
+				</case:hearingdates>
+			</x:context>
+			<x:expect label="decision argueddate with @month expected">
+				<decision:argueddate month="06">
+					<date-text/>
+				</decision:argueddate>
+			</x:expect>
+		</x:scenario>
+
+		<x:scenario label="Scenario for testing template with match 'date/@year">
+			<x:context>
+				<case:hearingdates>
+					<date year="2012"/>
+				</case:hearingdates>
+			</x:context>
+			<x:expect label="decision argueddate with @year expected">
+				<decision:argueddate year="2012">
+					<date-text/>
+				</decision:argueddate>
+			</x:expect>
+		</x:scenario>
+-->
+		<!--<x:scenario label="Scenario for testing template with match 'date">
+			<x:context>
+				<case:hearingdates>
+					<date day="01" month="07" year="2012"/>
+				</case:hearingdates>
+			</x:context>
+			<x:expect label="@day, @month, @year and @normdate appear on output element.">
+				<decision:argueddate day="01" month="07" year="2012" normdate="2012-07-01">
+					<date-text/>
+				</decision:argueddate>
+			</x:expect>
+		</x:scenario>-->
+
+		<x:scenario label="Scenario for testing template with match 'case:publishdate[@ln.user-displayed='false']">
+			<x:context>
+				<case:publishdate ln.user-displayed="false">
+					<date year="1995" month="04" day="28">28 April 1995</date>
+				</case:publishdate>
+			</x:context>
+			<x:expect label="a decision:decisiondate with only attributes is expected">
+				<decision:releaseddate day="28" month="04" year="1995" normdate="1995-04-28"/>
+			</x:expect>
+		</x:scenario>
+
+		<x:scenario label="Scenario for testing template with match 'case:publishdate">
+			<x:context>
+				<case:publishdate>
+					<date day="12" month="05" year="2000">12 May 2000</date>
+				</case:publishdate>
+			</x:context>
+			<x:expect label="a decision:decisiondate with  attributes and child nodes is expected">
+				<decision:releaseddate day="12" month="05" year="2000" normdate="2000-05-12">
+					<date-text>12 May 2000</date-text>
+				</decision:releaseddate>
+			</x:expect>
+		</x:scenario>
+
+
+		<x:scenario label="Scenario for testing template with match 'case:reviseddate[@ln.user-displayed='false']">
+			<x:context>
+				<case:reviseddate ln.user-displayed="false">
+					<date year="1995" month="04" day="28">28 April 1995</date>
+				</case:reviseddate>
+			</x:context>
+			<x:expect label="a decision:revisiondate with only attributes is expected">
+				<decision:revisiondate day="28" month="04" year="1995" normdate="1995-04-28"/>
+			</x:expect>
+		</x:scenario>
+
+		<x:scenario label="Scenario for testing template with match 'case:reviseddate">
+			<x:context>
+				<case:reviseddate>
+					<date day="12" month="05" year="2000">12 May 2000</date>
+				</case:reviseddate>
+			</x:context>
+			<x:expect label="a decision:revisiondate with  attributes and child nodes is expected">
+				<decision:revisiondate day="12" month="05" year="2000" normdate="2000-05-12">
+					<date-text>12 May 2000</date-text>
+				</decision:revisiondate>
+			</x:expect>
+		</x:scenario>
+		
+	</x:scenario>
+</x:description>

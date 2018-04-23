@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case"
+	xmlns:casesum="http://www.lexisnexis.com/xmlschemas/content/legal/case-summary/1/"	
+	xmlns:ci="http://www.lexis-nexis.com/ci" 
+	xmlns:lnci="http://www.lexisnexis.com/xmlschemas/content/shared/citations/1/" 
+	xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/" 
+	stylesheet="AU01_Rosetta_case.disposition-LxAdv_casesum.disposition.xsl">
+
+	<x:scenario label="Scenario for testing template with match 'case:disposition' with no node()">
+		<x:context>
+			<case:disposition></case:disposition>
+		</x:context>
+		<x:expect label="casesum:disposition wrapper element expected">
+			<casesum:disposition></casesum:disposition>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:disposition' with node()">
+		<x:context>
+			<case:disposition>text</case:disposition>
+		</x:context>
+		<x:expect label="casesum:disposition wrapper element expected">
+			<casesum:disposition><p>text</p></casesum:disposition>
+		</x:expect>
+	</x:scenario>
+	
+	<x:scenario label="Scenario for testing template with match 'case:decisionsummary/@subdoc">
+		<x:context>
+			<case:disposition subdoc="subdoc"></case:disposition>			
+		</x:context>
+		<x:expect label="source @subdoc becomes @includeintoc">
+			<casesum:disposition includeintoc="subdoc"></casesum:disposition>
+		</x:expect>
+	</x:scenario>
+	
+	<x:scenario label="Scenario for testing template with match 'case:decisionsummary/@toc-caption">
+		<x:context>
+			<case:disposition toc-caption="toc-caption"></case:disposition>			
+		</x:context>
+		<x:expect label="source @toc-caption becomes @alternatetoccaption">
+			<casesum:disposition alternatetoccaption="toc-caption"></casesum:disposition>
+		</x:expect>
+	</x:scenario>
+
+</x:description>

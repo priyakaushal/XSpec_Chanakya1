@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case"
+	xmlns:casesum="http://www.lexisnexis.com/xmlschemas/content/legal/case-summary/1/"	
+	xmlns:ci="http://www.lexis-nexis.com/ci" 
+	xmlns:courtcase="http://www.lexisnexis.com/xmlschemas/content/legal/courtcase/1/"
+	xmlns:lnci="http://www.lexisnexis.com/xmlschemas/content/shared/citations/1/" 
+	xmlns:person="http://www.lexisnexis.com/xmlschemas/content/shared/person/1/"
+	xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/" 
+	stylesheet="AU01_Rosetta_case.judgment-LxAdv_courtcase.opinion.xsl">
+	
+	<x:scenario label="Scenario for testing template with match 'case:judgment'">
+		<x:context>
+			<case:judgment>text</case:judgment>
+		</x:context>
+		<x:expect label="'courtcase:opinion' wrapper expected">
+			<courtcase:opinion>text</courtcase:opinion>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:judgment/@subdoc'">
+		<x:context>
+			<case:judgment subdoc="true">text</case:judgment>
+		</x:context>
+		<x:expect label="'courtcase:opinion' with @includeintoc expected">
+			<courtcase:opinion includeintoc="true">text</courtcase:opinion>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:judgment/@toc-caption'">
+		<x:context>
+			<case:judgment toc-caption="caption">text</case:judgment>
+		</x:context>
+		<x:expect label="'courtcase:opinion' with @alternatetoccaption expected">
+			<courtcase:opinion alternatetoccaption="caption">text</courtcase:opinion>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:judgment/@searchtype">
+		<x:context>
+			<x:context>
+				<case:judgment searchtype="searchtype">text</case:judgment>
+			</x:context>
+		</x:context>
+		<x:expect label="'courtcase:opinion' with no attribute expected">
+			<courtcase:opinion>text</courtcase:opinion>
+		</x:expect>
+	</x:scenario>
+</x:description>

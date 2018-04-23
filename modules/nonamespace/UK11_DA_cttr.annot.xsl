@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns:source_cttr="http://www.lexis-nexis.com/glp/cttr" xmlns:cttr="urn:x-lexisnexis:content:citator:sharedservices:1" xmlns:case="http://www.lexis-nexis.com/glp/case" xmlns:legisinfo="http://www.lexisnexis.com/xmlschemas/content/legal/legislation-info/1/" version="2.0" exclude-result-prefixes="dita source_cttr cttr case">
+
+	<dita:topic xmlns="http://dita.oasis-open.org/architecture/2005/" id="UK11_DA_cttr.annot">
+    <title>cttr:annot <lnpid>id-UK11DA-29414</lnpid></title>
+    <body>
+        <section>
+            <ul>
+                <li>If parent
+                        <sourcexml>cttr:annotations/@annotationtype="consideredcases"</sourcexml>,
+                    then <sourcexml>cttr:annot</sourcexml> becomes
+                        <targetxml>cttr:refitem/cttr:consideredcase</targetxml>.<ul>
+                        <li>Attribute <sourcexml>cttr:annot[@signal]</sourcexml> becomes
+                                <targetxml>cttr:consideredcase[@treatment]</targetxml>. If
+                                <sourcexml>@signal</sourcexml> not present, set
+                                <targetxml>@treatment="unspecified"</targetxml>.</li>
+                    </ul></li>
+                <li>If parent
+                        <sourcexml>cttr:annotations/@annotationtype="consideredleg"</sourcexml>,
+                    then <sourcexml>cttr:annot</sourcexml> becomes
+                        <targetxml>cttr:refitem/cttr:consideredlegis</targetxml>.<ul>
+                        <li>Attribute <sourcexml>cttr:annot[@leg-signal]</sourcexml> becomes
+                                <targetxml>cttr:consideredlegis/cttr:legisinfo/legisinfo:status[@statuscode]</targetxml>.</li>
+                    </ul></li>
+            </ul>
+            <note><targetxml>cttr:consideredlegis</targetxml> requires child
+                    <targetxml>legisinfo:names</targetxml>. Refer to the <xref href="UK11_DA_leg.info-ChOf-cttr.annot.dita">leg:info</xref> section for further
+                instruction.</note>
+            <note><targetxml>cttr:legisinfo</targetxml> requires child
+                <targetxml>cttr:citations</targetxml>. Refer to the <xref href="UK11_DA_citations.dita">*:citations</xref> section for further
+                instruction.</note>
+        </section>
+
+        <pre>
+              <b><i>Example: Source XML 1</i></b>
+                  
+
+&lt;dig:body&gt;
+...
+  &lt;cttr:annotations annotationtype="consideredcases"&gt;
+    &lt;heading&gt;
+        &lt;title&gt;Cases considered in this article&lt;/title&gt;
+    &lt;/heading&gt;
+    &lt;cttr:annot&gt;
+    ...
+    &lt;/cttr:annot&gt;
+  &lt;/cttr:annotations&gt;
+  &lt;cttr:annotations annotationtype="consideredleg"&gt;
+    &lt;heading&gt;
+        &lt;title&gt;Legislation considered in this article&lt;/title&gt;
+    &lt;/heading&gt;
+    &lt;cttr:annot leg-signal="in-force-commenced-amend"&gt;
+    ...
+    &lt;/cttr:annot&gt;
+  &lt;/cttr:annotations&gt;
+&lt;/dig:body&gt;
+ 
+	</pre>
+        <pre>
+                    
+              <b><i>Example: Target XML 1</i></b>
+    
+&lt;abstract:body&gt;
+  &lt;cttr:refs&gt;
+    &lt;cttr:refsection reftype="considered-cases"&gt;
+      &lt;heading&gt;
+          &lt;title&gt;Cases considered in this article&lt;/title&gt;
+      &lt;/heading&gt;
+      &lt;cttr:refitem&gt;
+          &lt;cttr:consideredcase treatment="unspecified"&gt;
+          ...
+          &lt;/cttr:consideredcase&gt;
+      &lt;cttr:refitem&gt;
+    &lt;/cttr:refsection&gt;
+    &lt;cttr:refsection reftype="considered-legislation"&gt;
+      &lt;heading&gt;
+          &lt;title&gt;Legislation considered in this article&lt;/title&gt;
+      &lt;/heading&gt;
+      &lt;cttr:refitem&gt;
+          &lt;cttr:consideredlegis&gt;
+          ...
+            &lt;cttr:legisinfo&gt;
+              &lt;legisinfo:status statuscode="in-force-commenced-amend"&gt;
+            &lt;/cttr:legisinfo&gt;
+          &lt;/cttr:consideredlegis&gt;
+      &lt;cttr:refitem&gt;
+    &lt;/cttr:refsection&gt;
+  &lt;cttr:refs&gt;
+&lt;/abstract:body&gt;
+
+    </pre>
+        <section>
+            <title>Changes</title>
+            <p>2013-07-31: <ph id="change_20130731_jm">Added mapping for attribute
+                        <sourcexml>cttr:annot[@leg-signal]</sourcexml></ph>. Narrative rearranged
+                for clarity but only the <sourcexml>@leg-signal</sourcexml> rule is new; formerly
+                the attribute was suppressed.</p>
+            <p>2013-04-08: <ph id="change_20130408_jm"><sourcexml>cttr:annot</sourcexml> - Removed
+                    reference to pending CR. <targetxml>cttr:consideredlegis</targetxml> no longer
+                    requires child <targetxml>cttr:legiscomponents</targetxml></ph>.</p>
+        </section>
+
+    </body>
+	</dita:topic>
+
+	<!--  @@@ This file has been autogenerated.  Remove this comment after manual development complete! @@@  -->
+	<!--    Original DITA file location:  DITA\ConversionInstructions\Rosetta\DITA-UK\UK11DA-Digest-Abstract\UK11_DA_cttr.annot.dita  -->
+<!--	<xsl:message>UK11_DA_cttr.annot.xsl requires manual development!</xsl:message> -->
+
+	
+
+	<xsl:template match="source_cttr:annot">
+		<cttr:refitem>
+			<cttr:consideredcase>
+			    <xsl:if test="not(@*)">
+			        <xsl:attribute name="treatment" select="'unspecified'"/>
+			    </xsl:if>
+			    <xsl:apply-templates select="@* | node() except (case:citations,case:info[preceding-sibling::case:info])"/>
+			</cttr:consideredcase>
+		</cttr:refitem>
+	</xsl:template>
+    
+    
+    <xsl:template match="source_cttr:annot[@leg-signal]">
+        <cttr:refitem>
+            <cttr:consideredlegis>
+                <xsl:apply-templates select="node() except source_cttr:use-group"/>
+            </cttr:consideredlegis>
+        </cttr:refitem>
+    </xsl:template>
+
+	
+    <xsl:template match="source_cttr:annot/@signal">
+	<xsl:attribute name="treatment">
+			<xsl:value-of select="."/>
+		</xsl:attribute>
+	</xsl:template>
+    
+    <xsl:template match="source_cttr:annot/@leg-signal">
+        <xsl:value-of select="."/>
+    </xsl:template>
+
+</xsl:stylesheet>

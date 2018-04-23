@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case"
+	xmlns:casesum="http://www.lexisnexis.com/xmlschemas/content/legal/case-summary/1/"	
+	xmlns:ci="http://www.lexis-nexis.com/ci" 
+	xmlns:lnci="http://www.lexisnexis.com/xmlschemas/content/shared/citations/1/" 
+	xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/" 
+	stylesheet="AU01_Rosetta_case.decisionsummary-LxAdv_casesum.decisionsummary.xsl">
+
+	<x:scenario label="Scenario for testing template with match 'case:decisionsummary">		
+		<x:context>
+			<case:decisionsummary></case:decisionsummary>
+		</x:context>
+		<x:expect label="casesum:decisionsummary wrapper expected">
+			<casesum:decisionsummary></casesum:decisionsummary>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:decisionsummary' with node other than 'heading'">		
+		<x:context>
+			<case:decisionsummary><p>text</p></case:decisionsummary>
+		</x:context>
+		<!-- note <p> child omitted because it is not processed by the XSLT module being tested -->			
+		<x:expect label="casesum:decisionsummary wrapper expected">
+			<casesum:decisionsummary><bodytext>text</bodytext></casesum:decisionsummary>
+		</x:expect>
+	</x:scenario>
+	
+	<x:scenario label="Scenario for testing template with match 'case:decisionsummary' with blockquote/case:embeddedcase">		
+		<x:context>
+			<case:decisionsummary><blockquote><case:embeddedcase>case:embedded case in blockquote</case:embeddedcase></blockquote></case:decisionsummary>
+		</x:context>
+		<!-- note <courtcase:caseexcerpt> child omitted because it is not processed by the XSLT module being tested -->			
+		<x:expect label="casesum:decisionsummary wrapper expected">
+			<casesum:decisionsummary>case:embedded case in blockquote</casesum:decisionsummary>
+		</x:expect>
+	</x:scenario>
+	
+	<x:scenario label="Scenario for testing template with match 'case:decisionsummary/@summarytype">
+		<x:context>
+			<case:decisionsummary summarytype="summarytype"></case:decisionsummary>			
+		</x:context>
+		<x:expect label="source @summarytype becomes @summarysource">
+			<casesum:decisionsummary summarysource="summarytype"></casesum:decisionsummary>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:decisionsummary/@subdoc">
+		<x:context>
+			<case:decisionsummary subdoc="subdoc"></case:decisionsummary>			
+		</x:context>
+		<x:expect label="source @subdoc becomes @includeintoc">
+			<casesum:decisionsummary includeintoc="subdoc"></casesum:decisionsummary>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:decisionsummary/@toc-caption">
+		<x:context>
+			<case:decisionsummary toc-caption="toc-caption"></case:decisionsummary>			
+		</x:context>
+		<x:expect label="source @toc-caption becomes @alternatetoccaption">
+			<casesum:decisionsummary alternatetoccaption="toc-caption"></casesum:decisionsummary>
+		</x:expect>
+	</x:scenario>
+</x:description>

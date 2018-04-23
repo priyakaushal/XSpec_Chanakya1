@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:docinfo="http://www.lexis-nexis.com/glp/docinfo"
+    stylesheet="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/docinfo/Rosetta_docinfo.custom-metafields-LxAdv-SUPPRESS.xsl">
+    <x:param name="streamID" select="'CA12'"></x:param>
+    <x:scenario 
+        label="Scenario for testing template with match 'docinfo:custom-metafields">
+        <x:context>
+            <docinfo:custom-metafields>
+                <docinfo:custom-metafield name="date">20070919</docinfo:custom-metafield>
+                <docinfo:custom-metafield name="country">1</docinfo:custom-metafield>
+                <docinfo:custom-metafield name="juris">30</docinfo:custom-metafield>
+                <docinfo:custom-metafield name="court">145</docinfo:custom-metafield>
+                <docinfo:custom-metafield name="dpsi">03EX</docinfo:custom-metafield>
+                <docinfo:custom-metafield searchtype="COURT-CLASSIFY">BCLabRelBd</docinfo:custom-metafield>
+                <docinfo:custom-metafield searchtype="JURIS-CLASSIFY">BC</docinfo:custom-metafield>
+                <docinfo:custom-metafield searchtype="CITED-COUNT">0</docinfo:custom-metafield>
+            </docinfo:custom-metafields>
+        </x:context>
+        <x:expect label="cited-count, dpsi">
+            <metaitem xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/" name="dpsi" value="03EX"/>
+            <metaitem xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/" name="CITED-COUNT" value="0"/>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario 
+        label="Canadian Exceptions, eh">
+        <x:context>
+            <docinfo:custom-metafields>
+                <docinfo:custom-metafield name="JURIS-SORT">180</docinfo:custom-metafield>
+                <docinfo:custom-metafield name="COURT-SORT">200</docinfo:custom-metafield>
+                <docinfo:custom-metafield name="TERM-SORT">102840</docinfo:custom-metafield>
+            </docinfo:custom-metafields>            
+        </x:context>
+        <x:expect label="all 3 output">
+            <metaitem xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/" name="JURIS-SORT" value="180"/>
+            <metaitem xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/" name="COURT-SORT" value="200"/>
+            <metaitem xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/" name="TERM-SORT" value="102840"/>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario 
+        label="Scenario drop everything now y'all">
+        <x:context>
+            <docinfo:custom-metafields>
+                <docinfo:custom-metafield name="date">20070919</docinfo:custom-metafield>
+                <docinfo:custom-metafield name="country">1</docinfo:custom-metafield>
+                <docinfo:custom-metafield name="juris">30</docinfo:custom-metafield>
+                <docinfo:custom-metafield name="court">145</docinfo:custom-metafield>                
+                <docinfo:custom-metafield searchtype="COURT-CLASSIFY">BCLabRelBd</docinfo:custom-metafield>
+                <docinfo:custom-metafield searchtype="JURIS-CLASSIFY">BC</docinfo:custom-metafield>                
+            </docinfo:custom-metafields>
+        </x:context>
+        <x:expect label="I expect nothing">            
+        </x:expect>
+    </x:scenario>
+</x:description>

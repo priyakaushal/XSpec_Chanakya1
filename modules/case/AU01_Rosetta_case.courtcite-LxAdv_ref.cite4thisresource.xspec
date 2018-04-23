@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case"
+	xmlns:ci="http://www.lexis-nexis.com/ci" xmlns:lnci="http://www.lexisnexis.com/xmlschemas/content/shared/citations/1/" 
+	xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/" 
+	stylesheet="AU01_Rosetta_case.courtcite-LxAdv_ref.cite4thisresource.xsl">
+	<x:scenario label="Scenario for testing template with match 'case:courtcite[ci:cite[@type='parallel']]">
+		<x:context>
+			<case:courtcite>
+				<ci:cite type='parallel'>
+				</ci:cite>
+			</case:courtcite> 
+		</x:context>
+		<x:expect label="a ref:parallelcite[@citetype='court'] is expected">
+			<ref:parallelcite citetype="court">				
+			</ref:parallelcite>			
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:courtcite[ci:cite[@type='cite4thisdoc']]">
+		<x:context>
+			<case:courtcite>
+				<ci:cite type='cite4thisdoc'>
+				</ci:cite>
+			</case:courtcite>
+		</x:context>
+		<x:expect label="a ref:cite4thisresource[@citetype='court'] is produced">
+			<ref:cite4thisresource citetype="court">
+			</ref:cite4thisresource>
+		</x:expect>
+	</x:scenario>
+	
+	<x:scenario label="Scenario for testing template with match 'case:courtcite[ci:cite[not(@type)]]">
+		<x:context>
+			<case:courtcite>
+				<ci:cite>
+				</ci:cite>
+			</case:courtcite>
+		</x:context>
+		<x:expect label="a ref:cite4thisresource[@citetype='court'] is produced">
+			<ref:cite4thisresource citetype="court">
+			</ref:cite4thisresource>
+		</x:expect>
+	</x:scenario>
+	
+	
+</x:description>

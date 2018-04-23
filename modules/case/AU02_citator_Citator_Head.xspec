@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case" 
+	xmlns:cttr="urn:x-lexisnexis:content:citator:sharedservices:1"
+	stylesheet="AU02_citator_Citator_Head.xsl">
+
+	<x:scenario label="Scenario for testing template with match 'case:info'">
+		<x:context>
+			<case:info></case:info>
+		</x:context>
+		<x:expect label="cttr:citeddecision/cttr:caseinfo expected">
+			<cttr:citeddecision><cttr:caseinfo></cttr:caseinfo></cttr:citeddecision>
+		</x:expect>
+	</x:scenario>
+
+	<!-- NOTE: there is a bug in the handling of comments below; the exclamation point at the start of comment is omitted -->
+	<!--<x:scenario label="Scenario for testing template with match 'note[child::lnlink[@service='SEARCH']][parent::case:info]">
+		<x:context>
+			<case:info>
+				<note>
+					<lnlink scope="All Subscribed Australian Cases and Commentary" scope-protocol="combinedsource-
+						name" service="SEARCH" status="valid">
+						<api-params>
+							<param name="expressSearch" value="true"/>
+							<param name="searchString" value="ELECTRICITY SAFETY ACT 1998 w/s LEG-REF(1)"/>
+						</api-params>
+					</lnlink>
+				</note>
+			</case:info>
+		</x:context>
+		<x:expect label="cttr:citeddecision/cttr:caseinfo expected, with comment containing source lnlink">
+			<cttr:citeddecision>
+				<cttr:caseinfo>
+					<!-\-<lnlink scope="All Subscribed Australian Cases and Commentary" 
+						scope-protocol="combinedsource-name"
+						service="SEARCH" 
+						status="valid">
+						<api-params>
+							<param name="expressSearch" 
+							value="true"/>
+							<param name="searchString" 
+							value="ELECTRICITY SAFETY ACT 1998 w/s LEG-REF(1)"/>
+						</api-params>
+					</lnlink>-\->					
+				</cttr:caseinfo>
+			</cttr:citeddecision>			
+		</x:expect>
+	</x:scenario>-->
+</x:description>

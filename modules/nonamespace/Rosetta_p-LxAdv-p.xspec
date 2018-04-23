@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- stripped-down scenarios for testing template in isolation-->
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/nonamespace/Rosetta_p-LxAdv-p.xsl">
+    <x:param name="streamID" select="HK05"/>
+    <x:scenario label="Scenario for testing template with match 'p">
+        <x:context>
+            <p><text>Note: There is no penalty for this Rule.</text></p>            
+        </x:context>
+        <x:expect label="namespace on p should change">
+            <p xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">...</p>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario label="Scenario for testing template with match 'p/@i">
+        <x:context><p i="3.5" indent="hang"><text>Note: There is no penalty for this Rule.</text></p></x:context>
+        <x:expect label="@i should be dropped">
+            <p xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/" indent="hang">...</p>
+        </x:expect>
+    </x:scenario>
+  
+    <x:scenario label="Scenario for testing template with match 'p/@style">
+        <x:context><p style="right"><text><emph typestyle="it">Last updated: June 2011</emph></text></p> 
+               </x:context>
+        <x:expect label="@style becomes @align">
+            <p xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/" align="right">...</p></x:expect>
+    </x:scenario>
+
+    <x:scenario
+        label="Scenario for testing template with match 'p/@indent">
+        <x:context>
+            <p indent="hang"><text>Note: There is no penalty for this Rule.</text></p>            
+        </x:context>
+        <x:expect label="p and @indent should be the same">
+            <p xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/" indent="hang">...</p>
+        </x:expect>
+    </x:scenario>
+</x:description>

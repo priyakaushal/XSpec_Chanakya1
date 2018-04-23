@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case"
+	xmlns:compcase="urn:x-lexisnexis:content:compositecourtcase:sharedservices:1"
+	xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/"
+	stylesheet="case.citations.xsl">
+
+	<x:scenario label="Scenario for testing template with match 'case:citations'">
+		<x:context>
+			<case:citations></case:citations>
+		</x:context>
+		<x:expect label="compcase:head/ref:relatedrefs[@referencetype='case-citations'] wrapper expected">
+			<compcase:head>
+				<ref:relatedrefs referencetype='case-citations'></ref:relatedrefs>
+			</compcase:head>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:citetext'">
+		<x:context>
+			<case:citations>
+				<case:citetext>text</case:citetext>
+			</case:citations>
+		</x:context>
+		<x:expect label="Not yet implemented">
+			<compcase:head>
+				<ref:relatedrefs referencetype='case-citations'>
+					<bodytext>
+							<p>
+								<text>text</text>
+							</p>
+					</bodytext>
+				</ref:relatedrefs>
+			</compcase:head>
+		</x:expect>
+	</x:scenario>
+</x:description>

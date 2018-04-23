@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case" 
+	xmlns:courtorder="urn:x-lexisnexis:content:courtorder:sharedservices:1" 
+	stylesheet="case.body_case.content_case.appendix.xsl">
+	
+	<x:scenario label="Scenario for testing template with match 'case:body/case:content/case:appendix'">
+		<x:context>
+			<case:body>
+				<case:content>
+					<case:appendix></case:appendix>
+				</case:content>
+			</case:body>
+		</x:context>
+		<x:expect label="courtorder:body/appendix/bodytext expected">
+			<courtorder:body>
+				<appendix>
+					<bodytext></bodytext>
+				</appendix>
+			</courtorder:body>
+		</x:expect>
+	</x:scenario>
+</x:description>

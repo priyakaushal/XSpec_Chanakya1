@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:source_dict="http://www.lexis-nexis.com/glp/dict"    
+    xmlns:dict="urn:x-lexisnexis:content:dict:sharedservices:1"
+    stylesheet="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/nonamespace/HK05_Dictionary_Head.xsl">
+   <!-- <x:scenario pending="Not yet implemented"
+        label="fully fleshed out scenario for non-standalone">
+        <x:context>
+            <dict:body>
+                <heading>
+                    <desig>
+                        <designum>
+                            <refpt id="S00905" type="ext"> [S00905] </refpt>
+                        </designum>
+                    </desig>
+                </heading> 
+                <dict:term-entry>
+                    <defterm>
+                        <emph typestyle="bf">Step in the proceedings</emph></defterm>
+                </dict:term-entry>
+            </dict:body>
+        </x:context>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'">
+            <dict:head>
+                <heading>
+                    <desig>&amp;#x005B;S00905&amp;#x005D;</desig>
+                </heading>
+            </dict:head>
+            <dict:body>
+                <dict:defitem>
+                    <tei:entry>
+                        <tei:form>
+                            <tei:orth norm="Step in the proceedings">
+                                <ref:anchor id="S00905" anchortype="global">
+                                    <ref:anchortext>Step in the proceedings</ref:anchortext></ref:anchor>
+                            </tei:orth>
+                        </tei:form>
+                    </tei:entry>
+                </dict:defitem>
+            </dict:body>
+        </x:expect>
+    </x:scenario>-->
+    
+    <x:scenario
+        label="Scenario for testing template with match 'dict:body/heading">
+        <x:context>
+            <source_dict:body><heading>...</heading>...</source_dict:body>
+        </x:context>
+        <x:expect label="dict:head/heading">
+            <dict:head>
+                <heading xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">...</heading>
+            </dict:head>...</x:expect>
+    </x:scenario>
+
+    <x:scenario pending="Not yet implemented"
+        label="Scenario for testing template with match 'dict:body/heading/desig/designum">
+        <x:context/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario pending="Not yet implemented"
+        label="Scenario for testing template with match 'refpt">
+        <x:context/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+</x:description>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description	xmlns:x="http://www.jenitennison.com/xslt/xspec"
+
+						xmlns:in="http://www.lexis-nexis.com/glp/in"
+						xmlns:docinfo="http://www.lexis-nexis.com/glp/docinfo"
+						xmlns:lnci="http://www.lexisnexis.com/xmlschemas/content/shared/citations/1/"
+						
+						xmlns:admt="http://www.lexis-nexis.com/glp/admt"
+						xmlns:case="http://www.lexis-nexis.com/glp/case" xmlns:ci="http://www.lexis-nexis.com/ci"
+						xmlns:comm="http://www.lexis-nexis.com/glp/comm"
+						xmlns:cttr="http://www.lexis-nexis.com/glp/cttr"
+						xmlns:dict="http://www.lexis-nexis.com/glp/dict" xmlns:dig="http://www.lexis-nexis.com/glp/dig"
+						xmlns:frm="http://www.lexis-nexis.com/glp/frm" xmlns:glp="http://www.lexis-nexis.com/glp"
+						xmlns:jrnl="http://www.lexis-nexis.com/glp/jrnl"
+						xmlns:leg="http://www.lexis-nexis.com/glp/leg" xmlns:source_lnci="http://www.lexis-nexis.com/lnci"
+						xmlns:lncle="http://www.lexis-nexis.com/lncle" xmlns:lnclx="http://www.lexis-nexis.com/lnclx"
+						xmlns:lndel="http://www.lexis-nexis.com/lndel"
+						xmlns:lndocmeta="http://www.lexis-nexis.com/lndocmeta"
+						xmlns:lngntxt="http://www.lexis-nexis.com/lngntxt"
+						xmlns:lnlit="http://www.lexis-nexis.com/lnlit" xmlns:lnv="http://www.lexis-nexis.com/lnv"
+						xmlns:lnvni="http://www.lexis-nexis.com/lnvni" xmlns:lnvx="http://www.lexis-nexis.com/lnvx"
+						xmlns:lnvxe="http://www.lexis-nexis.com/lnvxe" xmlns:nitf="urn:nitf:iptc.org.20010418.NITF"
+						xmlns:op="http://www.lexis-nexis.com/glp/op" xmlns:xhtml="http://www.w3c.org/1999/xhtml"
+
+						stylesheet="Rosetta_ci.cite-LxAdv-lnci.cite.xsl">
+
+<!-- Must add identity transform to the XSLT for unit testing -->
+<!-- <xsl:template match="@*|node()">
+		<xsl:copy>
+			<xsl:apply-templates select="@*|node()"/>
+		</xsl:copy>
+	</xsl:template>
+-->
+	
+<!-- Must add streamID variable to XSLT to run for unit testing-->
+	<!-- If testing first when in ci:cite/@searchtype template -->
+	<!-- <xsl:variable name="streamID">('NZ05', 'NZ06')</xsl:variable>-->
+	<!-- If not testing first when statement in ci:cite/@searchtype template -->
+	<!-- <xsl:variable name="streamID">NZ07</xsl:variable>-->
+	<x:scenario label="Unit Test of Module:  ci:cite">
+		<x:scenario label="ci:cite becomes lnci:cite ">
+			<x:context>
+				<ci:cite searchtype="CASE-REF">
+					<ci:case>
+						<ci:caseinfo>
+							<ci:decisiondate year="2001"/>
+						</ci:caseinfo>
+						<ci:caseref ID="cr000366" spanref="cr000366-001" status="unval">
+							<ci:reporter value="NSWCCR"/>
+							<ci:volume num="22"/>
+							<ci:page num="238"/>
+						</ci:caseref>
+					</ci:case>
+					<ci:content>
+						<citefragment searchtype="CASE-NAME-REF"><emph typestyle="it">Betts v Prisk Contractors Pty Ltd</emph></citefragment>
+						<citefragment searchtype="CASE-CITE-REF"><ci:span spanid="cr000366-001" status="unval">(2001) 22 NSWCCR 238</ci:span>;[2001] NSWCC 146</citefragment>
+					</ci:content>
+				</ci:cite>
+			</x:context>
+			<x:expect label="lnci:cite created from local example">
+				<lnci:cite>
+					<lnci:case>
+						<lnci:caseinfo>
+							<lnci:decisiondate year="2001"/>
+						</lnci:caseinfo>
+						<lnci:caseref ID="cr000366" status="unval">
+							<lnci:reporter value="NSWCCR"/>
+							<lnci:volume num="22"/>
+							<lnci:page num="238"/>
+						</lnci:caseref>
+					</lnci:case>
+					<lnci:content><emph typestyle="it">Betts v Prisk Contractors Pty Ltd</emph>(2001) 22 NSWCCR 238;[2001] NSWCC 146</lnci:content>
+				</lnci:cite>
+			</x:expect>
+		</x:scenario>
+		
+		<x:scenario label="ci:cite becomes lnci:cite without possible children of ci:cite ">
+			<x:context>
+				<ci:cite searchtype="CASE-REF">
+					<ci:caseinfo>
+						<ci:decisiondate year="2001"/>
+					</ci:caseinfo>
+					<ci:caseref ID="cr000366" status="unval">
+						<ci:reporter value="NSWCCR"/>
+						<ci:volume num="22"/>
+						<ci:page num="238"/>
+					</ci:caseref>
+					<ci:content>
+						<citefragment searchtype="CASE-NAME-REF"><emph typestyle="it">Betts v Prisk Contractors Pty Ltd</emph></citefragment>
+						<citefragment searchtype="CASE-CITE-REF"><ci:span spanid="cr000366-001" status="unval">(2001) 22 NSWCCR 238</ci:span>;[2001] NSWCC 146</citefragment>
+					</ci:content>
+				</ci:cite>
+			</x:context>
+			<x:expect label="lnci:cite created from local example">
+				<lnci:cite type="case">
+					<lnci:caseinfo>
+						<lnci:decisiondate year="2001"/>
+					</lnci:caseinfo>
+					<lnci:caseref ID="cr000366" status="unval">
+						<lnci:reporter value="NSWCCR"/>
+						<lnci:volume num="22"/>
+						<lnci:page num="238"/>
+					</lnci:caseref>
+					<lnci:content><emph typestyle="it">Betts v Prisk Contractors Pty Ltd</emph>(2001) 22 NSWCCR 238;[2001] NSWCC 146</lnci:content>
+				</lnci:cite>
+			</x:expect>
+		</x:scenario>
+		
+		<x:scenario label="Handling for AU Journals/Newsitem ci:cite[@type]  ">
+				<x:context>
+					<ci:cite type="cite4thisdoc">
+						<ci:case>
+							<ci:caseinfo>
+								<ci:decisiondate year="2001"/>
+							</ci:caseinfo>
+							<ci:caseref ID="cr000366" spanref="cr000366-001" status="unval">
+								<ci:reporter value="NSWCCR"/>
+								<ci:volume num="22"/>
+								<ci:page num="238"/>
+							</ci:caseref>
+						</ci:case>
+						<ci:content>
+							<citefragment searchtype="CASE-NAME-REF"><emph typestyle="it">Betts v Prisk Contractors Pty Ltd</emph></citefragment>
+							<citefragment searchtype="CASE-CITE-REF"><ci:span spanid="cr000366-001" status="unval">(2001) 22 NSWCCR 238</ci:span>;[2001] NSWCC 146</citefragment>
+						</ci:content>
+					</ci:cite>
+				</x:context>
+				<x:expect label="lnci:cite created from local example">
+					<lnci:cite type="cite4thisdoc">
+						<lnci:case>
+							<lnci:caseinfo>
+								<lnci:decisiondate year="2001"/>
+							</lnci:caseinfo>
+							<lnci:caseref ID="cr000366" status="unval">
+								<lnci:reporter value="NSWCCR"/>
+								<lnci:volume num="22"/>
+								<lnci:page num="238"/>
+							</lnci:caseref>
+						</lnci:case>
+						<lnci:content><emph typestyle="it">Betts v Prisk Contractors Pty Ltd</emph>(2001) 22 NSWCCR 238;[2001] NSWCC 146</lnci:content>
+					</lnci:cite>
+				</x:expect>
+			</x:scenario>
+		
+	</x:scenario>
+</x:description>

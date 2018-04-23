@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    stylesheet="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/nonamespace/Rosetta_l-LxAdv-list.xsl">
+    <x:scenario label="Scenario for testing template with match 'l[not(@virtual-nesting)]">
+        <x:context>
+            <l>
+                <li>
+                    <lilabel>
+                        <emph typestyle="ro">(1)</emph>
+                    </lilabel>
+                    <p>
+                        <text>The plaintiffs&amp;#x2019; application is dismissed.</text>
+                    </p>
+                </li>
+                <li>
+                    <lilabel>
+                        <emph typestyle="ro">(2)</emph>
+                    </lilabel>
+                    <p>
+                        <text>The plaintiffs pay the defendant&amp;#x2019;s costs, including each appearance in the court, as taxed, if not agreed.</text>
+                    </p>
+                </li>
+            </l>
+        </x:context>
+        <x:expect label="list/listitem/label/bodytext stuff">
+            <list>
+                <listitem>
+                    <label>...</label>
+                    <bodytext>
+                        ...The plaintiffs&amp;#x2019; application is dismissed...</bodytext> 
+                </listitem>
+                <listitem>
+                    <label>...</label>
+                    <bodytext>...The plaintiffs pay the defendant&amp;#x2019;s costs, including each appearance in the court, as taxed, if not agreed....</bodytext> 
+                </listitem>
+            </list>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario label="nested list">
+        <x:context>
+           <l>
+            <li>
+                <lilabel>&amp;#x2022;</lilabel>
+                <p>
+                    <text>the health and safety of workers who are:</text>
+                </p>
+            </li>
+            <li>
+                <l>
+                    <li>
+                        <lilabel>&amp;#x25E6;</lilabel>
+                        <p>
+                            <text>engaged by the person conducting the business or undertaking;</text>
+                        </p>
+                    </li>
+                </l>
+            </li>
+            <li>
+                <lilabel>3</lilabel>
+                <p>
+                    <text>concluding list</text>
+                </p>
+            </li>
+           </l>
+        </x:context>
+        <x:expect label="nested with bodytext within item">
+            <list>
+                <listitem>
+                    <label>&amp;#x2022;</label>
+                    <bodytext>
+                        <p>
+                            <text>the health and safety of workers who are:</text>
+                        </p>
+                    </bodytext>
+                </listitem>
+                <listitem>
+                    <bodytext>
+                        <list>
+                            <listitem>
+                                <label>&amp;#x25E6;</label>
+                                <bodytext>
+                                    <p>
+                                        <text>engaged by the person conducting the business or undertaking;</text>
+                                    </p>
+                                </bodytext>  
+                            </listitem>
+                        </list>
+                    </bodytext>  
+                </listitem>
+                <listitem>
+                    <label>3</label>
+                    <bodytext>
+                        <p>
+                            <text>concluding list</text>
+                        </p>
+                    </bodytext>
+                </listitem>
+            </list>        
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario label="Scenario for testing template with refpt in lilabel">
+        <x:context>
+            <li>
+                <lilabel>1<refpt id="P00490" type="ext"> [P00490] </refpt></lilabel>
+                <p>
+                    <text>the health and safety of workers who are:</text>
+                </p>
+            </li>
+        </x:context>
+        <x:expect label="move ref:anchor to first child of text.">
+            <listitem>... [P00490] ...                
+                <label>1</label>
+                <bodytext>
+                    ...the health and safety of workers who are:...</bodytext>
+            </listitem>
+        </x:expect>
+    </x:scenario>
+</x:description>

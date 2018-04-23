@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case" 
+	xmlns:courtorder="urn:x-lexisnexis:content:courtorder:sharedservices:1" 
+	stylesheet="case.body_case.content_case.author.xsl">
+	
+	<x:scenario label="Scenario for testing template with match 'case:body/case:content/case:author'">
+		<x:context>
+			<case:body>
+				<case:content>
+					<case:author></case:author>
+			</case:content>
+			</case:body>
+		</x:context>
+		<x:expect label="courtorder:body/sigblock expected">
+				<sigblock></sigblock>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:content/case:author[person]'">
+		<x:context>
+			<case:content>
+				<case:author>
+					<person></person>
+				</case:author>
+			</case:content>
+		</x:context>
+		<x:expect label="sigblock/p/text wrappers expected (person:person added by another module)">
+				<sigblock>
+					<p>
+						<text></text>
+					</p>
+				</sigblock>
+		</x:expect>
+	</x:scenario>
+</x:description>

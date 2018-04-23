@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case"
+	xmlns:casesum="http://www.lexisnexis.com/xmlschemas/content/legal/case-summary/1/"	
+	xmlns:ci="http://www.lexis-nexis.com/ci" 
+	xmlns:courtcase="http://www.lexisnexis.com/xmlschemas/content/legal/courtcase/1/"
+	xmlns:lnci="http://www.lexisnexis.com/xmlschemas/content/shared/citations/1/" 
+	xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/" 
+	stylesheet="AU01_Rosetta_case.factsummary-LxAdv_casesum.editorialsummary.xsl">
+	
+	<x:scenario label="Scenario for testing template with match 'case:factsummary' without child 'l'">
+		<x:context>
+			<case:factsummary>text</case:factsummary>
+		</x:context>
+		<x:expect label="'casesum:editorialsummary' expected with child p">
+			<casesum:editorialsummary>text</casesum:editorialsummary>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:factsummary' with child 'l'">
+		<x:context>
+			<case:factsummary>
+				<l>text in l</l>
+			</case:factsummary>
+		</x:context>
+		<x:expect label="'casesum:editorialsummary' expected with child p">
+			<casesum:editorialsummary>
+				<p>
+				<list>text in l</list>
+				</p>
+			</casesum:editorialsummary>
+		</x:expect>
+	</x:scenario>
+	
+	<x:scenario label="Scenario for testing template with match 'case:factsummary/@subdoc">
+		<x:context>
+			<case:factsummary subdoc="subdoc"></case:factsummary>			
+		</x:context>
+		<x:expect label="source @subdoc becomes @includeintoc">
+			<casesum:editorialsummary includeintoc="subdoc"></casesum:editorialsummary>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:factsummary/@toc-caption">
+		<x:context>
+			<case:factsummary toc-caption="toc-caption"></case:factsummary>			
+		</x:context>
+		<x:expect label="source @toc-caption becomes @alternatetoccaption">
+			<casesum:editorialsummary alternatetoccaption="toc-caption"></casesum:editorialsummary>
+		</x:expect>
+	</x:scenario>
+
+</x:description>

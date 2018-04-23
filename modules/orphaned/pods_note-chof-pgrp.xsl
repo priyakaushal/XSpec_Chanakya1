@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns:glp="http://www.lexis-nexis.com/glp" xmlns:seclaw="http://www.lexisnexis.com/xmlschemas/content/legal/secondary-law/1/" version="2.0" exclude-result-prefixes="dita glp">
+
+	<dita:topic xmlns="http://dita.oasis-open.org/architecture/2005/" id="psl_landingpgs-pods_note-chof-pgrp">
+  <title>POD <sourcexml>pgrp/note</sourcexml>
+    <lnpid>id-UK13-30020</lnpid></title>
+  <body>
+    <p>The element <sourcexml>pgrp/note</sourcexml> becomes
+        <targetxml>seclaw:digest/seclaw:digestinfo/note</targetxml> with the attribute
+        <sourcexml>note/@notetype</sourcexml> converted to
+      <targetxml>note/@notetype</targetxml>. Then a child <targetxml>note/bodytext</targetxml> is
+      created to contain the content of <sourcexml>note</sourcexml>. All child elements of
+        <sourcexml>note</sourcexml> are converted using the common element instructions provided
+      in the section <xref href="general.dita"/>.</p>
+    <section>
+      <title>Source XML </title>
+      <codeblock>
+
+&lt;level leveltype="digest"&gt;
+  &lt;levelinfo&gt;
+    &lt;updatedate&gt;
+      &lt;date searchtype="CREATION" day="17" month="09" year="2014"/&gt;
+    &lt;/updatedate&gt;
+    &lt;services&gt;
+      &lt;service&gt;
+        &lt;api-params&gt;
+          &lt;param name="content-type-digest-order" value="2"/&gt;
+        &lt;/api-params&gt;
+      &lt;/service&gt;
+    &lt;/services&gt;
+  &lt;/levelinfo&gt;
+  &lt;bodytext searchtype="Practical Guidance"&gt;
+    &lt;pgrp&gt;
+      &lt;p&gt;
+        &lt;text&gt;
+          &lt;remotelink remotekey1="DOCID" service="DOC-ID" dpsi="0RCE"
+            remotekey2="0RCE_308172"&gt;Salary sacrifice—basic principles&lt;/remotelink&gt;
+        &lt;/text&gt;
+      &lt;/p&gt;
+      &lt;note notetype="summary"&gt;
+        &lt;p&gt;
+          &lt;text&gt;A salary sacrifice involves an employee giving up a right to receive part of
+            their cash salary in exchange for a defined non-cash benefit. This practice note
+            provides an introduction to the concept of salary sacrifice and explains what it
+            is and why it is commonly used.&lt;/text&gt;
+        &lt;/p&gt;
+      &lt;/note&gt;
+    &lt;/pgrp&gt;
+  &lt;/bodytext&gt;
+&lt;/level&gt;
+
+      </codeblock>
+    </section>
+    <section>
+      <title>Target XML </title>
+      <codeblock>
+
+&lt;seclaw:digest&gt;
+  &lt;seclaw:digestinfo&gt;
+    &lt;meta&gt;
+      &lt;metaitem name="lpa:content-type-digest-order" value="2"/&gt;
+    &lt;/meta&gt;
+    &lt;seclaw:subjectmatterreference&gt;
+      &lt;ref:crossreference&gt;
+        &lt;ref:content&gt;Salary sacrifice—basic principles&lt;/ref:content&gt;
+        &lt;ref:locator&gt;
+          &lt;ref:locator-key&gt;
+            &lt;ref:key-name name="DOC-ID"/&gt;
+            &lt;ref:key-value value="0RCE-0RCE_308172"/&gt;
+          &lt;/ref:locator-key&gt;
+        &lt;/ref:locator&gt;
+      &lt;/ref:crossreference&gt;
+      &lt;ref:referencestatusgroup&gt;
+        &lt;ref:referencestatusdate name="lpa:creation" day="17" month="09" year="2014"/&gt;
+      &lt;/ref:referencestatusgroup&gt;
+    &lt;/seclaw:subjectmatterreference&gt;
+    &lt;note notetype="summary"&gt;
+      &lt;bodytext&gt;
+        &lt;p&gt;
+          &lt;text&gt;A salary sacrifice involves an employee giving up a right to receive part of
+            their cash salary in exchange for a defined non-cash benefit. This practice note
+            provides an introduction to the concept of salary sacrifice and explains what it
+            is and why it is commonly used.&lt;/text&gt;
+        &lt;/p&gt;
+      &lt;/bodytext&gt;
+    &lt;/note&gt;
+  &lt;/seclaw:digestinfo&gt;
+&lt;/seclaw:digest&gt;
+
+        </codeblock>
+    </section>
+    <section>
+      <title>Changes</title>
+      <p>2015-03-07: <ph id="change_20150307_JCG">Removed source namespace
+            <sourcexml>glp:</sourcexml> from instructions (the source element is now
+            <sourcexml>note</sourcexml> instead of <sourcexml>glp:note</sourcexml>), and provided a
+          completely new example. Also removed the note (added on 2014-02-12) stating that this
+          topic should not be used for current data. As of March 2015, the
+            <sourcexml>pgrp/note</sourcexml> elements described by this topic will exist in almost
+          all POD documents and should be converted as described.</ph></p>
+      <p>2014-02-12: <ph id="change_20140212_JCG">Added a note to clarify that the instructions in
+          this topic should not be used for current data. This topic is included only for
+          completeness with regard to possible future scenarios. Also, changed the example so that
+          it indicates a more accurate scenario regarding this instruction.</ph></p>
+      </section>
+  </body>
+	</dita:topic>
+
+	<!--  @@@ This file has been autogenerated.  Remove this comment after manual development complete! @@@  -->
+	<!--    Original DITA file location:  DITA\ConversionInstructions\Rosetta\DITA-UK\UK13_PSL_LandingPages\pods_note-chof-pgrp.dita  -->
+	<xsl:message>pods_note-chof-pgrp.xsl requires manual development!</xsl:message> 
+
+	<xsl:template match="pgrp/note">
+
+		<!--  Original Target XPath:  seclaw:digest/seclaw:digestinfo/note   -->
+		<seclaw:digest>
+			<seclaw:digestinfo>
+				<note>
+					<xsl:apply-templates select="@* | node()"/>
+				</note>
+			</seclaw:digestinfo>
+		</seclaw:digest>
+
+	</xsl:template>
+
+	<xsl:template match="note/@notetype">
+
+		<!--  Original Target XPath:  note/@notetype   -->
+		<note>
+			<xsl:attribute name="notetype">
+				<xsl:apply-templates select="node()"/>
+			</xsl:attribute>
+		</note>
+
+	</xsl:template>
+
+	<xsl:template match="note">
+
+		<!--  Original Target XPath:     -->
+		<!--  Could not determine target element or attribute name:  <>  -->			<xsl:apply-templates select="@* | node()"/>
+		<!--  Could not determine target element or attribute name:  </>  -->
+
+	</xsl:template>
+
+	<xsl:template match="glp:">
+
+		<!--  Original Target XPath:     -->
+		<!--  Could not determine target element or attribute name:  <>  -->			<xsl:apply-templates select="@* | node()"/>
+		<!--  Could not determine target element or attribute name:  </>  -->
+
+	</xsl:template>
+
+	<xsl:template match="glp:note">
+
+		<!--  Original Target XPath:     -->
+		<!--  Could not determine target element or attribute name:  <>  -->			<xsl:apply-templates select="@* | node()"/>
+		<!--  Could not determine target element or attribute name:  </>  -->
+
+	</xsl:template>
+
+</xsl:stylesheet>

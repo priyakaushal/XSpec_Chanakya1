@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:leg="http://www.lexis-nexis.com/glp/leg" 
+    xmlns:annot="http://www.lexisnexis.com/xmlschemas/content/shared/annotations/1/" 
+    xmlns:primlaw="http://www.lexisnexis.com/xmlschemas/content/legal/primarylaw/1/" 
+    xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/"   
+    stylesheet="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/leg/Rosetta_leg.comntry-LxAdv-annot.annotations-annot.annotation-grp.xsl">
+ <!-- add debug code to template to make this work:
+     
+     <xsl:param name="streamID" select="'IN04'"/>
+  <xsl:key name="idTypeValue" match="*[@id]" use="@id"/>
+  <xsl:key name="idTypeValue" match="*[@ID]" use="@ID"/>	
+  <xsl:key name="idTypeValue" match="footnote" use="@fntoken"/>
+  <xsl:key name="idTypeValue" match="fnr" use="@fnrtoken"/>
+  <xsl:include href="../../../global/functions/globalFunctions.xsl"/>
+  <xsl:include href="../../../global/defaultRules.xsl"/>
+  <xsl:include href="../../modules/nonamespace/Rosetta_heading-LxAdv-heading.xsl"/>
+  <xsl:include href="../../modules/leg/leg.bodytext.xsl"/>
+  <xsl:include href="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/nonamespace/Rosetta_leg.comntry-level_LEVELTYPE_GROUP-LxAdv-annot.annotations-annot.annotation-grp.xsl"/>
+  <xsl:include href="../../modules/nonamespace/Rosetta_identifier-LxAdv-ID_data_type-HandlingPatternRestrictions.xsl"/>
+  <xsl:include href="../../modules/nonamespace/Rosetta_identifier-LxAdv-ID_data_type-HandlingDuplicates.xsl"/>
+  <xsl:include href="../../modules/nonamespace/Rosetta_leg.comntry-level_LEVELTYPE_PARA0-LxAdv-annot.annotations-annot.annotation-grp.xsl"/>
+  <xsl:include href="../../modules/nonamespace/Rosetta_leg.comntry-level_LEVELTYPE_SUBPARA0-LxAdv-annot.annotations-annot.annotation-grp.xsl"/>
+  <xsl:include href="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/nonamespace/Rosetta_refpt-LxAdv-ref.anchor.xsl"/>
+  <xsl:include href="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/leg/leg.heading-LxAdv-heading.xsl"/>
+  <xsl:include href="../../modules/nonamespace/Rosetta_bodytext-LxAdv-bodytext.xsl"/>
+  <xsl:include href="../../modules/nonamespace/Rosetta_p-LxAdv-p.xsl"/>
+  <xsl:include href="../../modules/nonamespace/Rosetta_text-LxAdv-text-with-test-for-whitespace-content.xsl"/>
+  <xsl:include href="../../modules/nonamespace/Rosetta_title-LxAdv-title.xsl"/>
+  <xsl:include href="../../modules/nonamespace/Rosetta_edpnum-LxAdv-desig.xsl"/>
+-->
+    <x:scenario 
+        label="Scenario for testing template with match 'leg:comntry">
+        <x:context>
+            <leg:comntry subdoc="true" toc-caption="Notes">
+                <bodytext>
+                    <p><text>  </text></p>
+                    <p><text>  </text></p>
+                    <hrule/>
+                </bodytext>
+                <level id="NZREGS_REGS-H.SGM_PARA-2009R165S1-COMPENDIUM" leveltype="para0">
+                    <bodytext searchtype="COMMENTARY">...</bodytext>
+                </level>
+            </leg:comntry>            
+        </x:context>
+        <x:expect label="annot:annotations">            
+            <annot:annotations>
+                <annot:annotation-grp includeintoc="true" alternatetoccaption="Notes">
+                    <annot:annotation xml:id="NZREGS_REGS-H.SGM_PARA-2009R165S1-COMPENDIUM">
+                        <bodytext xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">...</bodytext>
+                    </annot:annotation>
+                </annot:annotation-grp>
+            </annot:annotations>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario 
+        label="Scenario for testing template for IN streams">
+        <x:context>
+            <leg:comntry searchtype="commentary">
+                <level leveltype="comm1">
+                    <bodytext>
+                        <pgrp>
+                            <heading>
+                                <title align="center">COMMENTS</title>
+                            </heading>
+                            .....
+                        </pgrp>
+                    </bodytext>
+                </level>
+            </leg:comntry>
+        </x:context>
+        <x:expect label="commentary type">
+            <annot:annotations>
+                <annot:annotation-grp grptype="COMMENTARY">...</annot:annotation-grp>
+            </annot:annotations>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario 
+        label="Scenario for testing template with match leg:comntry group level">
+        <x:context>
+            <leg:comntry toc-caption="Reader's Guide" subdoc="true">
+                <heading searchtype="COMMENTARY">
+                    <title>
+                        <refpt type="ext" id="CLSA.VOFF.ARRS.RGUIDE"/>Reader's Guide</title>
+                </heading>
+                <level 
+                    id="CLSA_VOFF.SGM_GROUP_2" 
+                    leveltype="group" 
+                    toc-caption="Aim of the Guide" 
+                    subdoc="true">
+                    <heading searchtype="COMMENTARY">
+                        <title>
+                            <refpt type="ext" id="CLSA.VOFF.29035-1"/>Aim of the Guide</title>
+                    </heading>
+                    <bodytext searchtype="COMMENTARY">
+                        <p>
+                            <text>The aim of this Guide...</text>
+                        </p>
+                    </bodytext>
+                </level>
+            </leg:comntry>
+        </x:context>
+        <x:expect label="nested annotation group">
+            <annot:annotations>
+                <annot:annotation-grp 
+                    grptype="COMMENTARY" 
+                    alternatetoccaption="Reader's Guide" 
+                    includeintoc="true">
+                    <ref:anchor 
+                        id="CLSA.VOFF.ARRS.RGUIDE" 
+                        anchortype="global"/>
+                    <heading xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                        <title>Reader's Guide</title>
+                    </heading>
+                    <annot:annotation-grp 
+                        xml:id="CLSA_VOFF.SGM_GROUP_2" 
+                        grptype="COMMENTARY" 
+                        alternatetoccaption="Aim of the Guide" 
+                        includeintoc="true">
+                        <ref:anchor 
+                            id="CLSA.VOFF.29035-1" 
+                            anchortype="global"/>
+                        <heading xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                            <title>Aim of the Guide</title>
+                        </heading>
+                        <annot:annotation>
+                            <bodytext xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                                <p>
+                                    <text>The aim of this Guide...</text>
+                                </p>
+                            </bodytext>
+                        </annot:annotation>
+                    </annot:annotation-grp>
+                </annot:annotation-grp>
+            </annot:annotations>            
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario
+        label="Scenario for testing template with match leveltype of comm.intro">
+        <x:context>
+            <leg:comntry>
+                <level id="PFI_CODES.SGM_COMM.INTRO_1" leveltype="comm.intro" toc-caption="FOREWORD" subdoc="true">
+                    <heading searchtype="COMMENTARY"><title>FOREWORD</title></heading>
+                    <bodytext searchtype="COMMENTARY">
+                        <p><text>As the Minister for Finance, Superannuation and...</text></p>
+                    </bodytext>
+                </level>
+            </leg:comntry>            
+        </x:context>
+        <x:expect label="annotation group">
+            <annot:annotations>
+                <annot:annotation-grp xml:id="PFI_CODES.SGM_COMM.INTRO_1" grptype="COMMENTARY" alternatetoccaption="FOREWORD" includeintoc="true">
+                    <heading xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/"><title>FOREWORD</title></heading>
+                    <annot:annotation>
+                        <bodytext xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                            <p><text>As the Minister for Finance, Superannuation and...</text></p>
+                        </bodytext>
+                    </annot:annotation>
+                </annot:annotation-grp>
+            </annot:annotations>            
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario 
+        label="Scenario for testing comm.intro with multiple levels">
+        <x:context>
+            <leg:comntry>
+                <level id="AEFP_ASX3.SGM_COMM.INTRO_8" leveltype="comm.intro" toc-caption="Appendices to ASX Operating Rules Procedures" subdoc="true">
+                    <heading searchtype="COMMENTARY"><title>Appendices to ASX Operating Rules Procedures</title></heading>
+                    <level id="AEFP_ASX3.SGM_GROUP_9" leveltype="group" toc-caption="Contents" subdoc="true">
+                        <heading searchtype="COMMENTARY"><title>Contents</title></heading>
+                        <bodytext searchtype="COMMENTARY">
+                            <p>...</p>
+                        </bodytext>
+                    </level>
+                </level>
+            </leg:comntry>            
+        </x:context>
+        <x:expect label="annotation output">
+            <annot:annotations>
+                <annot:annotation-grp xml:id="AEFP_ASX3.SGM_COMM.INTRO_8" grptype="COMMENTARY" alternatetoccaption="Appendices to ASX Operating Rules Procedures" includeintoc="true">
+                    <heading xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/"><title>Appendices to ASX Operating Rules Procedures</title></heading>
+                    <annot:annotation-grp xml:id="AEFP_ASX3.SGM_GROUP_9" grptype="COMMENTARY" alternatetoccaption="Contents" includeintoc="true">
+                        <heading xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/"><title>Contents</title></heading>
+                        <annot:annotation>
+                            <bodytext xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                                <p>...</p>
+                            </bodytext>
+                        </annot:annotation>
+                    </annot:annotation-grp>
+                </annot:annotation-grp>
+            </annot:annotations>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario
+        label="Scenario for testing leveltype of group">
+        <x:context>
+            <leg:comntry toc-caption="Reader's Guide" subdoc="true">
+                <heading searchtype="COMMENTARY">
+                    <title>
+                        <refpt type="ext" id="CLSA.VOFF.ARRS.RGUIDE"/>Reader's Guide</title>
+                </heading>
+                <level 
+                    id="CLSA_VOFF.SGM_GROUP_2" 
+                    leveltype="group" 
+                    toc-caption="Aim of the Guide" 
+                    subdoc="true">
+                    <heading searchtype="COMMENTARY">
+                        <title>
+                            <refpt type="ext" id="CLSA.VOFF.29035-1"/>Aim of the Guide</title>
+                    </heading>
+                    <bodytext searchtype="COMMENTARY">
+                        <p>
+                            <text>The aim of this Guide...</text>
+                        </p>
+                    </bodytext>
+                </level>
+            </leg:comntry>            
+        </x:context>
+        <x:expect label="group output">
+            <annot:annotations>
+                <annot:annotation-grp 
+                    grptype="COMMENTARY" 
+                    alternatetoccaption="Reader's Guide" 
+                    includeintoc="true">
+                    <ref:anchor 
+                        id="CLSA.VOFF.ARRS.RGUIDE" 
+                        anchortype="global"/>
+                    <heading xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                        <title>Reader's Guide</title>
+                    </heading>
+                    <annot:annotation-grp 
+                        xml:id="CLSA_VOFF.SGM_GROUP_2" 
+                        grptype="COMMENTARY" 
+                        alternatetoccaption="Aim of the Guide" 
+                        includeintoc="true">
+                        <ref:anchor 
+                            id="CLSA.VOFF.29035-1" 
+                            anchortype="global"/>
+                        <heading xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                            <title>Aim of the Guide</title>
+                        </heading>
+                        <annot:annotation>
+                            <bodytext xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                                <p>
+                                    <text>The aim of this Guide...</text>
+                                </p>
+                            </bodytext>
+                        </annot:annotation>
+                    </annot:annotation-grp>
+                </annot:annotation-grp>
+            </annot:annotations>            
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="para0 with preceding heading">
+        <x:context>
+            <leg:comntry subdoc="true" toc-caption="COMMENTARY ON REGULATION 12">
+                <heading searchtype="COMMENTARY">
+                    <title><refpt id="CLWA.SL.SARW03.REG12.COM1" type="ext"/>COMMENTARY ON REGULATION 12</title>
+                </heading>
+                <level id="CLWA_SL.SGM_CLWA.SL.SARR12-1" leveltype="para0" subdoc="true" toc-caption="[SAR r 12.1] Cross references">
+                    <heading searchtype="COMMENTARY">
+                        <edpnum><refpt id="CLWA.SL.SARR12-1" type="ext"/>[SAR r 12.1]</edpnum>
+                        <title>Cross references</title>
+                    </heading>
+                    <bodytext searchtype="COMMENTARY">
+                        <p>...</p>
+                    </bodytext>
+                </level>
+            </leg:comntry>            
+        </x:context>
+        <x:expect label="para0 output">
+            <annot:annotations>
+                <annot:annotation-grp grptype="COMMENTARY" includeintoc="true" alternatetoccaption="COMMENTARY ON REGULATION 12">
+                    <ref:anchor id="CLWA.SL.SARW03.REG12.COM1" anchortype="global"/>
+                    <heading xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/"><title>COMMENTARY ON REGULATION 12</title></heading>
+                    <annot:annotation xml:id="CLWA_SL.SGM_CLWA.SL.SARR12-1" alternatetoccaption="[SAR r 12.1] Cross references"
+                        includeintoc="true">
+                        <ref:anchor id="CLWA.SL.SARR12-1" anchortype="global"/>
+                        <heading xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                            <desig>[SAR r 12.1]</desig>
+                            <title>Cross references</title>
+                        </heading>
+                        <bodytext xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                            <p>...</p>
+                        </bodytext>
+                    </annot:annotation>
+                </annot:annotation-grp>
+            </annot:annotations>           
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="subpara0">
+        <x:context>
+            <leg:comntry subdoc="true" toc-caption="Commentary">
+                <level id="ACLL_CCPA.SGM_GROUP_2" leveltype="para0" toc-caption="Outline" subdoc="true">
+                    <heading searchtype="COMMENTARY"><title>Outline</title></heading>
+                    <bodytext searchtype="COMMENTARY">
+                        <p>...</p>
+                    </bodytext>
+                    <level id="ACLL_CCPA.SGM_GROUP_3" leveltype="subpara0" toc-caption="Provisions" subdoc="true">
+                        <heading searchtype="COMMENTARY"><title>Provisions</title></heading>
+                        <bodytext searchtype="COMMENTARY">
+                            <p>...</p>
+                        </bodytext>
+                    </level>
+                </level>
+            </leg:comntry>            
+        </x:context>
+        <x:expect label="annotation output">
+            <annot:annotations>
+                <annot:annotation-grp alternatetoccaption="Commentary" includeintoc="true">
+                    <annot:annotation xml:id="ACLL_CCPA.SGM_GROUP_2" alternatetoccaption="Outline" includeintoc="true">
+                        <heading xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/"><title>Outline</title></heading>
+                        <bodytext xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                            <p>...</p>
+                        </bodytext>
+                        <annot:annotationlevel xml:id="ACLL_CCPA.SGM_GROUP_3" alternatetoccaption="Provisions" includeintoc="true">
+                            <heading xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/"><title>Provisions</title></heading>
+                            <annot:bodytext>
+                                <p xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">...</p>
+                            </annot:bodytext>
+                        </annot:annotationlevel>
+                    </annot:annotation>
+                </annot:annotation-grp>
+            </annot:annotations>            
+        </x:expect>
+    </x:scenario>
+</x:description>

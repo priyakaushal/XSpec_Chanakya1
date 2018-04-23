@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case"
+	xmlns:casesum="http://www.lexisnexis.com/xmlschemas/content/legal/case-summary/1/"	
+	xmlns:ci="http://www.lexis-nexis.com/ci" 
+	xmlns:courtcase="http://www.lexisnexis.com/xmlschemas/content/legal/courtcase/1/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:decision="http://www.lexisnexis.com/xmlschemas/content/legal/decision/1/"
+	xmlns:jurisinfo="http://www.lexisnexis.com/xmlschemas/content/legal/jurisdiction-info/1/"
+	xmlns:lnci="http://www.lexisnexis.com/xmlschemas/content/shared/citations/1/" 
+	xmlns:location="http://www.lexisnexis.com/xmlschemas/content/shared/location/1/"
+	xmlns:person="http://www.lexisnexis.com/xmlschemas/content/shared/person/1/"
+	xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/" 
+	stylesheet="AU01_Rosetta_case.juris.xsl">
+
+	<x:scenario label="Scenario for testing template with match 'case:juris[starts-with(.,'NSW') or starts-with(.,'QLD') or starts-with(.,'SA') or starts-with(.,'TAS') or starts-with(.,'VIC') or starts-with(.,'WA') or starts-with(.,'ACT') or starts-with(.,'NT')]">
+		<!-- Note use of @select here: apply templates on that particular node (other is present to satify preceding-sibling:: match in XSL template -->
+		<x:context select="case:juris">
+			<case:courtcode>NSWSC</case:courtcode>
+			<case:juris>nsw</case:juris>
+		</x:context>
+		<x:expect label="jurisinfo:sytem and jurisinfo:alternatecourtcode expected.">
+			<jurisinfo:alternatecourtcode alternatecourtcode="NSWSC" />
+			<jurisinfo:jurisdiction>
+				<jurisinfo:system>nsw</jurisinfo:system>
+			</jurisinfo:jurisdiction>
+		</x:expect>
+	</x:scenario>
+	
+	<x:scenario label="Scenario for testing template with match 'case:juris[starts-with(.,'NSW') or starts-with(.,'QLD') or starts-with(.,'SA') or starts-with(.,'TAS') or starts-with(.,'VIC') or starts-with(.,'WA') or starts-with(.,'ACT') or starts-with(.,'NT')]' and mode 'dc.coverage'">
+		<x:context mode="dc.coverage">
+			<case:juris>nsw</case:juris>
+		</x:context>
+		<x:expect label="dc:coverage/location:state[@statecode='AU-NS'] expected">
+			<dc:coverage>
+				<location:state codescheme="ISO-3166-2" statecode="AU-NS">nsw</location:state>
+			</dc:coverage>
+		</x:expect>
+	</x:scenario>
+	
+	<x:scenario label="Scenario for testing template with match 'case:courtcode">
+		<x:context>
+			<case:courtcode>NSWSC</case:courtcode>
+		</x:context>
+		<x:expect label="jurisinfo:alternatecourtcode @alternatecourtcode expected">
+			<jurisinfo:alternatecourtcode alternatecourtcode="NSWSC"/></x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:juris[not(starts-with(.,'NSW') or starts-with(.,'QLD') or starts-with(.,'SA') or starts-with(.,'TAS') or starts-with(.,'VIC') or starts-with(.,'WA') or starts-with(.,'ACT') or starts-with(.,'NT'))]">
+		<x:context>
+			<case:juris>abc</case:juris>
+		</x:context>
+		<x:expect label="jurisinfo:jurisdiction with child jurisinfo:sytem expected.">
+			<jurisinfo:jurisdiction>
+				<jurisinfo:system>abc</jurisinfo:system>
+			</jurisinfo:jurisdiction>			
+		</x:expect>
+	</x:scenario>
+	
+	<x:scenario label="Scenario for testing template with match 'case:juris[not(starts-with(.,'NSW') or starts-with(.,'QLD') or starts-with(.,'SA') or starts-with(.,'TAS') or starts-with(.,'VIC') or starts-with(.,'WA') or starts-with(.,'ACT') or starts-with(.,'NT'))]' and mode 'dc.coverage'">
+		<x:context mode="dc.coverage">
+			<case:juris>CTH</case:juris>
+		</x:context>
+		<x:expect label="dc:coverage/location:country[@countrycode='AU'] expected">
+			<dc:coverage>
+				<location:country codescheme="ISO-3166-1" countrycode="AU"/>
+			</dc:coverage>
+		</x:expect>
+	</x:scenario>
+	
+</x:description>

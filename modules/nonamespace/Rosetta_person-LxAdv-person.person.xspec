@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:person="http://www.lexisnexis.com/xmlschemas/content/shared/person/1/"
+    xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/"
+    stylesheet="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/nonamespace/Rosetta_person-LxAdv-person.person.xsl">
+    <x:scenario 
+        label="Scenario for testing template with match 'person">
+        <x:context>
+            <person>
+                <name.text>Norman Lyall</name.text>
+                <name.detail>
+                    <name.degree>BA, LLB,</name.degree>
+                </name.detail>
+                <role>Solicitor of the Supreme Court of New South Wales</role>
+            </person>
+        </x:context>
+        <x:expect label="person:person">
+            <person:person>
+                <person:name.text>Norman Lyall</person:name.text>
+                <person:name.detail>
+                    <person:name.degree>BA, LLB,</person:name.degree>
+                </person:name.detail>
+                <role xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">Solicitor of the Supreme Court of New South Wales</role>
+            </person:person>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario 
+        label="Scenario 2: roles">
+        <x:context>
+            <person>
+                <role>by</role>
+                <name.text>A J ABADEE</name.text>
+                <role>Barrister-at-law, Sydney</role>
+            </person>
+        </x:context>
+        <x:expect label="Scenario 2 output">
+            <person:person>
+                <role xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">by</role>
+                <person:name.text>A J ABADEE</person:name.text>
+                <role xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">Barrister-at-law, Sydney</role>
+            </person:person>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario 
+        label="Scenario 3 text/role">
+        <x:context>
+            <p>
+                <text>
+                    <role>Chairman, Australian Advocacy Institute</role>
+                </text>
+            </p>          
+        </x:context>
+        <x:expect label="person:person/role">
+            <person:person>
+                <role xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">Chairman, Australian Advocacy Institute</role>
+            </person:person>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario 
+        label="Scenario for testing template with match 'name.honorific">
+        <x:context>
+            <person>
+                <name.text>The Hon R O Blanch</name.text>
+                <name.detail>
+                    <name.honorific>AM</name.honorific>
+                </name.detail>  
+                ...
+            </person>
+        </x:context>
+        <x:expect label="person:name.honorific">
+            <person:person>
+                <person:name.text>The Hon R O Blanch</person:name.text>
+                <person:name.detail>
+                    <person:name.honorific>AM</person:name.honorific>
+                </person:name.detail>  
+                ...
+            </person:person>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario pending="Not yet implemented"
+        label="Scenario for testing template with match 'name.degree">
+        <x:context/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario pending="Not yet implemented"
+        label="Scenario for testing template with match 'name.honorific">
+        <x:context/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+</x:description>

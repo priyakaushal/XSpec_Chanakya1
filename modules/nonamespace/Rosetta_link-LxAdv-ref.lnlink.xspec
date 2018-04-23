@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:ci="http://www.lexis-nexis.com/ci"
+    xmlns:docinfo="http://www.lexis-nexis.com/glp/docinfo"
+    xmlns:proc="http://www.lexisnexis.com/xmlschemas/content/shared/process-elements/1/" 
+    xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/"
+    
+    stylesheet="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/nonamespace/Rosetta_link-LxAdv-ref.lnlink.xsl">
+    <x:scenario 
+        label="Scenario 1 for testing template with match 'link[not(parent::docinfo:assoc-links or parent::docinfo:assoc-links-grp or parent::text[parent::docinfo:assoc-links or parent::docinfo:assoc-links-grp])]">
+        <x:context>            
+            <link type="pdf" smi="98765" filename="xmpl-c1.pdf" status="valid">Download in PDF</link>
+        </x:context>
+        <x:expect label="scenario 1 output">
+            <ref:lnlink service="ATTACHMENT">
+                <ref:marker role="label">Download in PDF</ref:marker> 
+                <ref:locator>
+                    <ref:locator-key>
+                        <ref:key-name name="attachment-key"/>
+                        <ref:key-value value="xmpl-c1"/>
+                    </ref:locator-key>
+                    <ref:locator-params>
+                        <proc:param name="componentseq" value="1"/>
+                        <proc:param name="attachment-type" value="PDF"/>
+                        <proc:param name="attachment-smi" value="98765"/>
+                    </ref:locator-params>
+                </ref:locator>
+            </ref:lnlink>
+        </x:expect>
+    </x:scenario>        
+    <x:scenario
+        label="Scenario 2">
+        <x:context>
+            <link type="pdf" filename="pbap-c1.pdf" status="valid">Download in PDF</link>
+        </x:context>
+        <x:expect label="scenario 2 output">
+            <ref:lnlink service="ATTACHMENT">
+                <ref:marker role="label">Download in PDF</ref:marker> 
+                <ref:locator>
+                    <ref:locator-key>
+                        <ref:key-name name="attachment-key"/>
+                        <ref:key-value value="X-Y-pbap-c1"/> 
+                        <!-- X and Y are LNI and SMI values obtained from CSSM -->
+                    </ref:locator-key>
+                    <ref:locator-params>
+                        <proc:param name="componentseq" value="1"/>
+                        <proc:param name="attachment-type" value="PDF"/>
+                        <proc:param name="attachment-smi" value=""/> 
+                        <!-- @value populated with SMI obtained from CSSM -->
+                        <!-- This @value assignment is done by conversion program -->
+                    </ref:locator-params>
+                </ref:locator>
+            </ref:lnlink>
+        </x:expect>
+    </x:scenario>                    
+</x:description>

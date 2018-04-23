@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case"
+	xmlns:casesum="http://www.lexisnexis.com/xmlschemas/content/legal/case-summary/1/"	
+	xmlns:ci="http://www.lexis-nexis.com/ci" 
+	xmlns:courtcase="http://www.lexisnexis.com/xmlschemas/content/legal/courtcase/1/"
+	xmlns:decision="http://www.lexisnexis.com/xmlschemas/content/legal/decision/1/"
+	xmlns:lnci="http://www.lexisnexis.com/xmlschemas/content/shared/citations/1/" 
+	xmlns:person="http://www.lexisnexis.com/xmlschemas/content/shared/person/1/"
+	xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/" 
+	stylesheet="AU01_Rosetta_case.judgments-LxAdv_courtcase.opinions.xsl">
+
+	<x:scenario label="Scenario for testing template with match 'case:judgments'">
+		<x:context>
+			<case:judgments></case:judgments>
+		</x:context>
+		<x:expect label="'courtcase:opinions' wrapper expected">
+			<courtcase:opinions></courtcase:opinions>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:judgments/@subdoc">
+		<x:context>
+			<case:judgments subdoc="true"></case:judgments>
+		</x:context>
+		<x:expect label="'courtcase:opinions' with @includeintoc expected">
+			<courtcase:opinions includeintoc="true"></courtcase:opinions>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:judgments/@toc-caption">
+		<x:context>
+			<case:judgments toc-caption="caption"></case:judgments>
+		</x:context>
+		<x:expect label="'courtcase:opinions' with @alternatetoccaption expected">
+			<courtcase:opinions alternatetoccaption="caption"></courtcase:opinions>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'inlineobject[parent::case:judgments]">
+		<x:context>
+			<case:judgments>
+				<inlineobject></inlineobject>
+			</case:judgments>			
+		</x:context>
+		<x:expect label="courtcase:opinions with child 'attachments'.">
+			<courtcase:opinions>
+				<attachments></attachments>
+			</courtcase:opinions>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:dates[parent::case:judgments]'">
+		<x:context>
+			<case:judgments>
+				<case:dates>
+					<case:decisiondate>
+						<date year="1986" month="07" day="01">1 July 1986</date>
+					</case:decisiondate>
+				</case:dates>
+			</case:judgments>
+		</x:context>
+		<x:expect label="'courtcase:opinions' wrapper with child 'decision:decisiondate', with all attributes and 'date-text'">
+			<courtcase:opinions>
+				<decision:decisiondate normdate="1986-07-01" year="1986" month="07" day="01"><date-text>1 July 1986</date-text></decision:decisiondate>
+			</courtcase:opinions>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:decisiondate'">
+		<x:context>
+			<case:decisiondate>
+				<date>1 July 1986</date>
+			</case:decisiondate>
+		</x:context>
+		<x:expect label="'decision:decisiondate' wrapper expected.">
+			<decision:decisiondate><date-text>1 July 1986</date-text></decision:decisiondate>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:decisiondate/date/@year">
+		<x:context>
+			<case:decisiondate>
+				<date year="1986">1 July 1986</date>
+			</case:decisiondate>			
+		</x:context>
+		<x:expect label="'decision:decisiondate' with @year expected">
+			<decision:decisiondate year="1986"><date-text>1 July 1986</date-text></decision:decisiondate>			
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:decisiondate/date/@month">
+		<x:context>
+			<case:decisiondate>
+				<date month="07">1 July 1986</date>
+			</case:decisiondate>
+		</x:context>
+		<x:expect label="'decision:decisiondate' with @month expected">
+			<decision:decisiondate month="07"><date-text>1 July 1986</date-text></decision:decisiondate>			
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:decisiondate/date/@day">
+		<x:context>
+			<case:decisiondate>
+				<date day="01">1 July 1986</date>
+			</case:decisiondate>
+		</x:context>
+		<x:expect label="'decision:decisiondate' with @day expected">
+			<decision:decisiondate day="01"><date-text>1 July 1986</date-text></decision:decisiondate>			
+		</x:expect>
+	</x:scenario>
+
+</x:description>

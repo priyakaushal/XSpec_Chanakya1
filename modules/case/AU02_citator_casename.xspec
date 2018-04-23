@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case" 
+	xmlns:caseinfo="http://www.lexisnexis.com/xmlschemas/content/legal/case-information/1/"
+	stylesheet="AU02_citator_casename.xsl">
+	
+	<x:scenario label="Scenario for testing template with match 'case:casename">
+		<x:context>
+			<case:casename>Queensland Wire Industries Pty Ltd v Broken Hill Proprietary Co Ltd</case:casename>
+		</x:context>
+		<x:expect label="caseinfo:fullcasename expected.">
+			<caseinfo:fullcasename>Queensland Wire Industries Pty Ltd v Broken Hill Proprietary Co Ltd</caseinfo:fullcasename>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'emph[parent::case:casename]">
+		<x:context>
+			<case:casename>
+				<emph typestyle="ro"><refpt id="10957" type="ext"/></emph>Queensland Wire Industries Pty Ltd v Broken Hill Proprietary Co Ltd</case:casename>
+		</x:context>
+		<x:expect label="emph should be suppressed">
+			<caseinfo:fullcasename>Queensland Wire Industries Pty Ltd v Broken Hill Proprietary Co Ltd</caseinfo:fullcasename>		
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'refpt[parent::case:casename]">
+		<x:context>
+			<case:casename>
+				<emph typestyle="ro"><refpt id="10957" type="ext"/></emph>Queensland Wire Industries Pty Ltd v Broken Hill Proprietary Co Ltd</case:casename>
+		</x:context>
+		<x:expect label="refpt should be suppressed">
+			<caseinfo:fullcasename>Queensland Wire Industries Pty Ltd v Broken Hill Proprietary Co Ltd</caseinfo:fullcasename>		</x:expect>
+	</x:scenario>
+</x:description>

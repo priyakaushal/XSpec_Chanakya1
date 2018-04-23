@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case"
+	xmlns:casesum="http://www.lexisnexis.com/xmlschemas/content/legal/case-summary/1/"	
+	xmlns:ci="http://www.lexis-nexis.com/ci" 
+	xmlns:courtcase="http://www.lexisnexis.com/xmlschemas/content/legal/courtcase/1/"
+	xmlns:lnci="http://www.lexisnexis.com/xmlschemas/content/shared/citations/1/" 
+	xmlns:person="http://www.lexisnexis.com/xmlschemas/content/shared/person/1/"
+	xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/" 
+	stylesheet="AU01_Rosetta_case.judges.xsl">
+
+	<x:scenario label="Scenario for testing template with match 'case:judges[ancestor::case:headnote]">
+		<x:context>
+			<case:headnote>
+				<case:judges>judges text</case:judges>
+			</case:headnote>
+		</x:context>
+		<x:expect label="'courtcase:judges' wrapper expected">
+			<courtcase:judges>judges text</courtcase:judges>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:judges[ancestor::case:judgments]">
+		<x:context>
+			<case:judgments>
+				<case:judges>judges text</case:judges>
+			</case:judgments>
+		</x:context>
+		<x:expect label="'courtcase:opinionby' wrapper expected">
+			<courtcase:opinionby>judges text</courtcase:opinionby>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'nl[parent::case:judges]'">
+		<x:context>
+			<case:judges>text before nl <nl/> text after nl</case:judges>
+		</x:context>
+		<!-- note person:judge created in another template -->
+		<x:expect label="'nl' should be suppressed">text before nl  text after nl</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:judge">
+		<x:context>
+			<case:judge>judge</case:judge>
+		</x:context>
+		<x:expect label="'person:judge' wrapper expected">
+			<person:judge>judge</person:judge>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'emph[@typestyle='smcaps'][parent::case:judges]">
+		<x:context>
+			<case:judges>Judge <emph typestyle="smcaps">Smith</emph></case:judges>
+		</x:context>
+		<!-- note person:judge created in another template -->
+		<x:expect label="no 'emph' markup">Judge Smith</x:expect>
+	</x:scenario>
+</x:description>

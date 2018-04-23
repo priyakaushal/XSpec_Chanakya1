@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" version="2.0" exclude-result-prefixes="dita">
+
+	<dita:topic xmlns="http://dita.oasis-open.org/architecture/2005/" id="Leg_Citator_AUNZ_History_cttr.annot-heading-with-sectionNumber">
+  <title>/cttr:annot/heading/title contains section number AND /cttr:annot/heading/subtitle contains words like 'Amended' or a text like '4' or another number <lnpid>id-AU20-22281</lnpid></title>
+  
+  <body>
+    <section>
+      <p>This entire section has been removed. The mapping instructions contained in this section have been modified, 
+        but are now part of other history tab sections like cttr:annotations[@annotgrp="prov-al"] (id-AU20-22285) and 
+        cttr:annotations[@annotgrp="prov-am"] (id-AU20-22286).</p>
+<!--      <p>When a historical item contains a heading which includes <sourcexml>/cttr:annot/heading/subtitle</sourcexml> and a value such as 
+        'Amended' the conversion should combine the title and the subtitle, separated by a single space and
+        wrapped with parentheses in the target xml 
+        <targetxml>primlawhist:histitem/primlawhist:histitem[div@divtype="heading"@status="amending"</targetxml>.</p>
+      <p>When a <sourcexml>note/p</sourcexml> follows, map to <targetxml>primlawhist:histitemdiv@divtype="text"/textitem</targetxml>.</p>
+    </section>
+    
+    <example>
+      <title>Example 1: Source /cttr:annot/heading/subtitle contains 'Amended'</title>
+      <codeblock><![CDATA[
+        <cttr:annot>
+          <heading>
+            <title>s 59</title>
+            <subtitle>Amended</subtitle>
+            <note>
+              <p>
+                <text>by <lnlink refpt="CTH_ACT_2008-135">
+                    <marker>(CTH) EVIDENCE AMENDMENT ACT 2008</marker>
+                    <api-params>
+                      <param name="dpsi" value="005X"/></api-params></lnlink> Commenced: 1/1/2009 Â·
+                  see <lnlink refpt="CTH_ACT_2008-135_sch1">
+                    <marker>Schedule 1 &amp; 2</marker>
+                    <api-params>
+                      <param name="dpsi" value="005X"/></api-params></lnlink></text>
+              </p>
+            </note>
+            
+            ]]></codeblock>
+
+      <title>Example 1: Target /primlawhist:histitem/label</title>
+      <codeblock><![CDATA[
+       <primlawhist:histitem>
+                <primlawhist:histgrp grptype="commencement">
+                    <primlawhist:histitem>
+                        <primlawhist:histitemdiv divtype="heading" status="amending">
+                            <textitem>s 59 (Amended)</textitem>   
+                        </primlawhist:histitemdiv>
+                        <primlawhist:histitemdiv divtype="text">
+                            <textitem>by 
+                 <ref:crossreference>
+                     <ref:content>(CTH) EVIDENCE AMENDMENT ACT 2008</ref:content>
+                     <ref:locator> 
+                       <ref:locator-key anchoridref="CTH_ACT_2008-135"> 
+                          <ref:key-name name="dpsi"/> 
+                          <ref:key-value value="005X"/> 
+                       </ref:locator-key>
+                       </ref:locator>
+                  </ref:crosssreference> Commenced: 1/1/2009 Â·
+                 <ref:crossreference>
+                     <ref:content>Schedule 1 &amp; 2</ref:content>
+                     <ref:locator> 
+                       <ref:locator-key anchoridref="CTH_ACT_2008-135_sch1"> 
+                          <ref:key-name name="dpsi"/> 
+                          <ref:key-value value="005X"/> 
+                       </ref:locator-key>
+                       </ref:locator>
+                  </ref:crosssreference></textitem>   
+                </primlawhist:histitemdiv>
+             </primlawhist:histitem>
+            
+ ]]></codeblock>
+    </example>
+    <example>
+      <title>Example 2: Source with subtitle containing number only</title>
+      <codeblock><![CDATA[
+         <heading>
+     <title>The Laws of New Zealand </title>
+     <subtitle>4</subtitle>
+    </heading>
+    
+    ]]></codeblock>
+
+      <title>Example 2: Target with subtitle containing number only</title>
+      <codeblock><![CDATA[
+        <primlawhist:histitem>
+             <label>The Laws of New Zealand (4)</label>
+             ...
+     ]]></codeblock>
+    </example>-->
+    </section>
+    <section>
+      <title>
+        Changes:
+      </title>
+      <p>2016-06-09: <ph id="change_20160609_snb">Removed entire section. The mapping instructions contained 
+        in this section have been modified, 
+        but are now part of other history tab sections like cttr:annotations[@annotgrp="prov-al"] (id-AU20-22285) and 
+        cttr:annotations[@annotgrp="prov-am"] (id-AU20-22286).</ph></p>
+    </section>
+  </body>
+	</dita:topic>
+
+	<!--  @@@ This file has been autogenerated.  Remove this comment after manual development complete! @@@  -->
+	<!--    Original DITA file location:  DITA\ConversionInstructions\Rosetta\DITA-PAC\AU20_Legislative_Citator\Leg_Citator_AUNZ_History_cttr.annot-heading-with-sectionNumber.dita  -->
+	<xsl:message>Leg_Citator_AUNZ_History_cttr.annot-heading-with-sectionNumber.xsl requires manual development!</xsl:message> 
+
+</xsl:stylesheet>

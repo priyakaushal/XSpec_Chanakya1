@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns:ci="http://www.lexis-nexis.com/ci" xmlns:docinfo="http://www.lexis-nexis.com/glp/docinfo" xmlns:doc="http://www.lexisnexis.com/xmlschemas/content/shared/document-level-metadata/1/" xmlns:legis="http://www.lexisnexis.com/xmlschemas/content/legal/legislation/1/" xmlns:lnci="http://www.lexisnexis.com/xmlschemas/content/shared/citations/1/" version="2.0" exclude-result-prefixes="dita ci docinfo">
+
+	<dita:topic xmlns="http://dita.oasis-open.org/architecture/2005/" id="GPL_IN01_Legis-Introduction">
+       <title>Introduction <lnpid>id-IN01-15410</lnpid></title>
+    
+    <shortdesc>This Conversion Instruction describes the conversion of legis 9.7 PROD schema in the
+        document.</shortdesc>
+    <body>
+        <section><title>Root Element</title>
+                    
+            <p>Identification Criteria for <b>IN01 Act</b> content stream is
+                    <sourcexml>LEGDOC[@legtype="act"]</sourcexml> and
+                    <sourcexml>docinfo:selector</sourcexml> having value <b>"legislation"</b>.</p>
+            <p>
+                <sourcexml>LEGDOC@legtype="act"</sourcexml> becomes
+                <targetxml>legis:legis[@legistype="act"]</targetxml> and is the root element for legislation
+                attributes are populated as follows: <sourcexml>LEGDOC[@id]</sourcexml> becomes
+                    <targetxml>legis:legis[@xml:id]</targetxml> and provides a unique identifier for
+                this element. The presence or absence of attribute value will not affect delivery
+                product behavior and default value is 'none'. </p>
+            <note>The attribute <sourcexml>@searchtype</sourcexml> will be suppressed from the conversion except citation markup.</note>
+            <note><p>Conversion should retain <sourcexml>ci:in</sourcexml> empty element in the target as
+                <targetxml>lnci:in</targetxml>.</p></note>
+            
+            <p>
+                <sourcexml>LEGDOC[@legtype="act"]</sourcexml> becomes
+                    <targetxml>legis:legis[@legistype="act"]</targetxml>
+                <pre>
+
+&lt;LEGDOC legtype="act"&gt;
+        .....
+        &lt;docinfo:doc-lang lang="en"/&gt;
+        &lt;docinfo:doc-country iso-cc="IN"/&gt;
+        .....
+&lt;/LEGDOC&gt;
+ 
+</pre>
+                <b>becomes</b>
+                <pre>
+
+&lt;legis:legis legistype="act" xml:lang="en-IN"&gt;
+      
+      &lt;legis:head&gt;...&lt;/legis:head&gt;
+
+      &lt;legis:body&gt;...&lt;/legis:body&gt;
+
+      &lt;doc:metadata&gt;...&lt;/doc:metadata&gt;
+      
+&lt;/legis:legis&gt;
+    
+                 </pre>
+            </p>                
+                                 
+                    
+                <p>
+                <targetxml>legis:head</targetxml>, <targetxml>legis:body</targetxml>, and <targetxml>doc:metadata</targetxml> are created as
+                required children of <targetxml>legis:legis</targetxml>
+                </p>
+            
+            <p>
+                The <sourcexml>@searchtype</sourcexml> attribute will be suppressed from conversion except for the citation element.
+            </p>
+            
+        </section>
+                <section>
+                           <title>Notes</title>
+                            <p>The following information is meant to help the user understand the conventions used in this document.</p>
+                            <p>Source elements and attributes are highlighted like this: <sourcexml>XML SOURCE</sourcexml></p>
+                            <p>Target elements and attributes are highlighted like this: <targetxml>XML TARGET</targetxml></p>
+                            <p>Verify content of following target attributes: 
+                                        <ul>
+                                        <li><sourcexml>@month</sourcexml> becomes <targetxml>@month</targetxml> is between 01-12. Any numbers
+                                            outside this range, do not output a <targetxml>@month</targetxml>.</li>
+                                        <li><sourcexml>@day</sourcexml> becomes <targetxml>@day</targetxml> is between 01-31. Any numbers outside
+                                            this range, do not output <targetxml>@day</targetxml>.</li>
+                                        <li><sourcexml>@year</sourcexml> becomes <targetxml>@year</targetxml> is 4 digits in length. Any other
+                                            lengths, do not output <targetxml>@year</targetxml>.</li>
+                                        </ul>
+                            </p>
+                </section>
+ <section>
+       <title>Changes</title>
+       <p>2014-03-21: <ph id="change_20140321_SSX">Created</ph>.</p>
+</section>
+    </body>
+	</dita:topic>
+
+	<!--  @@@ This file has been autogenerated.  Remove this comment after manual development complete! @@@  -->
+	<!--    Original DITA file location:  DITA\ConversionInstructions\Rosetta\DITA-GPL\IN01_Legislation\GPL_IN01_Legis-Introduction.dita  -->
+	<xsl:message>GPL_IN01_Legis-Introduction.xsl requires manual development!</xsl:message> 
+
+	<xsl:template match="LEGDOC[@legtype=&#34;act&#34;]">
+
+		<!--  Original Target XPath:  legis:legis[@legistype="act"]   -->
+		<legis:legis>
+			<xsl:apply-templates select="@* | node()"/>
+		</legis:legis>
+
+	</xsl:template>
+
+	<xsl:template match="docinfo:selector">
+
+		<!--  Original Target XPath:  legis:legis[@legistype="act"]   -->
+		<legis:legis>
+			<xsl:apply-templates select="@* | node()"/>
+		</legis:legis>
+
+	</xsl:template>
+
+	<xsl:template match="LEGDOC@legtype=&#34;act&#34;">
+
+		<!--  Original Target XPath:  legis:legis[@legistype="act"]   -->
+		<legis:legis>
+			<xsl:apply-templates select="@* | node()"/>
+		</legis:legis>
+
+	</xsl:template>
+
+	<xsl:template match="LEGDOC[@id]">
+
+		<!--  Original Target XPath:  legis:legis[@xml:id]   -->
+		<legis:legis>
+			<xsl:apply-templates select="@* | node()"/>
+		</legis:legis>
+
+	</xsl:template>
+
+	<xsl:template match="@searchtype">
+
+		<!--  Original Target XPath:  lnci:in   -->
+		<lnci:in>
+			<xsl:apply-templates select="@* | node()"/>
+		</lnci:in>
+
+	</xsl:template>
+
+	<xsl:template match="ci:in">
+
+		<!--  Original Target XPath:  lnci:in   -->
+		<lnci:in>
+			<xsl:apply-templates select="@* | node()"/>
+		</lnci:in>
+
+	</xsl:template>
+
+	<xsl:template match="XML SOURCE">
+
+		<!--  Original Target XPath:  XMLTARGET   -->
+		<XMLTARGET>
+			<xsl:apply-templates select="@* | node()"/>
+		</XMLTARGET>
+
+	</xsl:template>
+
+	<xsl:template match="@month">
+
+		<!--  Original Target XPath:  @month   -->
+		<xsl:attribute name="month">
+			<xsl:apply-templates select="node()"/>
+		</xsl:attribute>
+
+	</xsl:template>
+
+	<xsl:template match="@day">
+
+		<!--  Original Target XPath:  @day   -->
+		<xsl:attribute name="day">
+			<xsl:apply-templates select="node()"/>
+		</xsl:attribute>
+
+	</xsl:template>
+
+	<xsl:template match="@year">
+
+		<!--  Original Target XPath:  @year   -->
+		<xsl:attribute name="year">
+			<xsl:apply-templates select="node()"/>
+		</xsl:attribute>
+
+	</xsl:template>
+
+</xsl:stylesheet>

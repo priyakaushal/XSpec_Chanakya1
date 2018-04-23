@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case" 
+	xmlns:ci="http://www.lexis-nexis.com/ci"
+	xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/"
+	stylesheet="AU01_Rosetta_case.parallelcite-LxAdv_ref.cite4thisresource.xsl">
+
+	<x:scenario label="Scenario for testing template with match 'case:parallelcite'">
+		<x:context>
+			<case:parallelcite></case:parallelcite>
+		</x:context>
+		<x:expect label="'ref:cite4thisresource[@citetype='parallel'] expected.">
+			<ref:cite4thisresource citetype="parallel"></ref:cite4thisresource>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:parallelcite/@ln.user-displayed">
+		<x:context>
+			<case:parallelcite ln.user-displayed='true'></case:parallelcite>
+		</x:context>
+		<x:expect label="Attribute should be suppressed">
+			<ref:cite4thisresource citetype="parallel"></ref:cite4thisresource>
+		</x:expect>
+	</x:scenario>
+	
+	<x:scenario label="Scenario for testing template with match 'text()[parent::case:parallelcite and following-sibling::ci:cite]'">
+		<x:context>
+			<case:parallelcite>Also reported at: <ci:cite searchtype="CASE-REF"></ci:cite></case:parallelcite>		
+		</x:context>
+		<x:expect label="text() suppressed">
+			<ref:cite4thisresource citetype="parallel"></ref:cite4thisresource>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:parallelcite[ci:cite[@type='reporter']]">
+		<x:context>
+			<case:parallelcite>
+				<ci:cite type='reporter'></ci:cite>
+			</case:parallelcite>
+		</x:context>
+		<x:expect label="'ref:parallelcite' expected">
+			<ref:parallelcite></ref:parallelcite>
+		</x:expect>
+	</x:scenario>
+</x:description>

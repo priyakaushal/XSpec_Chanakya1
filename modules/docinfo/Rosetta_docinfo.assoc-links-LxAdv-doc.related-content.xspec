@@ -1,0 +1,608 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:lnci="http://www.lexis-nexis.com/lnci" xmlns:ci="http://www.lexis-nexis.com/ci" xmlns:docinfo="http://www.lexis-nexis.com/glp/docinfo" xmlns:doc="http://www.lexisnexis.com/xmlschemas/content/shared/document-level-metadata/1/" xmlns:proc="http://www.lexisnexis.com/xmlschemas/content/shared/process-elements/1/" xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/"
+    stylesheet="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/docinfo/Rosetta_docinfo.assoc-links-LxAdv-doc.related-content.xsl">
+    <x:param name="streamID" select="'CA07'"></x:param>
+    <x:scenario 
+        label="Scenario for testing template with match 'docinfo:assoc-links">
+        <x:context>
+            <docinfo:assoc-links>
+                <remotelink alttext="Find related journals" cmd="f:exp" remotekey1="LEG-REF(Flood and Water Management Act 2010 OR FWMA 2010 w/3 s 48 OR ss 48 OR section 48 OR sections 48) OR &amp;quot;Flood and Water Management Act 2010&amp;quot; OR FWMA 2010 w/3 LEG-REF(s 48 OR ss 48 OR section 48 OR sections 48)" remotekey2="All Subscribed Journals Sources" service="QUERY">Find related journals</remotelink>
+                <remotelink service="DOC-ID" remotekey1="REFPTID" refpt="786617_SL" dpsi="02o0" docidref="ABC123">Find related subordinate legislation</remotelink>
+            </docinfo:assoc-links>
+        </x:context>
+        <x:expect label="standard stuff">
+            <doc:related-content>
+                <doc:related-content-item>
+                    <doc:related-content-link>
+                        <ref:lnlink service="DOCUMENT">
+                            <ref:marker>Find related subordinate legislation</ref:marker>
+                            <ref:locator anchoridref="_786617_SL">
+                                <ref:locator-key>
+                                    <ref:key-name name="DOC-ID"/>
+                                    <ref:key-value value="02o0-ABC123"/>
+                                </ref:locator-key>
+                            </ref:locator>    
+                        </ref:lnlink>
+                    </doc:related-content-link>
+                </doc:related-content-item>
+            </doc:related-content>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario label="Scenario for testing assoc-links-grp, heading, and a citation">
+        <x:context>
+            <docinfo:assoc-links assoc-content="related-content-pod">
+                <docinfo:assoc-links-grp assoc-content="related-documents">
+                    <heading>
+                        <title>Related Documents</title>
+                    </heading>
+                    <remotelink service="DOC-ID" remotekey1="DOC-ID" remotekey2="0ONJ_151450"  dpsi="0ONJ">Transferring patent rights</remotelink>
+                </docinfo:assoc-links-grp>
+                <docinfo:assoc-links-grp assoc-content="related-legislation">
+                    <heading>
+                        <title>Related Legislation</title>
+                    </heading>
+                    <text>Primary statute: 
+                        <ci:cite searchtype="LEG-REF" status="valid">
+                            <ci:sesslaw>
+                                <ci:sesslawinfo>
+                                    <ci:sesslawnum num="1977_37a_Title"/>
+                                </ci:sesslawinfo>
+                                <ci:sesslawref>
+                                    <ci:standardname normpubcode="UK_ACTS"/>
+                                </ci:sesslawref>
+                            </ci:sesslaw>
+                            <ci:content>Patents Act 1977</ci:content>
+                        </ci:cite>
+                    </text>
+                </docinfo:assoc-links-grp>
+            </docinfo:assoc-links>
+        </x:context>
+        <x:expect label="multiple output">
+            <doc:related-content>
+                <doc:related-content-grp grptype="related-documents">
+                    <heading>
+                        <title>Related Documents</title>
+                    </heading>
+                    <doc:related-content-item>
+                        <doc:related-content-link>
+                            <ref:lnlink service="DOCUMENT">
+                                <ref:marker>Transferring patent rights</ref:marker>
+                                <ref:locator>
+                                    <ref:locator-key>
+                                        <ref:key-name name="DOC-ID"/>
+                                        <ref:key-value value="0ONJ-0ONJ_151450"/>
+                                    </ref:locator-key>
+                                </ref:locator>
+                            </ref:lnlink>
+                        </doc:related-content-link>
+                    </doc:related-content-item>
+                </doc:related-content-grp>
+                <doc:related-content-grp grptype="related-legislation">
+                    <heading>
+                        <title>Related Legislation</title>
+                    </heading>
+                    <doc:related-content-item>
+                        <doc:related-content-desc>
+                            <p>
+                                <text>Primary statute: 
+                                    ...
+                                </text>
+                            </p>
+                        </doc:related-content-desc>
+                    </doc:related-content-item>
+                </doc:related-content-grp>
+            </doc:related-content>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario
+        label="Scenario for testing template with url and citation">
+        <x:context>
+            <docinfo:assoc-links>
+                <remotelink alttext="Latest Times Law Reports" href="www.timesonline.co.uk/TGD/lexisDisplay/0,,,00.html" hrefclass="http">Latest Times Law Reports</remotelink>
+                <ci:cite searchtype="BOOK-REF">
+                    <ci:content>Data technologies and patents (2012) 18 MCN 5</ci:content>
+                </ci:cite>
+            </docinfo:assoc-links>
+        </x:context>
+        <x:expect label="url and traverse ref:lnlinks">
+            <doc:related-content>
+                <doc:related-content-item>
+                    <doc:related-content-link>
+                        <ref:lnlink service="URL">
+                            <ref:marker>Latest Times Law Reports</ref:marker>
+                            <ref:locator>
+                                <ref:locator-key>
+                                    <ref:key-name name="URL"/>
+                                    <ref:key-value value="http://www.timesonline.co.uk/TGD/lexisDisplay/0,,,00.html"/>
+                                </ref:locator-key>
+                            </ref:locator>
+                        </ref:lnlink>
+                    </doc:related-content-link>
+                </doc:related-content-item>
+                <doc:related-content-item>
+                    <doc:related-content-link>
+                        <ref:lnlink service="TRAVERSE">
+                            <ref:marker role="label">Data technologies and patents (2012) 18 MCN 5</ref:marker>
+                            <ref:locator>
+                                <ref:locator-key>
+                                    <ref:key-name name="normcite"/>
+                                    <ref:key-value value="Data technologies and patents (2012) 18 MCN 5"/>
+                                </ref:locator-key>
+                                <ref:locator-params>
+                                    <proc:param name="normprotocol" value="lexsee"/>
+                                </ref:locator-params>
+                            </ref:locator>
+                        </ref:lnlink>
+                    </doc:related-content-link>
+                </doc:related-content-item>
+            </doc:related-content>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario
+        label="Scenario remotelink service DOC-ID, text, and link">
+        <x:context>
+            <docinfo:assoc-links>
+                <docinfo:assoc-links-grp assoc-content="related-documents">
+                    <heading>
+                        <title>Related documents</title>
+                    </heading>
+                    <remotelink service="DOC-ID" remotekey1="REFPTID" newwindow="YES" refpt="0OLB_258264"
+                    dpsi="0OLB" status="invalid" docidref="e60348a7-cc9b-4d43-468b-55a207cd7f00">Serving the claim form—method, address, deemed service and dispensing with service</remotelink>
+                    <text searchtype="figure">
+                     <link filename="EXT_DR_List of authorised government departments for service.pdf"
+                        alttext="EXT_DR_List of authorised government departments for service.pdf" type="pdf"
+                        >List of authorised government departments for service</link>
+                    </text>
+                </docinfo:assoc-links-grp>
+            </docinfo:assoc-links>
+        </x:context>
+        <x:expect label="DOCUMENT and ATTACHMENT" >
+            <doc:related-content>
+                <doc:related-content-grp grptype="related-documents">
+                    <heading>
+                        <title>Related documents</title>
+                    </heading>
+                    <doc:related-content-item>
+                        <doc:related-content-link>
+                            <ref:lnlink service="DOCUMENT">
+                                <ref:marker>Serving the claim form—method, address, deemed service and
+                                    dispensing with service</ref:marker>
+                                <ref:locator anchoridref="0OLB_258264">
+                                    <ref:locator-key>
+                                        <ref:key-name name="DOC-ID"/>
+                                        <ref:key-value value="0OLB-e60348a7-cc9b-4d43-468b-55a207cd7f00"/>
+                                    </ref:locator-key>
+                                </ref:locator>
+                            </ref:lnlink>
+                        </doc:related-content-link>
+                    </doc:related-content-item>
+                    <doc:related-content-item>
+                        <doc:related-content-link>
+                            <ref:lnlink service="ATTACHMENT">
+                                <ref:marker role="label">List of authorised government departments for service</ref:marker>
+                                <ref:locator>
+                                    <ref:locator-key>
+                                        <ref:key-name name="attachment-key"/>
+                                        <ref:key-value value="{LNI}-{SMI}-EXT_DR_List of authorised government departments for service"/>
+                                        <!-- 
+                  The {LNI} and {SMI} are not literal values, 
+                  they show where the LNI and SMI values 
+                  obtained from CSSM should be output. 
+              -->
+                                    </ref:locator-key>
+                                    <ref:locator-params>
+                                        <proc:param name="componentseq" value="1"/>
+                                        <proc:param name="attachment-type" value="PDF"/>
+                                        <proc:param name="attachment-smi" value=""/>
+                                        <!-- proc:param/@value is set to the SMI value obtained from CSSM. -->
+                                        <!-- This @value assignment is done by the conversion program. -->
+                                    </ref:locator-params>
+                                </ref:locator>
+                            </ref:lnlink>
+                        </doc:related-content-link>
+                    </doc:related-content-item>
+                </doc:related-content-grp>
+            </doc:related-content>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario 
+        label="Scenario for testing template with querylink">
+        <x:context>
+            <docinfo:assoc-links>
+                <docinfo:assoc-links-grp display-name="VALUE_PROVIDED_BY_CONTENTEDITOR">
+                    <heading>
+                        <title>Query Links</title>
+                    </heading>
+                    <lnlink service="QUERYLINK">
+                        <key-name name="queryTemplatePGUID"/>
+                        <key-value value="urn:queryTemplate:1119"/>    
+                        <marker>Other Tax documents</marker>
+                        <api-params>
+                            <param name="queryParameter1" value="CA $#$ US"/> 
+                            <param name="queryParameter2" value="MA"/> 
+                            <param name="queryParameter3" value="-60"/> 
+                        </api-params>
+                    </lnlink>
+                </docinfo:assoc-links-grp>
+            </docinfo:assoc-links>            
+        </x:context>
+        <x:expect label="querylink results">
+            <doc:related-content>
+                <doc:related-content-grp grptype="VALUE_PROVIDED_BY_CONTENTEDITOR">
+                    <heading>
+                        <title>Query Links</title>
+                    </heading>
+                    <doc:related-content-item>
+                        <doc:related-content-link>
+                            <ref:lnlink service="QUERYLINK">
+                                <ref:marker>Other Tax documents</ref:marker>
+                                <ref:locator>
+                                    <ref:locator-key>
+                                        <ref:key-name name="queryTemplatePGUID"/>
+                                        <ref:key-value value="urn:queryTemplate:1119"/>
+                                    </ref:locator-key>
+                                    <ref:locator-params>
+                                        <proc:param name="queryParameter1" value="CA $#$ US"/>
+                                        <proc:param name="queryParameter2" value="MA"/>
+                                        <proc:param name="queryParameter3" value="-60"/>
+                                    </ref:locator-params>
+                                </ref:locator>
+                            </ref:lnlink>
+                        </doc:related-content-link>
+                    </doc:related-content-item>
+                </doc:related-content-grp>
+            </doc:related-content>            
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario 
+        label="Scenario for testing lnlink service ATTACHMENT">
+        <x:context>
+            <docinfo:assoc-links>
+                <docinfo:assoc-links-grp assoc-content="related-documents">
+                    <heading>
+                        <title>Related Documents</title>
+                    </heading>
+                    <lnlink service="ATTACHMENT">
+                        <marker>See PDF rendition</marker>
+                        <api-params>
+                            <param name="attachment-key" value="RSCS_14905_CURRENT-0001"/>
+                            <param name="attachment-type" value="PDF"/>
+                            <param name="componentseq" value="1"/>
+                        </api-params>
+                    </lnlink>
+                </docinfo:assoc-links-grp>
+            </docinfo:assoc-links>
+        </x:context>
+        <x:expect label="ref:lnlink service ATTACHMENT">
+            <doc:related-content-grp grptype="related-documents">
+                <heading>
+                    <title>Related documents</title>
+                </heading>
+                <doc:related-content-item>
+                    <doc:related-content-link>
+                        <ref:lnlink service="ATTACHMENT">
+                            <ref:marker role="label">See PDF rendition</ref:marker>
+                            <ref:locator>
+                                <ref:locator-key>
+                                    <ref:key-name name="attachment-key"/>
+                                    <ref:key-value value="{LNI}-{SMI}-RSCS_14905_CURRENT-0001"/>
+                                    <!-- 
+                  The {LNI} and {SMI} are not literal values, 
+                  they show where the LNI and SMI values 
+                  obtained from CSSM should be output. 
+              -->
+                                </ref:locator-key>
+                                <ref:locator-params>
+                                    <proc:param name="componentseq" value="1"/>
+                                    <proc:param name="attachment-type" value="PDF"/>
+                                    <proc:param name="attachment-smi" value="{SMI}"/>
+                                    <!-- proc:param/@value is set to the SMI value obtained from CSSM. -->
+                                    <!-- This @value assignment is done by the conversion program. -->
+                                </ref:locator-params>
+                            </ref:locator>
+                        </ref:lnlink>
+                    </doc:related-content-link>
+                </doc:related-content-item>
+            </doc:related-content-grp>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario
+        label="Scenario 11 LPA">
+        <x:context>
+            <docinfo:assoc-links>
+                <docinfo:assoc-links-grp assoc-content="related-documents" content-type="form">
+                    <docinfo:assoc-resource assoc-resourcename="BusLaw" assoc-resourceid="urn:krm:ABCDEABCDEABCDEABCDEABCDE3ABCDE1"/>
+                    <lnlink service="TRAVERSE">
+                        <key-name name="normcite"/>
+                        <key-value value="LexisNexis Forms Form 219-8.22-7"/>
+                        <marker role="label">Notice of Commencement Of Case Under Chapter 11 of the Bankruptcy Code, Meeting of Creditors, and Deadlines--Chapter 11 Corporation/Partnership Case; Official Form 9F </marker>
+                    </lnlink>
+                    <remotelink dpsi="0N5M" remotekey1="DOC-ID" remotekey2="0N5M_157408" service="DOC-ID">Exhibit A to Official Form 1</remotelink>
+                    <remotelink href="http://www.justice.gov/ust/index.htm" newwindow="YES" service="SEARCH" status="valid">Official Website of the U.S. Trustee Program</remotelink>
+                </docinfo:assoc-links-grp>
+                <docinfo:assoc-links-grp assoc-content="related-documents" content-type="case">
+                    <docinfo:assoc-resource assoc-resourcename="IP" assoc-resourceid="urn:krm:ABCDEABCDEABCDEABCDEABCDE3ABCDE2"/>
+                    <lnlink service="TRAVERSE">
+                        <key-name name="normcite"/>
+                        <key-value value="2012 U.S. Bankr. Ct. Motions LEXIS 1246"/>
+                        <marker role="label">2012 U.S. Bankr. Ct. Motions LEXIS 1246 (Bankr. N.D. Ill.)</marker>
+                    </lnlink>
+                    <remotelink dpsi="0N5N" remotekey1="DOC-ID" remotekey2="0N5N-0N5N_157355" service="DOC-ID">Emergency Motion for Joint Administration of Chapter 11 Cases</remotelink>
+                    <remotelink href="http://www.uscourts.gov/RulesAndPolicies/FederalRulemaking/LocalCourtRules/USBankruptcyCourts.htm" newwindow="YES" service="SEARCH" status="valid">Official Website of the Federal Judiciary</remotelink>
+                </docinfo:assoc-links-grp>
+            </docinfo:assoc-links>
+        </x:context>
+        <x:expect label="Scenario 11 LPA output">
+            <doc:related-content>
+                <doc:related-content-grp grptype="related-documents">
+                    <ref:relatedresourceref>
+                        <ref:relatedresourceid ref:resourcekey="urn:krm:ABCDEABCDEABCDEABCDEABCDE3ABCDE1"/>
+                    </ref:relatedresourceref>
+                    <doc:related-content-item>
+                        <doc:related-content-link>
+                            <ref:lnlink service="TRAVERSE">
+                                <ref:marker role="label">Notice of Commencement Of Case Under Chapter 11 of the Bankruptcy Code, Meeting of Creditors, and Deadlines--Chapter 11 Corporation/Partnership Case; Official Form 9F </ref:marker>
+                                <ref:locator>
+                                    <ref:locator-key>
+                                        <ref:key-name name="normcite"/>
+                                        <ref:key-value value="LexisNexis Forms Form 219-8.22-7"/>
+                                    </ref:locator-key>
+                                    <ref:locator-params>
+                                        <proc:param name="normprotocol" value="lexsee"/>
+                                    </ref:locator-params>
+                                </ref:locator>
+                            </ref:lnlink>
+                        </doc:related-content-link>
+                    </doc:related-content-item>
+                    <doc:related-content-item>
+                        <doc:related-content-link>
+                            <ref:lnlink service="DOCUMENT">
+                                <ref:marker>Exhibit A to Official Form 1</ref:marker>
+                                <ref:locator>
+                                    <ref:locator-key>
+                                        <ref:key-name name="DOC-ID"/>
+                                        <ref:key-value value="0N5M-0N5M_157408"/>
+                                    </ref:locator-key>
+                                </ref:locator>
+                            </ref:lnlink>
+                        </doc:related-content-link>
+                    </doc:related-content-item>
+                    <doc:related-content-item>
+                        <doc:related-content-link>
+                            <ref:lnlink service="URL">
+                                <ref:marker>Official Website of the U.S. Trustee Program</ref:marker>
+                                <ref:locator>
+                                    <ref:locator-key>
+                                        <ref:key-name name="URL"/>
+                                        <ref:key-value value="http://www.justice.gov/ust/index.htm"/>
+                                    </ref:locator-key>
+                                </ref:locator>
+                            </ref:lnlink>
+                        </doc:related-content-link>
+                    </doc:related-content-item>
+                </doc:related-content-grp>
+                <doc:related-content-grp grptype="related-documents">
+                    <ref:relatedresourceref>
+                        <ref:relatedresourceid ref:resourcekey="urn:krm:ABCDEABCDEABCDEABCDEABCDE3ABCDE2"/>
+                    </ref:relatedresourceref>
+                    <doc:related-content-item>
+                        <doc:related-content-link>
+                            <ref:lnlink service="TRAVERSE">
+                                <ref:marker role="label">2012 U.S. Bankr. Ct. Motions LEXIS 1246 (Bankr. N.D. Ill.)</ref:marker>
+                                <ref:locator>
+                                    <ref:locator-key>
+                                        <ref:key-name name="normcite"/>
+                                        <ref:key-value value="2012 U.S. Bankr. Ct. Motions LEXIS 1246"/>
+                                    </ref:locator-key>
+                                    <ref:locator-params>
+                                        <proc:param name="normprotocol" value="lexsee"/>
+                                    </ref:locator-params>
+                                </ref:locator>
+                            </ref:lnlink>
+                        </doc:related-content-link>
+                    </doc:related-content-item>
+                    <doc:related-content-item>
+                        <doc:related-content-link>
+                            <ref:lnlink service="DOCUMENT">
+                                <ref:marker>Emergency Motion for Joint Administration of Chapter 11 Cases</ref:marker>
+                                <ref:locator>
+                                    <ref:locator-key>
+                                        <ref:key-name name="DOC-ID"/>
+                                        <ref:key-value value="0N5N-0N5N_157355"/>
+                                    </ref:locator-key>
+                                </ref:locator>
+                            </ref:lnlink>
+                        </doc:related-content-link>
+                    </doc:related-content-item>
+                    <doc:related-content-item>
+                        <doc:related-content-link>
+                            <ref:lnlink service="URL">
+                                <ref:marker>Official Website of the Federal Judiciary</ref:marker>
+                                <ref:locator>
+                                    <ref:locator-key>
+                                        <ref:key-name name="URL"/>
+                                        <ref:key-value value="http://www.uscourts.gov/RulesAndPolicies/FederalRulemaking/LocalCourtRules/USBankruptcyCourts.htm"/>
+                                    </ref:locator-key>
+                                </ref:locator>
+                            </ref:lnlink>
+                        </doc:related-content-link>
+                    </doc:related-content-item>
+                </doc:related-content-grp>
+            </doc:related-content>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario
+        label="Scenario 7 Canada eh">
+        <x:context>
+            <docinfo:assoc-links>
+                <docinfo:assoc-links-grp assoc-content="enabling">
+                    <heading>
+                        <title>Enabling Act</title>
+                    </heading>
+                    <remotelink remotekey1="DOCINFO(2cb2cdcca9bdd55a897d897ac67f7e39)" remotekey2="All Canadian Statutes" service="QUERY">Enabling Act</remotelink>
+                </docinfo:assoc-links-grp>
+            </docinfo:assoc-links>
+        </x:context>
+        <x:expect label="Scenario 7 Canadian output eh">
+            <doc:related-content>
+                <doc:related-content-grp grptype="enablingLeg">
+                    <heading>
+                        <title>Enabling Act</title>
+                    </heading>
+                    <doc:related-content-item content-type="enablingLeg">
+                        <ref:relatedresourceref>
+                            <ref:relatedresourceid ref:resourcekey="urn:leg-id-1:2cb2cdcca9bdd55a897d897ac67f7e39"/>
+                        </ref:relatedresourceref>
+                    </doc:related-content-item>
+                </doc:related-content-grp>
+            </doc:related-content>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario
+        label="Scenario 8 CA05">
+        <x:context>            
+            <docinfo:assoc-links>
+                <remotelink remotekey1="DOCINFO(5eff46c7fc603910e15eb944d97c13c0)"
+                    remotekey2="All Canadian Regulations" service="QUERY">Link to regulations enabled by this
+                    act</remotelink>
+            </docinfo:assoc-links>
+        </x:context>
+        <x:expect label="output scenario 8 CA05">
+            <doc:related-content>
+                <doc:related-content-item content-type="subordinateLeg">
+                    <ref:relatedresourceref>
+                        <ref:relatedresourceid ref:resourcekey="urn:leg-id-1:5eff46c7fc603910e15eb944d97c13c0"/>
+                    </ref:relatedresourceref>
+                </doc:related-content-item>                
+            </doc:related-content>            
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario 
+        label="Scenario 9 CA06-07">
+        <x:context>
+            <docinfo:assoc-links>
+                <docinfo:assoc-links-grp assoc-content="enabling">
+                    <heading>
+                        <title>Enabling Act</title>
+                    </heading>
+                    <remotelink
+                        remotekey1="DOCINFO(2ccc2826b445aebac6f6b3f8013e7931) 
+                        OR DOCINFO(2ccc2826b445aebac6f6b3f8013e7932) 
+                        OR DOCINFO(2ccc2826b445aebac6f6b3f8013e7933)
+                        OR DOCINFO(2ccc2826b445aebac6f6b3f8013e7939)"
+                        remotekey2="All Canadian Statutes" service="QUERY">Enabling Act</remotelink>
+                </docinfo:assoc-links-grp>
+            </docinfo:assoc-links>
+        </x:context>
+        <x:expect label="Scenario 9 output">
+            <doc:related-content>
+                <doc:related-content-grp grptype="enablingLeg">
+                    <heading>
+                        <title>Enabling Act</title>
+                    </heading>
+                    <doc:related-content-item content-type="enablingLeg">
+                        <ref:relatedresourceref>
+                            <ref:relatedresourceid ref:resourcekey="urn:leg-id-1:2ccc2826b445aebac6f6b3f8013e7931"/>
+                        </ref:relatedresourceref>
+                    </doc:related-content-item>
+                    <doc:related-content-item content-type="enablingLeg">
+                        <ref:relatedresourceref>
+                            <ref:relatedresourceid ref:resourcekey="urn:leg-id-1:2ccc2826b445aebac6f6b3f8013e7932"/>
+                        </ref:relatedresourceref>
+                    </doc:related-content-item>
+                    <doc:related-content-item content-type="enablingLeg">
+                        <ref:relatedresourceref>
+                            <ref:relatedresourceid ref:resourcekey="urn:leg-id-1:2ccc2826b445aebac6f6b3f8013e7933"/>
+                        </ref:relatedresourceref>
+                    </doc:related-content-item>
+                    <doc:related-content-item content-type="enablingLeg">
+                        <ref:relatedresourceref>
+                            <ref:relatedresourceid ref:resourcekey="urn:leg-id-1:2ccc2826b445aebac6f6b3f8013e7939"/>
+                        </ref:relatedresourceref>
+                    </doc:related-content-item>
+                </doc:related-content-grp>
+            </doc:related-content>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario pending="Not yet implemented"
+        label="Scenario for testing template with match 'remotelink[@href][parent::docinfo:assoc-links or parent::docinfo:assoc-links-grp]">
+        <x:context/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario pending="Not yet implemented"
+        label="Scenario for testing template with match 'lnlink[@service='QUERYLINK'][parent::docinfo:assoc-links or parent::docinfo:assoc-links-grp]">
+        <x:context/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario pending="Not yet implemented"
+        label="Scenario for testing template with match 'lnlink/marker">
+        <x:context/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario pending="Not yet implemented"
+        label="Scenario for testing template with match 'lnlink/marker/@role">
+        <x:context/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario pending="Not yet implemented"
+        label="Scenario for testing template with match 'api-params">
+        <x:context/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario pending="Not yet implemented"
+        label="Scenario for testing template with match 'param">
+        <x:context/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario pending="Not yet implemented"
+        label="Scenario for testing template with match 'param/@name | param/@value">
+        <x:context/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario pending="Not yet implemented"
+        label="Scenario for testing template with match 'lnlink[@service='ATTACHMENT'][parent::docinfo:assoc-links or parent::docinfo:assoc-links-grp]">
+        <x:context/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario pending="Not yet implemented"
+        label="Scenario for testing template with match 'lnlink[@service='TRAVERSE'][parent::docinfo:assoc-links or parent::docinfo:assoc-links-grp]">
+        <x:context/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario pending="Not yet implemented"
+        label="Scenario for testing template with match 'lnlink/@status">
+        <x:context/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario pending="Not yet implemented"
+        label="Scenario for testing template with match 'lnlink[@service='URL'][parent::docinfo:assoc-links or parent::docinfo:assoc-links-grp]">
+        <x:context/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+
+    <x:scenario pending="Not yet implemented"
+        label="Scenario for testing template with match 'ci:cite[parent::docinfo:assoc-links or parent::docinfo:assoc-links-grp]">
+        <x:context/>
+        <x:expect label="Not yet implemented" select="'Not yet implemented'"/>
+    </x:scenario>
+</x:description>

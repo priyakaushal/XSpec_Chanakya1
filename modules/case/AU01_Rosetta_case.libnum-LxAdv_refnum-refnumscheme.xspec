@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case"
+	stylesheet="AU01_Rosetta_case.libnum-LxAdv_refnum-refnumscheme.xsl">
+
+	<x:scenario label="Scenario for testing template with match 'case:libnum'">
+		<x:context>
+			<case:libnum>960591</case:libnum>
+		</x:context>
+		<x:expect label="'refnum' expected.">
+			<refnum refnumscheme="wa-AU-library-number">960591</refnum>
+		</x:expect>
+	</x:scenario>
+</x:description>

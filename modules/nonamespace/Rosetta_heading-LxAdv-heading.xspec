@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description	xmlns:x="http://www.jenitennison.com/xslt/xspec"
+
+						xmlns:in="http://www.lexis-nexis.com/glp/in"
+						xmlns:docinfo="http://www.lexis-nexis.com/glp/docinfo"
+
+						stylesheet="Rosetta_heading-LxAdv-heading.xsl">
+
+
+	<!--  NOTE:  to run this test, you must first copy the combineSiblingsOfSameName named template from globalFunctions.xsl and paste it into Rosetta_heading-LxAdv-heading.xsl   -->
+
+
+	<x:scenario label="Unit Test of Module:  heading">
+		<x:scenario label="heading becomes heading">
+		<!--  "typical" input and creation of heading   -->
+
+			<x:context href="../../drivers/CA02IC_INDEXDOC/samplesInput/udt_LNICACASESUMMARIESIC_target2.expectedXPathList.xml.CA02IC.xml" select="/INDEXDOC/in:body/heading"/>
+
+			<!--  note since title template not in module, only title text will persist for this testing  -->
+			<x:expect label="heading created">
+				<heading xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+            ele_title
+        </heading>
+			</x:expect>
+
+		</x:scenario>
+		<x:scenario label="heading within bodytext so becomes h instead">
+
+			<x:context>
+				<bodytext>
+					<heading inline="should be suppressed" align="right" searchtype="should be suppressed">test only; heading doesn't normally have text</heading>
+				</bodytext>
+			</x:context>
+
+			<x:expect label="becomes h with only @align attribute">
+				<h align="right" xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">test only; heading doesn't normally have text</h>
+			</x:expect>
+
+		</x:scenario>
+		<x:scenario label="multiple heading siblings test">
+
+			<x:context>
+				<heading inline="true" align="right" searchtype="should be suppressed">
+					<title>Title of first heading.</title>
+				</heading>
+				<heading inline="ignored" align="ignored" searchtype="should be suppressed anyway">
+					<title>Title of second heading.</title>
+				</heading>
+				<heading inline="ignored" align="ignored" searchtype="should be suppressed anyway">
+					<title>Title of third heading.</title>
+				</heading>
+			</x:context>
+
+			<!--    note expected output has careful inclusion of left over spaces    -->
+			<x:expect label="dc:title with certain strings removed">
+				<heading inline="true" align="right" xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">Title of first heading.Title of second heading.Title of third heading.</heading>
+			</x:expect>
+
+		</x:scenario>
+		<x:scenario label="multiple heading siblings test for h output">
+
+			<x:context>
+				<bodytext>
+					<heading inline="should be suppressed" align="right" searchtype="should be suppressed">
+						<title>Title of first heading.</title>
+					</heading>
+					<heading inline="should be suppressed anyway" align="ignored" searchtype="should be suppressed anyway">
+						<title>Title of second heading.</title>
+					</heading>
+					<heading inline="should be suppressed anyway" align="ignored" searchtype="should be suppressed anyway">
+						<title>Title of third heading.</title>
+					</heading>
+				</bodytext>
+			</x:context>
+
+			<!--    note expected output has careful inclusion of left over spaces    -->
+			<x:expect label="dc:title with certain strings removed">
+				<h align="right" xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">Title of first heading.Title of second heading.Title of third heading.</h>
+			</x:expect>
+
+		</x:scenario>
+	</x:scenario>
+</x:description>

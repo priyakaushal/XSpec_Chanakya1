@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:ci="http://www.lexis-nexis.com/ci" xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/"
+    xmlns:lnci="http://www.lexisnexis.com/xmlschemas/content/shared/citations/1/"
+    stylesheet="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/nonamespace/Rosetta_remotelink-Chof-ci.content-LxAdv-ref.crossreference.xsl">
+    
+    <!-- debug code  to insert into module for best results
+    
+    <xsl:key name="idTypeValue" match="*[@id]" use="@id"/>
+    <xsl:key name="idTypeValue" match="*[@ID]" use="@ID"/>	
+    <xsl:key name="idTypeValue" match="footnote" use="@fntoken"/>
+    <xsl:key name="idTypeValue" match="fnr" use="@fnrtoken"/>
+    
+    <xsl:key name="fnr-footnote-tokens" match="fnr" use="@fntoken"/>
+    
+    <xsl:variable name="streamID" as="xs:string" select="'HK01'"/>
+    
+    <xsl:param name="dpsi" as="xs:string" select=" 'From LBU Manifest File' "/>
+    <xsl:param name="inlineobjBoilerplateFiles"/>
+    <xsl:param name="inlineobjFilesToSuppress" select="('1.gif', '2.gif', '3.gif', '4.gif', '5.gif', 'IconSignalPositive.gif', 'IconSignalNegative.gif', 'IconSignalNeutral.gif', 'IconSignalPossibleNegative.gif', 'IconSignalCiteInfoOnly.gif', 'cbcc.gif', 'leg1.gif', 'mb.gif', 'au_repealed.gif', 'au_exclaim.gif', '1.png', '2.png', '3.png', '4.png', '5.png', 'IconSignalPositive.png', 'IconSignalNegative.png', 'IconSignalNeutral.png', 'IconSignalPossibleNegative.png', 'IconSignalCiteInfoOnly.png', 'cbcc.png', 'leg1.png', 'mb.png', 'au_repealed.png', 'au_exclaim.png')"/>
+    
+    
+    <xsl:include href="../../../global/functions/globalFunctions.xsl"/>
+    <xsl:include href="../../../global/defaultRules.xsl"/>
+    <xsl:include href="../../modules/nonamespace/Rosetta_identifier-LxAdv-ID_data_type-HandlingPatternRestrictions.xsl"/>
+    
+    <xsl:include href="../../modules/nonamespace/Rosetta_identifier-LxAdv-ID_data_type-HandlingDuplicates.xsl"/>
+    
+    <xsl:include href="../../modules/nonamespace/Rosetta_p-LxAdv-p.xsl"/>
+    <xsl:include href="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/nonamespace/Rosetta_l-LxAdv-list.xsl"/>
+    
+    <xsl:include href="../../modules/nonamespace/Rosetta_text-LxAdv-text-with-test-for-whitespace-content.xsl"/>
+    <xsl:include href="../../modules/nonamespace/Rosetta_emph-LxAdv-emph.xsl"/>
+    <xsl:include href="../../modules/glp/Rosetta_glp.note-LxAdv-note.xsl"/>
+    <xsl:include href="../../modules/nonamespace/Rosetta_ci.cite-LxAdv-lnci.cite.xsl"/>
+    <xsl:include href="../../modules/nonamespace/Rosetta_remotelink-LxAdv-ref.crossreference.xsl"/>
+    <xsl:include href="../../modules/nonamespace/Rosetta_remotelink-self-inter-document-link-LxAdv-intra-document-link.xsl"/>
+    
+   end debug code --> 
+    
+    <x:scenario
+        label="Scenario for testing template with match 'text/ci:cite/ci:content[remotelink] | entry/ci:cite/ci:content[remotelink]">
+        <x:context>
+            <text>Swimming pools <ci:cite searchtype="LEG-REF" status="invalid">
+                    <ci:sesslaw>
+                        <ci:sesslawinfo>
+                            <ci:sesslawnum num="1970_9a"/>
+                            <ci:hierpinpoint>
+                                <ci:hierlev label="section" num="109BCT"/>
+                            </ci:hierpinpoint>
+                        </ci:sesslawinfo>
+                        <ci:sesslawref>
+                            <ci:standardname normpubcode="UK_ACTS"/>
+                        </ci:sesslawref>
+                    </ci:sesslaw>
+                    <ci:content>
+                        <remotelink hrefclass="http" href="www.somedomain.com/practice-statments/cpi">Statement of Practice 2/90, page 97</remotelink>CT
+                    </ci:content>
+                </ci:cite>
+                ...
+            </text>
+        </x:context>
+        <x:expect label="bump up remotelink">
+            <text>Swimming pools<lnci:cite>
+                    <lnci:sesslaw>
+                        <lnci:sesslawinfo>
+                            <lnci:sesslawnum num="1970_9a"/>
+                            <lnci:hierpinpoint>
+                                <lnci:hierlev label="section" num="109BCT"/>
+                            </lnci:hierpinpoint>
+                        </lnci:sesslawinfo>
+                        <lnci:sesslawref>
+                            <lnci:standardname normpubcode="UK_ACTS"/>
+                        </lnci:sesslawref>
+                    </lnci:sesslaw>
+                    <lnci:content>CT</lnci:content>
+                </lnci:cite>
+                <ref:lnlink service="URL">
+                    <ref:marker>Statement of Practice 2/90, page 97</ref:marker>
+                    <ref:locator>
+                        <ref:locator-key>
+                            <ref:key-name name="URL"/>
+                            <ref:key-value value="http://www.somedomain.com/practice-statments/cpi"/>
+                        </ref:locator-key>
+                    </ref:locator>
+                </ref:lnlink>
+                ...
+            </text>
+        </x:expect>
+    </x:scenario>
+</x:description>

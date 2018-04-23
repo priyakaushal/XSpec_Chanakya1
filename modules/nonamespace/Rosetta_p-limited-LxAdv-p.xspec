@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description	xmlns:x="http://www.jenitennison.com/xslt/xspec"
+
+						xmlns:in="http://www.lexis-nexis.com/glp/in"
+
+						stylesheet="Rosetta_p-limited-LxAdv-p.xsl">
+
+	<x:scenario label="Unit Test of Module:  p-limited">
+		<x:scenario label="p-limited becomes p/text">
+
+			<x:context href="../../drivers/CA02IC_INDEXDOC/samplesInput/udt_LNICACASESUMMARIESIC_target2.expectedXPathList.xml.CA02IC.xml" select="/INDEXDOC/in:body/table/tgroup/tbody/row/entry/p-limited"/>
+
+			<x:expect label="p/text created">
+				<p xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+					<text>ele_p-limitedele_remotelink</text>
+				</p>
+			</x:expect>
+
+		</x:scenario>
+	</x:scenario>
+</x:description>

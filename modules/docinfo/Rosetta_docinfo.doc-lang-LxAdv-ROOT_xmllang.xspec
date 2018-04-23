@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description	xmlns:x="http://www.jenitennison.com/xslt/xspec"
+
+						xmlns:docinfo="http://www.lexis-nexis.com/glp/docinfo"
+						xmlns:case="http://www.lexis-nexis.com/glp/case"
+
+						stylesheet="Rosetta_docinfo.doc-lang-LxAdv-ROOT_xmllang.xsl">
+
+
+	<!--  NOTE:  to run this test, you must first un-comment out a template rule in Rosetta_docinfo.doc-lang-LxAdv-ROOT_xmllang.xsl (refer to that file for more info)   -->
+
+
+	<x:scenario label="Unit Test of Named Module:  xml_lang">
+		<x:scenario label="test/@xml:lang=en-NZ case">
+
+			<x:context>
+				<case:headnote>
+					<case:info>
+						<case:courtinfo>
+							<case:juris>NZ</case:juris>
+						</case:courtinfo>
+					</case:info>
+				</case:headnote>
+				<docinfo>
+					<docinfo:doc-country iso-cc="AU"/>
+					<docinfo:doc-lang lang="en"/>
+				</docinfo>
+			</x:context>
+
+			<x:expect label="test element created with xml:lang set to en-NZ; the text NZ will appear as well due to default template rules">NZ<test xml:lang="en-NZ"/></x:expect>
+
+		</x:scenario>
+		<x:scenario label="test/@xml:lang=en-AU case">
+
+			<x:context>
+				<docinfo>
+					<docinfo:doc-country iso-cc="AU"/>
+					<docinfo:doc-lang lang="en"/>
+				</docinfo>
+			</x:context>
+
+			<x:expect label="test element created with xml:lang set to en-AU">
+				<test xml:lang="en-AU"/>
+			</x:expect>
+
+		</x:scenario>
+		<x:scenario label="test/@xml:lang=en-GB case">
+
+			<x:context>
+				<docinfo>
+					<docinfo:doc-country iso-cc="GB"/>
+					<docinfo:doc-lang lang="en"/>
+				</docinfo>
+			</x:context>
+
+			<x:expect label="test element created with xml:lang set to en-GB">
+				<test xml:lang="en-GB"/>
+			</x:expect>
+
+		</x:scenario>
+	</x:scenario>
+</x:description>

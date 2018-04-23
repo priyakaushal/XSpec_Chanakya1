@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case"
+	xmlns:ci="http://www.lexis-nexis.com/ci" xmlns:lnci="http://www.lexisnexis.com/xmlschemas/content/shared/citations/1/" 
+	xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/" 
+	stylesheet="AU01_Rosetta_case.appendix-LxAdv_attachments_appendix.xsl">
+	
+	<x:scenario label="Scenario for testing template with match 'case:appendix[not(child::case:embeddedcase or child::sigblock)]">
+		<x:context>
+			<case:appendix></case:appendix>
+		</x:context>
+		<x:expect label="attachments/appendix wrapper elements expected.">
+			<attachments>
+				<appendix></appendix>
+			</attachments>			
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:appendix[child::case:embeddedcase]">
+		<x:context>
+			<case:appendix>
+				<case:embeddedcase></case:embeddedcase>
+			</case:appendix>
+		</x:context>
+		<x:expect label="attachments/appendix/bodytext wrapper elements expected.">
+			<attachments>
+				<appendix>
+					<bodytext></bodytext>
+				</appendix>
+			</attachments>						
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:appendix[child::sigblock]">
+		<x:context>
+			<case:appendix>
+				<sigblock></sigblock>
+			</case:appendix>
+		</x:context>
+		<x:expect label="attachments/appendix/bodytext/note/byline/person:person/person:name.text wrapper elements expected.">
+			<attachments>
+				<appendix>
+					<bodytext>
+						<note>
+							<byline>
+								<person:person xmlns:person="http://www.lexisnexis.com/xmlschemas/content/shared/person/1/">
+									<person:name.text></person:name.text>
+								</person:person>
+							</byline>
+						</note>
+					</bodytext>
+				</appendix>
+			</attachments>			
+		</x:expect>
+	</x:scenario>
+</x:description>

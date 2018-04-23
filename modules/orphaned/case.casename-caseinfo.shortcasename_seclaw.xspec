@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case" 
+	xmlns:caseinfo="http://www.lexisnexis.com/xmlschemas/content/legal/case-information/1/"
+	stylesheet="case.casename-caseinfo.shortcasename_seclaw.xsl">
+	
+	<x:scenario label="Scenario for testing template with match 'case:casename'">
+		<x:context>
+			<case:casename>me vs. you</case:casename>
+		</x:context>
+		<x:expect label="caseinfo:casename/caseinfo:shortcasename expected.">
+			<caseinfo:casename>
+				<caseinfo:shortcasename>me vs. you</caseinfo:shortcasename>
+			</caseinfo:casename>			
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:casename' with 'nl'">
+		<x:context>
+			<case:casename>me<nl/>vs.<nl/>you</case:casename>
+		</x:context>
+		<x:expect label="caseinfo:casename/caseinfo:shortcasename expected, with 'nl' output as space.">
+			<caseinfo:casename>
+				<caseinfo:shortcasename>me vs. you</caseinfo:shortcasename>
+			</caseinfo:casename>			
+		</x:expect>
+	</x:scenario>
+	
+</x:description>

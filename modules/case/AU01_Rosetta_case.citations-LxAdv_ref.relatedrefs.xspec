@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case"
+	xmlns:ci="http://www.lexis-nexis.com/ci" xmlns:lnci="http://www.lexisnexis.com/xmlschemas/content/shared/citations/1/" 
+	xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/"
+	stylesheet="file:/C:/code/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/case/AU01_Rosetta_case.citations-LxAdv_ref.relatedrefs.xsl">
+	
+	<x:scenario label="Scenario for testing template with match 'case:citations">
+		<x:context>
+			<case:citations></case:citations>
+		</x:context>
+		<x:expect label="ref:relatedrefs[@referencetype='case-citations'] is expected">
+			<ref:relatedrefs referencetype='case-citations'></ref:relatedrefs>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:citetext">
+		<x:context>
+			<case:citetext>citing text</case:citetext>
+		</x:context>
+		<x:expect label="Not yet implemented">
+			<bodytext>
+				<p>
+					<text>citing text</text>
+				</p>
+			</bodytext>			
+		</x:expect>
+	</x:scenario>
+
+</x:description>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case" 
+	xmlns:courtcase="http://www.lexisnexis.com/xmlschemas/content/legal/courtcase/1/"
+	stylesheet="case.author-courtcase.body_note_byline.xsl">
+	
+	<x:scenario label="Scenario for testing template with match 'case:author' with text only">
+		<x:context>
+			<case:author></case:author>
+		</x:context>
+		<x:expect label="courtcase:body/note/byline expected">
+			<courtcase:body>
+				<note>
+					<byline></byline>
+				</note>
+			</courtcase:body>			
+		</x:expect>
+	</x:scenario>
+</x:description>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description	xmlns:x="http://www.jenitennison.com/xslt/xspec"
+						xmlns:xs="http://www.w3.org/2001/XMLSchema"
+
+						xmlns:docinfo="http://www.lexis-nexis.com/glp/docinfo"
+						xmlns:dc="http://purl.org/dc/elements/1.1/"
+
+						stylesheet="Rosetta_docinfo.doc-heading-LxAdv-dc.title.xsl">
+
+
+	<!--  NOTE:  to run this test, you must first copy the lnf:removeSequenceOfStrings function from globalFunctions.xsl (or below) and paste it into Rosetta_docinfo.doc-heading-LxAdv-dc.title.xsl, and the template rule below,
+						and add the xsl:param to the docinfo:doc-heading template.
+
+	<xsl:template match="test">
+		<test>
+			<xsl:sequence select=" lnf:removeSequenceOfStrings( 'this is a test that *string1* and *STRING2* are removed' , ( 'sTrInG1' , 'StRiNg2' ) , true() ) "/>
+		</test>
+	</xsl:template>
+
+		<xsl:function name="lnf:removeSequenceOfStrings" as="xs:string">
+			<xsl:param name="inputString" as="xs:string"/>
+			<xsl:param name="stringsToRemove" as="xs:string*"/>
+			<xsl:param name="caseInsensitive" as="xs:boolean"/>
+
+			<xsl:choose>
+				<xsl:when test=" string-join( $stringsToRemove , '' ) = '' ">
+					<xsl:sequence select="$inputString"/>
+				</xsl:when>
+				<xsl:when test=" $stringsToRemove[1] = '' or $stringsToRemove[1] = () ">
+					<xsl:sequence select="lnf:removeSequenceOfStrings( $inputString , remove($stringsToRemove, 1) , $caseInsensitive )"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:sequence select="lnf:removeSequenceOfStrings( replace( $inputString , $stringsToRemove[1] , '' , if ($caseInsensitive) then 'i' else '' ) , remove($stringsToRemove, 1) , $caseInsensitive )"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</xsl:function>
+
+		<xsl:param name="streamID"/>
+
+   -->
+
+
+	<x:scenario label="docinfo:doc-heading becomes dc:title">
+	<!--  "typical" input and creation of dc:title   -->
+
+		<x:context href="../../drivers/CA02IC_INDEXDOC/samplesInput/udt_LNICACASESUMMARIESIC_target2.expectedXPathList.xml.CA02IC.xml" select="/INDEXDOC/docinfo/docinfo:doc-heading">
+			<x:param name="streamID" select=" 'CA02-IC' "/>
+		</x:context>
+
+		<x:expect label="dc:title created">
+			<dc:title>ele_docinfo:doc-heading</dc:title>
+		</x:expect>
+
+	</x:scenario>
+	<x:scenario label="docinfo:doc-heading with $streamID = 'AU20' ">
+
+		<!--  docinfo:doc-heading include child <emph>, which should be pass-through, and <nl/>, which should turn into a space.   -->
+		<!--    These strings are included in docinfo:doc-heading and should be removed from dc:title: 'TITLE:' , 'NAME:' , and 'Overview Tab for'    -->
+		<x:context>
+			<x:param name="streamID" select=" 'AU20' "/>
+			<docinfo:doc-heading>TITLE:  Test title(TM) with <emph>emphasized NAME:</emph> text<nl/>plus Overview Tab for other elements(R)</docinfo:doc-heading>
+		</x:context>
+
+		<!--    note expected output has careful inclusion of left over spaces    -->
+		<x:expect label="dc:title with certain strings removed">
+			<dc:title>TITLE:  Test title(TM) with emphasized NAME: text plus  other elements(R)</dc:title>
+		</x:expect>
+
+	</x:scenario>
+	<x:scenario label="docinfo:doc-heading with $streamID = 'CA11' ">
+
+		<!--  docinfo:doc-heading include child <emph>, which should be pass-through, and <nl/>, which should turn into a space.   -->
+		<!--    These strings are included in docinfo:doc-heading and should be removed from dc:title: 'TITLE:' , 'NAME:' , and 'Overview Tab for'    -->
+		<x:context>
+			<x:param name="streamID" select=" 'CA11' "/>
+			<docinfo:doc-heading>TITLE:  Test title(TM) with <emph>emphasized NAME:</emph> text<nl/>plus Overview Tab for other elements(R)</docinfo:doc-heading>
+		</x:context>
+
+		<!--    note expected output has careful inclusion of left over spaces    -->
+		<x:expect label="dc:title with certain strings removed">
+			<dc:title>  Test title(TM) with emphasized  text plus Overview Tab for other elements(R)</dc:title>
+		</x:expect>
+
+	</x:scenario>
+	<x:scenario label="docinfo:doc-heading with $streamID = 'CA14' ">
+
+		<!--  docinfo:doc-heading include child <emph>, which should be pass-through, and <nl/>, which should turn into a space.   -->
+		<!--    These strings are included in docinfo:doc-heading and should be removed from dc:title: 'TITLE:' , 'NAME:' , and 'Overview Tab for'    -->
+		<x:context>
+			<x:param name="streamID" select=" 'CA14' "/>
+			<docinfo:doc-heading>TITLE:  Test title(TM) with <emph>emphasized NAME:</emph> text<nl/>plus Overview Tab for other elements(R)</docinfo:doc-heading>
+		</x:context>
+
+		<!--    note expected output has careful inclusion of left over spaces    -->
+		<x:expect label="dc:title with certain strings removed">
+			<dc:title>TITLE:  Test title™ with emphasized NAME: text plus Overview Tab for other elements®</dc:title>
+		</x:expect>
+
+	</x:scenario>
+	<x:scenario label="Testing function removeSequenceOfStrings with case insensitivity">
+
+		<!--  assumes code at bottom of Rosetta_docinfo.doc-heading-LxAdv-dc.title.xsl is uncommented to support this test case   -->
+		<x:context>
+			<x:param name="streamID" select=" 'CA02-IC' "/>
+			<test/>
+		</x:context>
+
+		<x:expect label="$stringsToRemove are still removed even though case does not match">
+			<test>this is a test that ** and ** are removed</test>
+		</x:expect>
+
+	</x:scenario>
+</x:description>

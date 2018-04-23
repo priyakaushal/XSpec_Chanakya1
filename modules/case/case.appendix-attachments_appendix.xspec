@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case" 
+	xmlns:courtcase="http://www.lexisnexis.com/xmlschemas/content/legal/courtcase/1/"
+	stylesheet="case.appendix-attachments_appendix.xsl">
+	
+	<x:scenario label="Scenario for testing template with match 'case:appendix'">
+		<x:context>
+			<case:appendix></case:appendix>
+		</x:context>
+		<x:expect label="attachments/appendix wrappers expected">
+			<attachments><appendix></appendix></attachments>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:appendix[case:embeddedcase]'">
+		<x:context>
+			<case:appendix><case:embeddedcase></case:embeddedcase></case:appendix>
+		</x:context>
+		<x:expect label="attachments/appendix/bodytext wrappers expected">
+			<attachments>
+				<appendix>
+					<bodytext></bodytext>
+				</appendix>
+			</attachments>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:appendix[sigblock]'">
+		<x:context>
+			<case:appendix><sigblock></sigblock></case:appendix>
+		</x:context>
+		<x:expect label="attachments/appendix/bodytext/note/byline/person:person/person:name.text expected">
+			<attachments>
+				<appendix>
+					<bodytext>
+						<note>
+							<byline>
+								<person:person xmlns:person="http://www.lexisnexis.com/xmlschemas/content/shared/person/1/">
+									<person:name.text></person:name.text>
+								</person:person>
+							</byline>
+						</note>
+					</bodytext>
+				</appendix>
+			</attachments>
+		</x:expect>
+	</x:scenario>
+</x:description>

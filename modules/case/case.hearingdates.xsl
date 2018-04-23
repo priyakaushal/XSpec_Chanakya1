@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dita="http://dita.oasis-open.org/architecture/2005/" xmlns:case="http://www.lexis-nexis.com/glp/case" xmlns:decision="http://www.lexisnexis.com/xmlschemas/content/legal/decision/1/" version="2.0" exclude-result-prefixes="dita case">
+
+	<dita:topic xmlns="http://dita.oasis-open.org/architecture/2005/" id="case.hearingdates">
+  <title>case:hearingdates <lnpid>id-ST05-28428</lnpid></title>
+  <body>
+    <section>
+      <p>
+        <sourcexml>case:hearingdates</sourcexml> becomes <targetxml>decision:dates/decision:argueddate/date-text</targetxml>
+      </p>
+    </section>
+    
+    <example>
+      <title>Source XML based on AU content</title>
+      <codeblock>
+
+&lt;case:dates&gt;
+    &lt;case:hearingdates&gt;23, 24 JULY 1936&lt;/case:hearingdates&gt;
+&lt;/case:dates&gt;
+
+      </codeblock>
+    </example>
+    
+    <example>
+      <title>Target XML</title>
+      <codeblock>
+
+&lt;decision:dates&gt;
+    &lt;decision:argueddate&gt;
+      &lt;date-text&gt;23, 24 JULY 1936&lt;date-text&gt;
+    &lt;/decision:argueddate&gt;
+&lt;/decision:dates&gt;
+
+      </codeblock>
+    </example>
+    <section>
+      <ul>
+        <li>
+          <b>Example where complete date occurs within case:hearingdate:</b>
+          <sourcexml>case:hearingdates</sourcexml> becomes
+          <targetxml>decision:dates/decision:argueddate</targetxml> populated with below
+          mentioned attributes: <sourcexml>case:hearingdates/date/@day</sourcexml> becomes
+          <targetxml>decision:argueddate/@day</targetxml>,
+          <sourcexml>case:hearingdates/date/@month</sourcexml> becomes
+          <targetxml>decision:argueddate/@month</targetxml> and
+          <sourcexml>case:hearingdates/date/@year</sourcexml> becomes
+          <targetxml>decision:argueddate/@year</targetxml>
+          <ul>
+            <li>
+              <sourcexml>date</sourcexml> becomes
+              <targetxml>decision:dates/decision:argueddate/date-text</targetxml>
+            </li>
+          </ul>
+        </li>
+        </ul>
+    </section>
+    
+    <example>
+      <title>Source XML based on AU content</title>
+      <codeblock>
+
+
+&lt;case:hearingdates&gt;
+  &lt;date day="12" month="05" year="2000"&gt;12 May 2000&lt;/date&gt;
+&lt;/case:hearingdates&gt;
+
+
+      </codeblock>
+    </example>
+    
+    <example>
+      <title>Target XML</title>
+      <codeblock>
+
+
+&lt;decision:argueddate day="12" month="05" year="2000"&gt;
+  &lt;date-text&gt;12 May 2000&lt;/date-text&gt;
+&lt;/decision:argueddate&gt;
+
+      </codeblock>
+    </example>
+    
+          <note>When <sourcexml>@ln.user-displayed="false"</sourcexml> appears on a date element
+      (i.e, <sourcexml>case:decisiondate/@ln.user-displayed="false"</sourcexml>), that element is
+      translated into the target but with the element content omitted. Only the attributes are
+      populated. So there is no display content.</note>
+    <example>
+      <title>Source XML based on AU content</title>
+      <codeblock>
+
+
+&lt;case:dates&gt;
+  &lt;case:decisiondate ln.user-displayed="false"&gt;
+    &lt;date year="1995" month="04" day="28"&gt;28 April 1995&lt;/date&gt; 
+  &lt;/case:decisiondate&gt;
+&lt;/case:dates&gt;
+
+
+      </codeblock>
+    </example>
+    
+    <example>
+      <title>Target XML</title>
+      <codeblock>
+
+
+&lt;decision:dates&gt;  
+  &lt;decision:decisiondate day="28" month="04" year="1995" normdate="1995-04-28"/&gt;
+&lt;/decision:dates&gt;
+
+
+      </codeblock>
+    </example>
+    <section>
+      <ul>
+      <li>If <sourcexml>case:hearingdates</sourcexml> has multiple <sourcexml>date</sourcexml>
+          children, then each <sourcexml>date</sourcexml> should become
+          <targetxml>decision:arguedate</targetxml>. If there are punctuation marks between
+          <sourcexml>date</sourcexml> elements, then each punctuation mark should be
+          associated with the <sourcexml>date</sourcexml> that precedes it.
+      </li>
+      </ul>
+    </section>
+    <example>
+      <title>Source XML based on AU content</title>
+      <codeblock>
+
+
+&lt;case:hearingdates&gt;
+  &lt;date day="02" month="03" year="1900"&gt;2&lt;/date&gt;, 
+  &lt;date day="03" month="03" year="1900"&gt;3 March&lt;/date&gt;;
+&lt;/case:hearingdates&gt;
+
+
+      </codeblock>
+    </example>
+    
+    <example>
+      <title>Target XML</title>
+      <codeblock>
+
+
+
+&lt;decision:dates&gt;
+  &lt;decision:argueddate day="02" month="03" year="1900"&gt;&lt;date-text&gt;2&lt;/date-text&gt;, &lt;/decision:arguedate&gt;
+  &lt;decision:argueddate day="03" month="03" year="1900"&gt;&lt;date-text&gt;3 March&lt;/date-text&gt;;&lt;/decision:arguedate&gt;
+&lt;/decision:dates&gt;
+
+      </codeblock>
+    </example>
+    <section>
+      <title>Changes</title>
+      <p>2014-05-15: <ph id="change_20140515_SS">Created.</ph></p>
+    </section>
+  </body>
+	</dita:topic>
+
+	<!--  @@@ This file has been autogenerated.  Remove this comment after manual development complete! @@@  -->
+	<!--    Original DITA file location:  DITA\ConversionInstructions\Rosetta\DITA-Standard\Compcase\case.hearingdates.dita  -->
+	<xsl:message>case.hearingdates.xsl requires manual development!</xsl:message> 
+
+	<xsl:template match="case:hearingdates">
+
+		<!--  Original Target XPath:  decision:dates/decision:argueddate/date-text   -->
+		<decision:dates>
+			<decision:argueddate>
+				<date-text>
+					<xsl:apply-templates select="@* | node()"/>
+				</date-text>
+			</decision:argueddate>
+		</decision:dates>
+
+	</xsl:template>
+
+	<xsl:template match="case:hearingdates/date/@day">
+
+		<!--  Original Target XPath:  decision:argueddate/@day   -->
+		<decision:argueddate>
+			<xsl:attribute name="day">
+				<xsl:apply-templates select="node()"/>
+			</xsl:attribute>
+		</decision:argueddate>
+
+	</xsl:template>
+
+	<xsl:template match="case:hearingdates/date/@month">
+
+		<!--  Original Target XPath:  decision:argueddate/@month   -->
+		<decision:argueddate>
+			<xsl:attribute name="month">
+				<xsl:apply-templates select="node()"/>
+			</xsl:attribute>
+		</decision:argueddate>
+
+	</xsl:template>
+
+	<xsl:template match="case:hearingdates/date/@year">
+
+		<!--  Original Target XPath:  decision:argueddate/@year   -->
+		<decision:argueddate>
+			<xsl:attribute name="year">
+				<xsl:apply-templates select="node()"/>
+			</xsl:attribute>
+		</decision:argueddate>
+
+	</xsl:template>
+
+	<xsl:template match="date">
+
+		<!--  Original Target XPath:  decision:dates/decision:argueddate/date-text   -->
+		<decision:dates>
+			<decision:argueddate>
+				<date-text>
+					<xsl:apply-templates select="@* | node()"/>
+				</date-text>
+			</decision:argueddate>
+		</decision:dates>
+
+	</xsl:template>
+
+	<xsl:template match="@ln.user-displayed=&#34;false&#34;">
+
+		<!--  Original Target XPath:  decision:arguedate   -->
+		<decision:arguedate>
+			<xsl:apply-templates select="@* | node()"/>
+		</decision:arguedate>
+
+	</xsl:template>
+
+	<xsl:template match="case:decisiondate/@ln.user-displayed=&#34;false&#34;">
+
+		<!--  Original Target XPath:  decision:arguedate   -->
+		<decision:arguedate>
+			<xsl:apply-templates select="@* | node()"/>
+		</decision:arguedate>
+
+	</xsl:template>
+
+</xsl:stylesheet>

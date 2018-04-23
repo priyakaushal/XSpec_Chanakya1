@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:glp="http://www.lexis-nexis.com/glp" xmlns:form="http://www.lexisnexis.com/xmlschemas/content/shared/form/1/"
+    stylesheet="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/glp/Rosetta_glp.note-Chof-p-LxAdv-note.xsl">
+    <!-- debug code  to insert into module for best results
+        
+    <xsl:key name="idTypeValue" match="*[@id]" use="@id"/>
+    <xsl:key name="idTypeValue" match="*[@ID]" use="@ID"/>	
+    <xsl:key name="idTypeValue" match="footnote" use="@fntoken"/>
+    <xsl:key name="idTypeValue" match="fnr" use="@fnrtoken"/>
+    
+    <xsl:key name="fnr-footnote-tokens" match="fnr" use="@fntoken"/>
+    
+    <xsl:variable name="streamID" as="xs:string" select="'HK01'"/>
+    
+    <xsl:param name="dpsi" as="xs:string" select=" 'From LBU Manifest File' "/>
+    <xsl:param name="inlineobjBoilerplateFiles"/>
+    <xsl:param name="inlineobjFilesToSuppress" select="('1.gif', '2.gif', '3.gif', '4.gif', '5.gif', 'IconSignalPositive.gif', 'IconSignalNegative.gif', 'IconSignalNeutral.gif', 'IconSignalPossibleNegative.gif', 'IconSignalCiteInfoOnly.gif', 'cbcc.gif', 'leg1.gif', 'mb.gif', 'au_repealed.gif', 'au_exclaim.gif', '1.png', '2.png', '3.png', '4.png', '5.png', 'IconSignalPositive.png', 'IconSignalNegative.png', 'IconSignalNeutral.png', 'IconSignalPossibleNegative.png', 'IconSignalCiteInfoOnly.png', 'cbcc.png', 'leg1.png', 'mb.png', 'au_repealed.png', 'au_exclaim.png')"/>
+    
+    
+    <xsl:include href="../../../global/functions/globalFunctions.xsl"/>
+    <xsl:include href="../../../global/defaultRules.xsl"/>
+    <xsl:include href="../../modules/nonamespace/Rosetta_identifier-LxAdv-ID_data_type-HandlingPatternRestrictions.xsl"/>
+    
+    <xsl:include href="../../modules/nonamespace/Rosetta_identifier-LxAdv-ID_data_type-HandlingDuplicates.xsl"/>
+    
+    <xsl:include href="../../modules/nonamespace/Rosetta_p-LxAdv-p.xsl"/>
+    <xsl:include href="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/nonamespace/Rosetta_l-LxAdv-list.xsl"/>
+    
+    <xsl:include href="../../modules/nonamespace/Rosetta_text-LxAdv-text-with-test-for-whitespace-content.xsl"/>
+    <xsl:include href="../../modules/nonamespace/Rosetta_emph-LxAdv-emph.xsl"/>
+    <xsl:include href="../../modules/glp/Rosetta_glp.note-LxAdv-note.xsl"/>
+   end debug code --> 
+    
+    <x:scenario label="Scenario for testing template with match 'p[glp:note]">
+        <x:context>
+            <p>
+                <glp:note>
+                    <p><text><emph typestyle="it"><emph typestyle="it">Note 1</emph> If a form is approved under s&amp;#160;15 for this provision, the form
+                        must be used.</emph></text></p>
+                </glp:note>
+            </p>
+        </x:context>
+        <x:expect label="note without parent p">
+            <note xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                <bodytext>
+                    <p><text><emph typestyle="it">Note 1 If a form is approved under s&amp;#160;15 for this provision, the form must be used.</emph></text></p>
+                </bodytext>
+            </note>
+        </x:expect>
+    </x:scenario>
+    <x:scenario label="when p has other children than glp:note">
+        <x:context>
+            <p>
+                <text>Preceding text.</text>
+                <text>Second preceding text.</text>
+                <glp:note>
+                    <p><text><emph typestyle="it">Note 1 If a form is approved under s&amp;#160;15 for this provision, the form
+                        must be used.</emph></text></p>
+                </glp:note>
+                <text>Following text.</text>
+            </p>
+        </x:context>
+        <x:expect label="note bump-up">
+            <p xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                <text>Preceding text.</text>
+                <text>Second preceding text.</text>
+            </p>
+            <note xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                <bodytext>
+                    <p><text><emph typestyle="it">Note 1 If a form is approved under s&amp;#160;15 for this provision, the form must be used.</emph></text></p>
+                </bodytext>
+            </note>
+            <p xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                <text>Following text.</text>
+            </p>            
+        </x:expect>
+    </x:scenario>
+    <x:scenario label="when p has attributes and other children than glp:note">
+        <x:context>
+            <p style="left">
+                <text>Preceding text.</text>
+                <glp:note>
+                    <p><text><emph typestyle="it"><emph typestyle="it">Note 1</emph> If a form is approved under s&amp;#160;15 for this provision, the form
+                        must be used.</emph></text></p>
+                </glp:note>
+                <text>Following text.</text>
+            </p>
+        </x:context>
+        <x:expect label="note bump-up with atts preserved">
+            <p xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/" align="left">
+                <text>Preceding text.</text>
+            </p>
+            <note xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                <bodytext>
+                    <p><text><emph typestyle="it">Note 1 If a form is approved under s&amp;#160;15 for this provision, the form must be used.</emph></text></p>
+                </bodytext>
+            </note>
+            <p xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/" align="left">
+                <text>Following text.</text>
+            </p>            
+        </x:expect>
+    </x:scenario>
+</x:description>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case" 
+	xmlns:courtcase="http://www.lexisnexis.com/xmlschemas/content/legal/courtcase/1/"
+	xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/"
+	stylesheet="AU01_Rosetta_case.reportercite-LxAdv_ref.cite4thisresource.xsl">
+	
+	<x:scenario label="Scenario for testing template with match 'case:reportercite[@searchtype!='BCNUM']'">
+		<x:context>
+			<case:reportercite searchtype='foo'></case:reportercite>
+		</x:context>
+		<x:expect label="ref:citations/ref:cite4thisresource[@citetype='reporter'] expected">
+			<ref:citations>
+				<ref:cite4thisresource citetype="reporter"></ref:cite4thisresource>
+			</ref:citations>			
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:reportercite[@searchtype='BCNUM']'">
+		<x:context>
+			<case:reportercite searchtype='BCNUM'></case:reportercite>
+		</x:context>
+		<x:expect label="case:statusnotice and ref:citations expected">
+			<courtcase:statusnotice>
+				<courtcase:pubstatus status="none">
+					<p>
+						<text>unreported case</text>
+					</p>
+				</courtcase:pubstatus>
+			</courtcase:statusnotice>
+			<ref:citations>
+				<ref:cite4thisresource citetype="reporter"></ref:cite4thisresource>
+			</ref:citations>
+		</x:expect>
+	</x:scenario>
+</x:description>

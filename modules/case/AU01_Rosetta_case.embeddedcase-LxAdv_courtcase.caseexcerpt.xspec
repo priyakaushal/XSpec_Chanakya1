@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+	xmlns:case="http://www.lexis-nexis.com/glp/case"
+	xmlns:casesum="http://www.lexisnexis.com/xmlschemas/content/legal/case-summary/1/"	
+	xmlns:ci="http://www.lexis-nexis.com/ci" 
+	xmlns:courtcase="http://www.lexisnexis.com/xmlschemas/content/legal/courtcase/1/"
+	xmlns:lnci="http://www.lexisnexis.com/xmlschemas/content/shared/citations/1/" 
+	xmlns:ref="http://www.lexisnexis.com/xmlschemas/content/shared/reference/1/" 
+	stylesheet="AU01_Rosetta_case.embeddedcase-LxAdv_courtcase.caseexcerpt.xsl">
+
+	<x:scenario label="Scenario for testing template with match 'case:embeddedcase">
+		<x:context>
+			<case:embeddedcase>embeddedcase</case:embeddedcase>
+		</x:context>
+		<x:expect label="courtcase:caseexcerpt expected">
+			<courtcase:caseexcerpt>embeddedcase</courtcase:caseexcerpt>
+		</x:expect>
+	</x:scenario>
+
+	<x:scenario label="Scenario for testing template with match 'case:embeddedcase/@id starting with digits">
+		<x:context>
+			<case:embeddedcase id="1">embeddedcase</case:embeddedcase>			
+		</x:context>
+		<x:expect label="courtcase:caseexcerpt with @xml:id='_1' expected">
+			<courtcase:caseexcerpt xml:id="_1">embeddedcase</courtcase:caseexcerpt>
+		</x:expect>
+	</x:scenario>
+	
+	<x:scenario label="Scenario for testing template with match 'case:embeddedcase/@id not starting with digits">
+		<x:context>
+			<case:embeddedcase id="abc">embeddedcase</case:embeddedcase>			
+		</x:context>
+		<x:expect label="courtcase:caseexcerpt with @xml:id='_1' expected">
+			<courtcase:caseexcerpt xml:id="abc">embeddedcase</courtcase:caseexcerpt>
+		</x:expect>
+	</x:scenario>
+	
+</x:description>

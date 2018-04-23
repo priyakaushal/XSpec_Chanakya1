@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec"
+    xmlns:glp="http://www.lexis-nexis.com/glp"
+    stylesheet="file:/C:/CA_View/dataArch/trunk/XSLT/ContentArch/Rosetta-to-LA/modules/glp/Rosetta_glp.note-Chof-li-LxAdv-listitem-note.xsl">
+    <x:scenario
+        label="Scenario for testing template with match 'l[child::glp:note]">
+        <x:context>
+            <l>
+                <li>
+                    <lilabel>&amp;#x2022;</lilabel>
+                    <p>
+                        <text>Estoppel &amp;#x2013; if the true owner induces another to believe in a state of affairs and causes that other person to act on that
+                            belief to his or her detriment, the true owner will not be allowed to deny that the state of affairs exists. In the context of sale of
+                            goods, this means that if the true owner knowingly allows a seller to represent to a buyer that the seller has title to the goods and
+                            the buyer, believing the representation, purchases the goods from the seller, the buyer will get title to the goods as against the
+                            true owner. If the true owner owes the buyer a duty of care to the buyer to make the true owner&amp;#x2019;s title to the goods known or
+                            apparent to the buyer, but breaches that duty and the buyer purchases the goods from a seller who in fact has no title, the true owner
+                            might be estopped by negligence from asserting that ownership. Proving the existence of the duty is usually very difficult.</text>
+                    </p>
+                </li>
+                <glp:note notetype="xref">
+                    <p nl="0">
+                        <text><emph typestyle="it">Big Rock Pty Ltd v Esanda Finance Corp Ltd </emph>10 WAR 259</text>
+                    </p>
+                </glp:note>
+                <glp:note notetype="xref">
+                    <p nl="0">
+                        <text><emph typestyle="it">Thomas Australia Wholesale Vehicle Trading Co Pty Ltd v Marac Finance Australia Ltd </emph>(1985) 3 NSWLR
+                            452</text>
+                    </p>
+                </glp:note>
+            </l>
+        </x:context>
+        <x:expect label="merged notes">
+            <list xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">
+                <listitem>
+                    <label>&amp;#x2022;</label>
+                    <bodytext>
+                        <p>
+                            <text>Estoppel &amp;#x2013; if the true owner induces another to believe in a state of affairs and causes that
+                                other person to act on that belief to his or her detriment, the true owner will not be allowed to deny
+                                that the state of affairs exists. In the context of sale of goods, this means that if the true owner
+                                knowingly allows a seller to represent to a buyer that the seller has title to the goods and the buyer,
+                                believing the representation, purchases the goods from the seller, the buyer will get title to the goods
+                                as against the true owner. If the true owner owes the buyer a duty of care to the buyer to make the true
+                                owner&amp;#x2019;s title to the goods known or apparent to the buyer, but breaches that duty and the buyer
+                                purchases the goods from a seller who in fact has no title, the true owner might be estopped by negligence
+                                from asserting that ownership. Proving the existence of the duty is usually very difficult.</text>
+                        </p>
+                    </bodytext>
+                </listitem>
+                <note notetype="xref">
+                    <bodytext>
+                        <p>
+                            <text><emph typestyle="it">Big Rock Pty Ltd v Esanda Finance Corp Ltd </emph>10 WAR 259</text>
+                        </p>
+                        <p>
+                            <text><emph typestyle="it">Thomas Australia Wholesale Vehicle Trading Co Pty Ltd v Marac Finance Australia Ltd
+                            </emph>(1985) 3 NSWLR 452</text>
+                        </p>
+                    </bodytext>
+                </note>
+            </list>
+        </x:expect>
+    </x:scenario>
+</x:description>

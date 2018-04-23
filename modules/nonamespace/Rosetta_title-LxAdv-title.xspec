@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description	xmlns:x="http://www.jenitennison.com/xslt/xspec"
+
+						xmlns:in="http://www.lexis-nexis.com/glp/in"
+						xmlns:docinfo="http://www.lexis-nexis.com/glp/docinfo"
+
+						stylesheet="Rosetta_title-LxAdv-title.xsl">
+
+
+	<!--  NOTE:  to run this test, you must first copy the lnf:removeSequenceOfStrings function from globalFunctions.xsl and paste it into Rosetta_title-LxAdv-title.xsl   -->
+
+
+	<x:scenario label="Unit Test of Module:  title">
+		<x:scenario label="title becomes title">
+		<!--  "typical" input and creation of title   -->
+
+			<x:context href="../../drivers/CA02IC_INDEXDOC/samplesInput/udt_LNICACASESUMMARIESIC_target2.expectedXPathList.xml.CA02IC.xml" select="/INDEXDOC/in:body/heading/title"/>
+
+			<x:expect label="title created">
+				<title xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">ele_title</title>
+			</x:expect>
+
+		</x:scenario>
+		<x:scenario label="title with various nodes designed to hit all the templates in this module">
+
+			<!--  title include child <defterm>, which should be pass-through, and <nl/>, which should turn into a space, plus attributes.   -->
+			<!--    These strings are included in docinfo:doc-heading and should be removed from dc:title: 'TITLE:' and 'NAME:'    -->
+			<x:context>
+				<docinfo:hierlev>
+					<heading>
+						<title inline="true" align="right">TITLE:  Test title with <defterm>defterm NAME:</defterm> text<nl/>plus attributes</title>
+					</heading>
+				</docinfo:hierlev>
+			</x:context>
+
+			<!--    note expected output has careful inclusion of left over spaces    -->
+			<x:expect label="dc:title with certain strings removed">
+				<title inline="true" align="right" xmlns="http://www.lexisnexis.com/xmlschemas/content/shared/base/1/">  Test title with defterm  text plus attributes</title>
+			</x:expect>
+
+		</x:scenario>
+		<x:scenario label="empty title is suppressed">
+
+			<x:context>
+				<title/>
+			</x:context>
+
+			<x:expect label="title not created"/>
+
+		</x:scenario>
+	</x:scenario>
+</x:description>

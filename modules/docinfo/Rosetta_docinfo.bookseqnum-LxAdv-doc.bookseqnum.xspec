@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description	xmlns:x="http://www.jenitennison.com/xslt/xspec"
+
+						xmlns:docinfo="http://www.lexis-nexis.com/glp/docinfo"
+						xmlns:doc="http://www.lexisnexis.com/xmlschemas/content/shared/document-level-metadata/1/"
+
+						stylesheet="Rosetta_docinfo.bookseqnum-LxAdv-doc.bookseqnum.xsl">
+
+	<x:scenario label="Unit Test of Module:  docinfo:bookseqnum">
+		<x:scenario label="non empty docinfo:bookseqnum becomes doc:bookseqnum">
+
+			<x:context href="../../drivers/CA02IC_INDEXDOC/samplesInput/udt_LNICACASESUMMARIESIC_target2.expectedXPathList.xml.CA02IC.xml" select="/INDEXDOC/docinfo/docinfo:bookseqnum"/>
+
+			<x:expect label="doc:bookseqnum created">
+				<doc:bookseqnum>ele_docinfo:bookseqnum</doc:bookseqnum>
+			</x:expect>
+
+		</x:scenario>
+		<x:scenario label="empty docinfo:bookseqnum is suppressed">
+
+			<x:context>
+				<docinfo:bookseqnum/>
+			</x:context>
+
+			<x:expect label="doc:bookseqnum not created"/>
+
+		</x:scenario>
+	</x:scenario>
+</x:description>

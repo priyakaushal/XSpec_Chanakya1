@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description	xmlns:x="http://www.jenitennison.com/xslt/xspec"
+
+						xmlns:docinfo="http://www.lexis-nexis.com/glp/docinfo"
+						xmlns:case="http://www.lexis-nexis.com/glp/case"
+
+						stylesheet="Rosetta_docinfo.doc-country_iso-cc-LxAdv-doc.docinfo_doc-content-country.xsl">
+
+
+	<!--  NOTE:  to run this test, you must first un-comment out a template rule in Rosetta_docinfo.doc-country_iso-cc-LxAdv-doc.docinfo_doc-content-country.xsl (refer to that file for more info)   -->
+
+
+	<x:scenario label="Unit Test of Named Module:  doc_content_country">
+		<x:scenario label="test/@doc-content-country=NZ case">
+
+			<x:context>
+				<case:headnote>
+					<case:info>
+						<case:courtinfo>
+							<case:juris>NZ</case:juris>
+						</case:courtinfo>
+					</case:info>
+				</case:headnote>
+				<docinfo>
+					<docinfo:doc-country iso-cc="AU"/>
+					<docinfo:doc-lang lang="en"/>
+				</docinfo>
+			</x:context>
+
+			<x:expect label="test element created with @doc-content-country set to NZ; the text NZ will appear as well due to default template rules">NZ<test doc-content-country="NZ"/></x:expect>
+
+		</x:scenario>
+		<x:scenario label="test/@doc-content-country=AU case">
+
+			<x:context>
+				<docinfo>
+					<docinfo:doc-country iso-cc="AU"/>
+					<docinfo:doc-lang lang="en"/>
+				</docinfo>
+			</x:context>
+
+			<x:expect label="test element created with @doc-content-country set to AU">
+				<test doc-content-country="AU"/>
+			</x:expect>
+
+		</x:scenario>
+		<x:scenario label="test/@doc-content-country=GB case">
+
+			<x:context>
+				<docinfo>
+					<docinfo:doc-country iso-cc="GB"/>
+					<docinfo:doc-lang lang="en"/>
+				</docinfo>
+			</x:context>
+
+			<x:expect label="test element created with doc-content-country set to GB">
+				<test doc-content-country="GB"/>
+			</x:expect>
+
+		</x:scenario>
+	</x:scenario>
+</x:description>
