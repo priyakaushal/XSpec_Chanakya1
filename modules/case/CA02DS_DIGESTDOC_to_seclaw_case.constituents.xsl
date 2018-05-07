@@ -8,7 +8,7 @@
           <p>In Rosetta samples element <sourcexml>case:constituents/case:constituent</sourcexml>
                 occurs with attribute <sourcexml>case:constituent/@constituenttype</sourcexml> which
                 contains as given below: <ul>
-                    <li>case:constituent[@constituenttype=”counsel”]</li>
+                    <li>case:constituent[@constituenttype="counsel"]</li>
                 </ul></p>
           <ul>
          <li>

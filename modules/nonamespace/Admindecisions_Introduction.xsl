@@ -8,7 +8,7 @@
     <p>This Conversion Instruction describes the conversion of Rosetta CASEDOC DTD to Admindoc 3.10
       PROD schema in the document.</p>
     
-    <p>Administrative Decisions are identified using the root element <sourcexml>CASEDOC</sourcexml> with attribute <sourcexml>@type=”fulltext”</sourcexml> and also "FOLDER NAME" i.e. "CA_Boards_Tribunals".</p>
+    <p>Administrative Decisions are identified using the root element <sourcexml>CASEDOC</sourcexml> with attribute <sourcexml>@type="fulltext"</sourcexml> and also "FOLDER NAME" i.e. "CA_Boards_Tribunals".</p>
 
     <p><sourcexml>CASEDOC</sourcexml> becomes <targetxml>admindoc:admindoc</targetxml>. Its a root element for Administrative Decisions. The source attribute is: 
       <sourcexml>@type</sourcexml> becomes <targetxml>@admindoctype</targetxml> with value set as <b>administrative-decision</b>.
