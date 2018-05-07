@@ -52,8 +52,9 @@
     xmlns:source_cttr="http://www.lexis-nexis.com/glp/cttr"
     xmlns:source_dict="http://www.lexis-nexis.com/glp/dict"
     xmlns:source_docinfo="http://www.lexis-nexis.com/glp/docinfo"
-    stylesheet="MY01_Rosetta_CASEDOC-to-LxAdv_courtcase.xsl">
-  
-    <x:import href="CA02DS.xspec"/><x:import href="CA04.xspec"/>
-  
+    stylesheet="test.xsl">
+    
+    <x:import href="CA04.xspec"/>    
+    <x:import href="CA02DS.xspec"/>
+    
 </x:description>
