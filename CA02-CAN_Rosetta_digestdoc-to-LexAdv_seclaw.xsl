@@ -4059,7 +4059,7 @@ and, <sourcexml>casesum:decisionsummary/bodytext/p/text/emph</sourcexml> contain
                         &lt;/ref:locator-key&gt;
                         &lt;ref:locator-params&gt;
                             &lt;proc:param name="componentseq" value="1"/&gt;
-                            &lt;proc:param name="object-type" value="image"/&gt; &lt;!-- allowable values: “image�?; (from .jpg, .gif, .png, .bmp)--&gt;
+                            &lt;proc:param name="object-type" value="image"/&gt; &lt;!-- allowable values: “image”; (from .jpg, .gif, .png, .bmp)--&gt;
                             &lt;proc:param name="object-smi" value=""/&gt;    &lt;!-- This @value assignment is done by conversion program --&gt;
                         &lt;/ref:locator-params&gt;
                     &lt;/ref:locator&gt;
@@ -5462,7 +5462,7 @@ and, <sourcexml>casesum:decisionsummary/bodytext/p/text/emph</sourcexml> contain
                                     <li>When <sourcexml>case:reportercite/ci:cite</sourcexml>
                                         contains attribute
                                             <sourcexml>ci:cite[@type="cite4thisdoc"]</sourcexml>,
-                                        then <sourcexml>@type=�?cite4thisdoc�?</sourcexml> needs to be
+                                        then <sourcexml>@type=”cite4thisdoc”</sourcexml> needs to be
                                         converted to the <targetxml>seclaw:body</targetxml> so
                                         conversion will
                                             create<targetxml>seclaw:seclaw/seclaw:body/seclaw:level/seclaw:bodytext/seclaw:digestgrp/seclaw:digest/seclaw:digestinfo/caseinfo:caseinfo/ref:citations/ref:cite4thisresource/@citetype="reporter"</targetxml></li>
@@ -12919,7 +12919,7 @@ and, <sourcexml>casesum:decisionsummary/bodytext/p/text/emph</sourcexml> contain
 				<!-- 20170623:  MCJ:  Removed AU06 from this list in preference to using modules/docinfo/Rosetta_docinfo.doc-id-LxAdv-dcidentifier_lnmetaidentifier-scheme.xsl. -->
 				<!--  WPK 2017-11-06.  Due to webstar, all of the following streams must now use modules\docinfo\Rosetta_docinfo.doc-id-LxAdv-dcidentifier_lnmetaidentifier-scheme.xsl
 				http://webstar.reedelsevier.com/WebStarWebApp/incident/viewIncident.do?incTktNum=7041473
-				Also, streams need to remove any stream empty template that would conflict, i.e. <xsl:template match=�?docinfo:doc=id�?/>.  
+				Also, streams need to remove any stream empty template that would conflict, i.e. <xsl:template match=”docinfo:doc=id”/>.  
 				<xsl:if test="$streamID = ('AU10', 'AU13', 'AU16', 'AU17', 'AU19-CA', 'NZ14', 'NZ02', 'AU09', 'NZ10','HK09','AU19_CC')">
 					<xsl:if test="docinfo:doc-id">
 						<dc:identifier lnmeta:identifier-scheme="DOC-ID">
@@ -18094,7 +18094,7 @@ ref:lnlink[@service="DOCUMENT"]. Added this for UK11DN -->
                     typestyle="bf"&gt;EDITORIAL NOTE&lt;/emph&gt; ... &lt;/text&gt; &lt;/p&gt;
                 </codeblock>
             </example>
-            <note>If <sourcexml>p</sourcexml> comes with <sourcexml>@nl=�?0�?</sourcexml>, this means
+            <note>If <sourcexml>p</sourcexml> comes with <sourcexml>@nl=”0”</sourcexml>, this means
                 the first <sourcexml>&lt;nl/&gt;</sourcexml> encountered within the
                     <sourcexml>&lt;p&gt;</sourcexml> should be omitted.</note>
             <example>
@@ -18228,7 +18228,7 @@ ref:lnlink[@service="DOCUMENT"]. Added this for UK11DN -->
                             <sourcexml>p/@style</sourcexml>.</ph></p>
                 <p>2013-10-09: <ph id="change_20131009_PS">Added instruction and example
                             <sourcexml>p</sourcexml> comes with
-                    <sourcexml>@nl=�?0�?</sourcexml>.</ph></p>
+                    <sourcexml>@nl=”0”</sourcexml>.</ph></p>
                 <p>2013-10-25: <ph id="change_20131025_PS">Added instruction and example
                             <sourcexml>p/@nl="0"</sourcexml> comes in
                             <sourcexml>references</sourcexml>.</ph></p>
@@ -19837,7 +19837,7 @@ service="DOC-ID" xml:lang="en"&gt;Current&amp;#x20;to&amp;#x20;June&amp;#x20;23,
 				</codeblock>
 		</example>
 		<note>Please note that XML comments need to be added around markup <targetxml>ref:marker
-		  </targetxml> if it is in <targetxml>ref:lnlink@service=�?URL�?</targetxml>and the
+		  </targetxml> if it is in <targetxml>ref:lnlink@service=”URL”</targetxml>and the
 			<targetxml>ref:key-value@value</targetxml> starts-with
 			(<b>'http://www.lexisnexis.com/au/legal/api'</b>). Please see the below target xml for more
 		  details. </note>
@@ -19846,7 +19846,7 @@ service="DOC-ID" xml:lang="en"&gt;Current&amp;#x20;to&amp;#x20;June&amp;#x20;23,
 		  <title>Source XML 7a: for link to URL, with non-URL text content</title>
 		  <codeblock>
 
-    &lt;remotelink href=�?www.lexisnexis.com/au/legal/api/version1/sr?csi=357205&amp;sr=FILE%2DCODE(%28%23LL00093CF%23+OR+%23LL000CQNJ%23%29)&amp;shr=T&amp;oc=00254"
+    &lt;remotelink href=”www.lexisnexis.com/au/legal/api/version1/sr?csi=357205&amp;sr=FILE%2DCODE(%28%23LL00093CF%23+OR+%23LL000CQNJ%23%29)&amp;shr=T&amp;oc=00254"
  hrefclass="http" newwindow="YES" service="SEARCH" status="valid"&gt;Search LexisNexisAU&lt;/remotelink&gt;
 
 		  </codeblock>
@@ -20061,7 +20061,7 @@ service="DOC-ID" xml:lang="en"&gt;Current&amp;#x20;to&amp;#x20;June&amp;#x20;23,
         &lt;/ref:locator-key&gt;
         &lt;ref:locator-params&gt;
             &lt;proc:param name="componentseq" value="1"/&gt;
-            &lt;proc:param name="object-type" value="image"/&gt; &lt;!-- allowable values: “image�?; (from .jpg, .gif, .png, .bmp)--&gt;
+            &lt;proc:param name="object-type" value="image"/&gt; &lt;!-- allowable values: “image”; (from .jpg, .gif, .png, .bmp)--&gt;
             &lt;proc:param name="object-smi" value=""/&gt;    &lt;!-- This @value assignment is done by conversion program --&gt;
         &lt;/ref:locator-params&gt;
       &lt;/ref:locator&gt;
@@ -20334,7 +20334,7 @@ service="DOC-ID" xml:lang="en"&gt;Current&amp;#x20;to&amp;#x20;June&amp;#x20;23,
 				after"</b> and another for <b>"Pre-Release 4.0"</b>.</ph></p>
 		  <p>2013-03-11: <ph id="change_20130311_RPX">Instruction and example added on how to handle
 				<targetxml>ref:marker </targetxml> if it is in
-				<targetxml>ref:lnlink@service=�?URL�?</targetxml>and the
+				<targetxml>ref:lnlink@service=”URL”</targetxml>and the
 				<targetxml>ref:key-value@value</targetxml> starts-with (.,
 				<b>'http://www.lexisnexis.com/au/legal/api'</b>)</ph></p>
 		  <p>2013-04-10: <ph id="change_20130410_MLV">Added Source XML 7a: for link to URL, with non-URL
@@ -21555,7 +21555,7 @@ are not preceded or followed by a space should be converted into a single space 
 				<p>The only markup needed for JCite/CFE is
 						<targetxml>lnci:cite/lnci:content</targetxml> and optionally
 						<targetxml>lnci:cite/@normcite</targetxml>. In order to resolve the correct
-					“pile�? target for cite link traversal, either a semantic child content type
+					“pile” target for cite link traversal, either a semantic child content type
 					element as described below <b>or</b> the <targetxml>lnci:cite/@type</targetxml>
 					attribute (but not both) must also be present in the output markup.</p>
 
@@ -21675,7 +21675,7 @@ are not preceded or followed by a space should be converted into a single space 
 								<targetxml>lnci:cite/@type="case"</targetxml></li>
 						<li><sourcexml>ci:cite/@searchtype="SUMM-CASE-REF"</sourcexml> becomes
 								<targetxml>lnci:cite/@type="case"</targetxml></li>
-					</ul>This will ensure that the correct “context clue�? (Product Content Type or
+					</ul>This will ensure that the correct “context clue” (Product Content Type or
 					PCT) is populated in the Fab Pipeline so that the resulting citation hyperlink
 					targets the correct pile. </p>
 				<p>
@@ -22436,8 +22436,8 @@ are not preceded or followed by a space should be converted into a single space 
 											<p>If the LBU requires a conversion of CALS units to LA
 												accepted units, some of the conversions are detailed
 												below.</p>
-											<p>If colspec@colwidth ends in “in�? (inch) them remove
-												“in�? and multiply the value by 96 to convert to
+											<p>If colspec@colwidth ends in “in” (inch) them remove
+												“in” and multiply the value by 96 to convert to
 												pixel. Only keep the integer portion of the result.
 												These are not valid: 0.1, 12.86. These are valid:
 												12, 185</p>
@@ -23545,8 +23545,8 @@ are not preceded or followed by a space should be converted into a single space 
                                             <li>If <sourcexml>link[@smi]</sourcexml> is not present,
                                                 then conversion program should pass
                                                 <sourcexml>link[@filename]</sourcexml> value to
-                                                <b>“Workflow Generic Image Handler�?</b> as is and
-                                                “Workflow Generic Image Handler�? will do conversion
+                                                <b>“Workflow Generic Image Handler”</b> as is and
+                                                “Workflow Generic Image Handler” will do conversion
                                                 of filename value as noted above. <b>Conversion of
                                                     filename replaces underscore, blank, and period
                                                     with hyphen.</b></li>
@@ -23574,7 +23574,7 @@ are not preceded or followed by a space should be converted into a single space 
                                             </li>
                                             <li><targetxml>proc:param[@name="attachment-type"]</targetxml> with the
                                                 attribute <targetxml>@value</targetxml>. The <targetxml>@value</targetxml> value is from
-                                                <targetxml>link[@type]</targetxml>. Allowable values: “image�?; “PDF�?; “spreadsheet�?; “audio�?; “HTML�?; “video�?; “hotdoc�?; “wordprocess�?.
+                                                <targetxml>link[@type]</targetxml>. Allowable values: “image”; “PDF”; “spreadsheet”; “audio”; “HTML”; “video”; “hotdoc”; “wordprocess”.
                                             </li>
                                             <li><targetxml>proc:param[@name="attachment-smi"]</targetxml> with the
                                                 attribute <targetxml>@value</targetxml>. The <targetxml>@value</targetxml>
@@ -23660,7 +23660,7 @@ are not preceded or followed by a space should be converted into a single space 
             <p>2013-09-24: <ph id="change_20130924_jm">Not a rule change. Modified examples to illustrate when <sourcexml>@status</sourcexml> suppressed and when retained.</ph></p>
             <p>2013-08-21: <ph id="change_20130821_raj">Added instruction for when to suppress <sourcexml>@status</sourcexml>.</ph></p>
             <p>2013-05-24: <ph id="change_20130524_SP">Updated instruction for handling of link when <b>smi</b> is present and some of the verbiage is changed.</ph></p>
-            <p>2013-05-02: <ph id="change_20130502_SP">Some of the verbiage is changed and updated target example to if the SMI is present then a <targetxml>ref:lnlink/@status</targetxml> attribute is set to “valid�?.</ph></p>
+            <p>2013-05-02: <ph id="change_20130502_SP">Some of the verbiage is changed and updated target example to if the SMI is present then a <targetxml>ref:lnlink/@status</targetxml> attribute is set to “valid”.</ph></p>
             <p>2013-05-01: <ph id="change_20130501_SP">Updated instructions and target example per latest Apollo markup.</ph></p>
             <p>2013-02-26: <ph id="change_20130226_SP">Updated target example per project requirement.</ph></p>
             <p>2012-10-26: Changed to reflect recent requirements for attachment-type links.</p>
