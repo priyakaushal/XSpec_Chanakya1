@@ -12,7 +12,7 @@
                 </ul></p>
           <ul>
          <li>
-                    <sourcexml>case:constituent[@constituenttype=”counsel”]</sourcexml> becomes
+                    <sourcexml>case:constituent[@constituenttype="counsel"]</sourcexml> becomes
                         <targetxml>/seclaw:digestinfo/caseinfo:caseinfo/courtcase:representation/courtcase:counsel
                     </targetxml>. <ul>
                         <li><sourcexml>case:constituent</sourcexml> becomes

@@ -126,7 +126,7 @@
                     a valid date. For more clarification please refer the example below.
                       </note></p><p><note><targetxml>date-text</targetxml> for
                       <targetxml>decision:argueddate</targetxml> should always be created even if
-                      <sourcexml>@ln.user-displayed="false“</sourcexml></note>
+                      <sourcexml>@ln.user-displayed="false"</sourcexml></note>
                   <pre>
 
 &lt;case:dates&gt;
@@ -151,7 +151,7 @@
 &lt;/casedigest:head&gt;
 
                 </pre>
-                  <note>when <sourcexml>@ln.user-displayed="true“</sourcexml> or attribute
+                  <note>when <sourcexml>@ln.user-displayed="true"</sourcexml> or attribute
                       <sourcexml>@ln.user-displayed</sourcexml> does not appears on a date element
                     (i.e, <sourcexml>case:decisiondate/@ln.user-displayed="true"</sourcexml> or
                       <sourcexml>case:decisiondate</sourcexml> without any argument) then that
@@ -221,8 +221,8 @@
                           <entry>fr-CA</entry>
                         </row>
                         <row>
-                          <entry>Date format – do not add leading zeroes on the days, e.g. “2” is
-                            correct, “02” is incorrect.</entry>
+                          <entry>Date format – do not add leading zeroes on the days, e.g. "2" is
+                            correct, "02" is incorrect.</entry>
                           <entry>Month DD, YYYY, e.g. April 2, 2014</entry>
                           <entry>DD month YYYY, e.g. 2 avril 2014 </entry>
                         </row>
@@ -331,7 +331,7 @@
         <p>2014-11-18: <ph id="change_20141118_AS">updated example for ln.user-displayed="false"
             with <sourcexml>decision:argueddate</sourcexml><b>DB item # 366</b></ph></p>
         <p>2014-10-06: <ph id="change_20141006_AS">case:decisiondate should not output
-            argueddate/date-text if <sourcexml>ln.user-displayed="false“</sourcexml>. Removed
+            argueddate/date-text if <sourcexml>ln.user-displayed="false"</sourcexml>. Removed
             instructions for invalid date as LBU has remediated the issue.<b>DB item #
           337</b></ph></p>
         <p>2014-08-19: <ph id="change_20140819_AS">Updated example for nl. Multiple argued date will

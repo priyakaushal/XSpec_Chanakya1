@@ -36,11 +36,11 @@
                         following:</p>
                     
                         <ul>
-                            <li>Doc-id begins with an upper case “Q”, e.g. -
+                            <li>Doc-id begins with an upper case "Q", e.g. -
                                     <sourcexml>&lt;docinfo:doc-id&gt;QSEN 10000&lt;/docinfo:doc-id&gt;</sourcexml>.</li>
                             <li>Classitem classscheme = lnc.quantum -
                                     <sourcexml>&lt;classitem classscheme="lnc.quantum"&gt;</sourcexml>.</li>
-                            <li>Case:courtname contains searchtype=”JUDGES”, e.g.
+                            <li>Case:courtname contains searchtype="JUDGES", e.g.
                                     <sourcexml>&lt;emph typestyle="ro" searchtype="JUDGES"&gt;</sourcexml>.</li>
                         </ul>
                         <p>If above sceanrios occure in an xml file then
